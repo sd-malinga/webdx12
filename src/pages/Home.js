@@ -5,8 +5,8 @@ const Home = () => {
     return(
         <div>
             
-            <div class="opacity-30 w-[200px] md:w-[350px] h-[350px] bg-red-300 rounded-full blur-[140px] bottt top-[35%] absolute "></div>
-            <div class="opacity-50 w-[200px] md:w-[350px] h-[350px] bg-blue-300 rounded-full blur-[140px] bottt top-[35%]  absolute "></div>
+            <div class="opacity-40 w-[200px] md:w-[350px] h-[350px] bg-red-300 rounded-full blur-[140px] bottt top-[35%] left-0 absolute "></div>
+            <div class="opacity-40 w-[200px] md:w-[350px] h-[350px] bg-blue-300 rounded-full blur-[140px] bottt top-[35%] right-0 absolute "></div>
     
             <section id='nav' className="flex backdrop-blur-xl toppp justify-center md:justify-between p-8 px-12 items-center">
                 <p className="text-blue-800 font-bold text-2xl">$LOGO</p>
@@ -21,10 +21,11 @@ const Home = () => {
                 </div>
             </section>
 
-            <section className="mt-[10%]">
+            <section className="mt-[10%] relative">
                 <h1 className="text-black/70 w-10/12 md:w-[60%] m-auto text-center font-black text-2xl md:text-4xl">
                     Lorem ipsum dolor sit amet, consectetur adipLorem ipsum dolor sit amet, consectetur adip
                 </h1>
+                <div className='scale-[50%] md:scale-[100%] blur-lg md:w-[150px] toppp h-[150px] mix-blend-overlay bg-white rounded-full drop-shadow-2xl absolute top-1/2 right-1/2'></div>
                 <img className='m-auto w-[40rem] mt-8 blur-xl' src={img1} />
             </section>
 
