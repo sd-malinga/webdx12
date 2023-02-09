@@ -26,18 +26,19 @@ import { Link } from 'react-router-dom'
 const Home = () => {
     return(
         <div>
+
             <section id='nav' className="flex fixed backdrop-blur-xl w-full top-0 bg-white/90 topppp justify-center md:justify-between p-6 px-12 items-center">
                 <a href='#home'><img className='h-[1rem] lg:h-auto' src={logo} /></a>
                 <div className="pc hidden lg:visible text-black/60 font-medium text-md flex lg:gap-10">
                     <a href="#about" className="hover:text-blue-800 transition-all duration-500 ease-in-out ">About</a>
                     <a href="#services" className="hover:text-blue-800 transition-all duration-500 ease-in-out ">Services</a>
-                    <a href="/" className="hover:text-blue-800 transition-all duration-500 ease-in-out ">Roadmap</a>
-                    <a href="/" className="hover:text-blue-800 transition-all duration-500 ease-in-out ">Statistic</a>
-                    <a href="/" className="hover:text-blue-800 transition-all duration-500 ease-in-out ">Token</a>
-                    <a href="/" className="hover:text-blue-800 transition-all duration-500 ease-in-out ">Whitepaper</a>
-                    <a href="/" className="hover:text-blue-800 transition-all duration-500 ease-in-out ">Team</a>
-                    <a href="/" className="hover:text-blue-800 transition-all duration-500 ease-in-out ">FAQ</a>
-                    <a href="/" className="hover:text-blue-800 transition-all duration-500 ease-in-out ">Blog</a>
+                    <a href="#roadmap" className="hover:text-blue-800 transition-all duration-500 ease-in-out ">Roadmap</a>
+                    <a href="#stats" className="hover:text-blue-800 transition-all duration-500 ease-in-out ">Statistic</a>
+                    <a href="#token" className="hover:text-blue-800 transition-all duration-500 ease-in-out ">Token</a>
+                    <a href="#whitepaper" className="hover:text-blue-800 transition-all duration-500 ease-in-out ">Whitepaper</a>
+                    <a href="#team" className="hover:text-blue-800 transition-all duration-500 ease-in-out ">Team</a>
+                    <a href="#faq" className="hover:text-blue-800 transition-all duration-500 ease-in-out ">FAQ</a>
+                    <a href="#blog" className="hover:text-blue-800 transition-all duration-500 ease-in-out ">Blog</a>
                 </div>
                 <button className='rounded-lg pc px-6 py-4 text-white font-medium text-sm grad'>Join Brit World</button>
             </section>
@@ -244,24 +245,26 @@ const Home = () => {
                  of Brit Gold </h1>
 
                 <div className='flex flex-wrap lg:flex-nowrap justify-center gap-6 mt-12 md:gap-12 items-center w-full'>
-                    <div className='flex flex-col gap-4 text-white font-bold justify-center hover:scale-[102%] transition-all duration-500 ease-in-out  grad rounded-2xl items-center w-10/12 md:w-[15rem] h-[15rem]'>
+                    <div className='flex flex-col gap-4 text-white text-xs md:text-md font-bold justify-center hover:scale-[102%] transition-all duration-500 ease-in-out text-center p-5 grad rounded-2xl items-center w-[9rem] md:w-[15rem] min-h-[9rem] md:min-h-[15rem]'>
                         <img className='w-[2rem]' src={pdf} />
                         <p>Terms & Conditions</p>
                     </div>
-                    <div className='flex flex-col gap-4 text-white font-bold justify-center hover:scale-[102%] transition-all duration-500 ease-in-out  grad rounded-2xl items-center w-10/12 md:w-[15rem] h-[15rem]'>
+                    <div className='flex flex-col gap-4 text-white text-xs md:text-md font-bold justify-center hover:scale-[102%] transition-all duration-500 ease-in-out text-center p-5 grad rounded-2xl items-center w-[9rem] md:w-[15rem] min-h-[9rem] md:min-h-[15rem]'>
                         <img className='w-[2rem]' src={pdf} />
                         <p>Whitepapers</p>
                     </div>
-                    <div className='flex flex-col gap-4 text-white font-bold justify-center hover:scale-[102%] transition-all duration-500 ease-in-out  grad rounded-2xl items-center w-10/12 md:w-[15rem] h-[15rem]'>
+                    <div className='flex flex-col gap-4 text-white text-xs md:text-md font-bold justify-center hover:scale-[102%] transition-all duration-500 ease-in-out text-center p-5 grad rounded-2xl items-center w-[9rem] md:w-[15rem] min-h-[9rem] md:min-h-[15rem]'>
                         <img className='w-[2rem]' src={pdf} />
                         <p>Privacy Policy</p>
                     </div>
-                    <div className='flex flex-col gap-4 text-white font-bold justify-center hover:scale-[102%] transition-all duration-500 ease-in-out  grad rounded-2xl items-center w-10/12 md:w-[15rem] h-[15rem]'>
+                    <div className='flex flex-col gap-4 text-white text-xs md:text-md font-bold justify-center hover:scale-[102%] transition-all duration-500 ease-in-out text-center p-5 grad rounded-2xl items-center w-[9rem] md:w-[15rem] min-h-[9rem] md:min-h-[15rem]'>
                         <img className='w-[2rem]' src={pdf} />
                         <p>Business Profile</p>
                     </div>
                 </div>
             </section>
+
+
             <br/>
             <br/>
             <br/>
