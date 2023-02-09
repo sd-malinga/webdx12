@@ -28,6 +28,10 @@ body {
 .shad{
   box-shadow: 0px 3px 32px 0px rgba(74, 131, 236, 0.54);
 }
+.shad1{
+  box-shadow: 0px 3px 32px 0px rgba(74, 131, 236, 0.262);
+}
+
 .grad{
   background: linear-gradient(89.84deg, #181F4E 0.13%, #303D8C 98.99%);
 }
