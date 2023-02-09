@@ -7,6 +7,9 @@ import img2 from '../assets/img-2.webp'
 import mob from '../assets/mobile.webp'
 import shp1 from '../assets/shp01.svg'
 import shp2 from '../assets/shp02.svg'
+import rdmp from '../assets/roadmap.svg'
+import working from '../assets/working.svg'
+import pdf from '../assets/pdf.svg'
 
 import gp from '../assets/gp.png'
 import as from '../assets/as.png'
@@ -60,7 +63,12 @@ const Home = () => {
                 <img className='m-auto mt-12 noselect' src={pay} />
             </section>
 
-            <img className='m-auto w-11/12 mt-12 drop-shadow-xl shad hover:p-4 bg-white/20 backdrop-blur-xl hover:scale-[102%] transition-all duration-700 ease-in-out rounded-lg  md:w-1/2' src={vid} />
+            {/*<img className='m-auto w-11/12 mt-12 drop-shadow-xl shad hover:p-4 bg-white/20 backdrop-blur-xl hover:scale-[102%] transition-all duration-700 ease-in-out rounded-lg  md:w-1/2' src={vid} />*/}
+            
+            <h1 className="text-black/90 w-10/12 lg:w-[60%] my-24 m-auto pt-16 text-center font-black text-[2rem] md:text-[3rem] leading-[2rem] md:leading-[3rem] lg:leading-[3.5rem]">
+                Brit Gold Just Entered<br/>
+                <span className='font-[100] text-[1.7rem] md:text-[2.7rem] text-black/60'>the Real World</span>
+                </h1>
 
             <section id="#economy" className="mt-8 md:mt-16 relative w-full gap-8 px-3 lg:px-12 flex flex-col-reverse lg:flex-row toppp">
                 <p className='absolute mob top-8 m-auto left-12 md:left-0  text-xs text-[#303C8B]'>▽ DECENTRALISED ECONOMY</p>
@@ -145,11 +153,11 @@ const Home = () => {
             </section>
 
             <section id='#services' className='mt-8 md:mt-16 relative'>
-                <p className='absolute mob top-8 m-auto left-12 md:left-0 bottt text-xs text-[#303C8B]'>▽ ABOUT BRIT GOLD</p>
-                <p className='absolute pc top-8 m-auto centerh bottt  text-xs text-[#303C8B]'>▽ ABOUT BRIT GOLD</p>
+                <p className='absolute mob top-8 text-center m-auto centerh md:left-0 bottt text-xs text-[#303C8B]'>▽ ABOUT BRIT GOLD</p>
+                <p className='absolute pc top-8 m-auto text-center md:text-left centerh bottt  text-xs text-[#303C8B]'>▽ ABOUT BRIT GOLD</p>
                 <h1 className="text-black/90 w-10/12 lg:w-[60%] m-auto pt-16 text-center font-black text-[2rem] md:text-[3rem] leading-[2rem] md:leading-[3rem] lg:leading-[3.5rem]">Brit Gold Features</h1>
 
-                <div className='w-full md:w-[85%] m-auto mt-6 scale-[90%] md:scale-[85%] justify-center flex flex-wrap gap-4'>
+                <div className='w-full md:w-[85%] m-auto scale-[90%] md:scale-[85%] justify-center flex flex-wrap gap-4'>
                     <div className='flex flex-wrap md:flex-nowrap justify-center gap-4 bg-white rounded-xl p-4 items-start w-full md:w-[45%]'>
                         <img className=' object-contain p-2 shad1 rounded-full' src={fe1} />
                         <div className='text-center md:text-left '>
@@ -194,11 +202,18 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+            
+            <section className='relative '>
+                <p className='absolute mob top-8 text-center m-auto centerh md:left-0 bottt text-xs text-[#303C8B]'>▽ ROADMAP</p>
+                <p className='absolute pc top-8 m-auto text-center md:text-left centerh bottt  text-xs text-[#303C8B]'>▽ ROADMAP</p>
+                <h1 className="text-black/90 w-10/12 lg:w-[60%] m-auto pt-16 text-center font-black text-[2rem] md:text-[3rem] leading-[2rem] md:leading-[3rem] lg:leading-[3.5rem]">Roadmap</h1>
+                <img className='m-auto w-11/12 md:w-[65%] mt-8 md:mt-12' src={rdmp} />
+            </section>
 
-            <section className='mt-0 md:mt-8 relative'>
-                <p className='absolute mob top-8 m-auto left-12 md:left-0 bottt text-xs text-[#303C8B]'>▽ APPS</p>
+            <section className='mt-8 md:mt-12 relative'>
+                <p className='absolute mob top-8 m-auto left-8 md:left-0 bottt text-xs text-[#303C8B]'>▽ APPS</p>
                 <p className='absolute pc top-8 m-auto ml-4 left-16 bottt  text-xs text-[#303C8B]'>▽ APPS</p>
-                <div className='relative w-full h-[60vh] overflow-hidden'>
+                <div className='relative w-full h-auto md:h-[70vh] overflow-hidden'>
                     <img className='absolute bottt pc right-0 w-1/2' src={shp2} />
                     <div className='flex flex-col justify-center ml-[8%] md:ml-[6%]'>
                         <h1 className="text-black/90 w-11/12 lg:w-[40%] pt-16 font-black text-[2rem] md:text-[3rem] leading-[2rem] md:leading-[3rem] lg:leading-[3.5rem]">
@@ -213,6 +228,45 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
+            <section className='relative mt-12'>
+                <p className='absolute mob top-8 text-center m-auto centerh md:left-0 bottt text-xs text-[#303C8B]'>▽ WORKING</p>
+                <p className='absolute pc top-8 m-auto text-center md:text-left centerh bottt  text-xs text-[#303C8B]'>▽ WORKING</p>
+                <h1 className="text-black/90 w-10/12 lg:w-[60%] m-auto pt-16 text-center font-black text-[2rem] md:text-[3rem] leading-[2rem] md:leading-[3rem] lg:leading-[3.5rem]">Working of Brit Gold </h1>
+                <img className='m-auto w-11/12 md:w-[65%] my-8 md:my-12' src={working} />
+            </section>
+
+            
+            <section className='relative mt-12'>
+                <p className='absolute mob top-8 text-center m-auto centerh md:left-0 bottt text-xs text-[#303C8B]'>▽ DOCUMENTS</p>
+                <p className='absolute pc top-8 m-auto text-center md:text-left centerh bottt  text-xs text-[#303C8B]'>▽ DOCUMENTS</p>
+                <h1 className="text-black/90 w-10/12 lg:w-[60%] m-auto pt-16 text-center font-black text-[2rem] md:text-[3rem] leading-[2rem] md:leading-[3rem] lg:leading-[3.5rem]">Documents
+                 of Brit Gold </h1>
+
+                <div className='flex flex-wrap lg:flex-nowrap justify-center gap-6 mt-12 md:gap-12 items-center w-full'>
+                    <div className='flex flex-col gap-4 text-white font-bold justify-center hover:scale-[102%] transition-all duration-500 ease-in-out  grad rounded-2xl items-center w-10/12 md:w-[15rem] h-[15rem]'>
+                        <img className='w-[2rem]' src={pdf} />
+                        <p>Terms & Conditions</p>
+                    </div>
+                    <div className='flex flex-col gap-4 text-white font-bold justify-center hover:scale-[102%] transition-all duration-500 ease-in-out  grad rounded-2xl items-center w-10/12 md:w-[15rem] h-[15rem]'>
+                        <img className='w-[2rem]' src={pdf} />
+                        <p>Whitepapers</p>
+                    </div>
+                    <div className='flex flex-col gap-4 text-white font-bold justify-center hover:scale-[102%] transition-all duration-500 ease-in-out  grad rounded-2xl items-center w-10/12 md:w-[15rem] h-[15rem]'>
+                        <img className='w-[2rem]' src={pdf} />
+                        <p>Privacy Policy</p>
+                    </div>
+                    <div className='flex flex-col gap-4 text-white font-bold justify-center hover:scale-[102%] transition-all duration-500 ease-in-out  grad rounded-2xl items-center w-10/12 md:w-[15rem] h-[15rem]'>
+                        <img className='w-[2rem]' src={pdf} />
+                        <p>Business Profile</p>
+                    </div>
+                </div>
+            </section>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+
         </div>
     )
 }
