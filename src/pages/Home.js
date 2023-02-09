@@ -63,8 +63,8 @@ const Home = () => {
             <img className='m-auto w-11/12 mt-12 drop-shadow-xl shad hover:p-4 bg-white/20 backdrop-blur-xl hover:scale-[102%] transition-all duration-700 ease-in-out rounded-lg  md:w-1/2' src={vid} />
 
             <section id="#economy" className="mt-8 md:mt-16 relative w-full gap-8 px-3 lg:px-12 flex flex-col-reverse lg:flex-row toppp">
-                <p className='absolute mob top-8 m-auto left-12 md:left-0  text-xs text-blue-500'>▽ DECENTRALISED ECONOMY</p>
-                <p className='absolute pc top-8 m-auto right-16  text-xs text-blue-500'>▽ DECENTRALISED ECONOMY</p>
+                <p className='absolute mob top-8 m-auto left-12 md:left-0  text-xs text-[#303C8B]'>▽ DECENTRALISED ECONOMY</p>
+                <p className='absolute pc top-8 m-auto right-16  text-xs text-[#303C8B]'>▽ DECENTRALISED ECONOMY</p>
                 <img className='p-6 object-contain' src={img1} />
                 <div className=''>
                     <h1 className="text-black/90 w-10/12 m-auto pt-16 font-black text-[2rem] md:text-[3rem] leading-[2rem] md:leading-[3rem] lg:leading-[3.5rem]"><a className='transition-all duration-500 ease-in-out hover:text-blue-700' href='#about'>A banking platform that <br/><span className='font-[100] text-[1.7rem] md:text-[2.4rem] text-black/60'>enables developer solutions</span></a></h1>
@@ -104,8 +104,8 @@ const Home = () => {
             </section>
 
             <section id="#about" className="mt-8 md:mt-16 relative w-full gap-8 px-3 lg:px-12 flex flex-col-reverse lg:flex-row-reverse toppp">
-                <p className='absolute mob top-8 m-auto left-12 md:left-0 bottt text-xs text-blue-500'>▽ ABOUT BRIT GOLD</p>
-                <p className='absolute pc top-8 m-auto ml-4 left-24 bottt  text-xs text-blue-500'>▽ ABOUT BRIT GOLD</p>
+                <p className='absolute mob top-8 m-auto left-12 md:left-0 bottt text-xs text-[#303C8B]'>▽ ABOUT BRIT GOLD</p>
+                <p className='absolute pc top-8 m-auto ml-4 left-24 bottt  text-xs text-[#303C8B]'>▽ ABOUT BRIT GOLD</p>
                 <img className='p-6 object-contain' src={img2} />
                 <div className=''>
                     <h1 className="text-black/90 w-10/12 m-auto pt-20 font-black text-[2rem] md:text-[3rem] leading-[2rem] md:leading-[3rem] lg:leading-[3.5rem]"><a className='transition-all duration-500 ease-in-out hover:text-blue-700' href='#about'>Brit Gold Theme <br/><span className='font-[100] text-[1.7rem] md:text-[2.4rem] text-black/60'>is the best for your ICO</span></a></h1>
@@ -145,8 +145,8 @@ const Home = () => {
             </section>
 
             <section id='#services' className='mt-8 md:mt-16 relative'>
-                <p className='absolute mob top-8 m-auto left-12 md:left-0 bottt text-xs text-blue-500'>▽ ABOUT BRIT GOLD</p>
-                <p className='absolute pc top-8 m-auto centerh bottt  text-xs text-blue-500'>▽ ABOUT BRIT GOLD</p>
+                <p className='absolute mob top-8 m-auto left-12 md:left-0 bottt text-xs text-[#303C8B]'>▽ ABOUT BRIT GOLD</p>
+                <p className='absolute pc top-8 m-auto centerh bottt  text-xs text-[#303C8B]'>▽ ABOUT BRIT GOLD</p>
                 <h1 className="text-black/90 w-10/12 lg:w-[60%] m-auto pt-16 text-center font-black text-[2rem] md:text-[3rem] leading-[2rem] md:leading-[3rem] lg:leading-[3.5rem]">Brit Gold Features</h1>
 
                 <div className='w-full md:w-[85%] m-auto mt-6 scale-[90%] md:scale-[85%] justify-center flex flex-wrap gap-4'>
@@ -196,8 +196,8 @@ const Home = () => {
             </section>
 
             <section className='mt-0 md:mt-8 relative'>
-                <p className='absolute mob top-8 m-auto left-12 md:left-0 bottt text-xs text-blue-500'>▽ APPS</p>
-                <p className='absolute pc top-8 m-auto ml-4 left-16 bottt  text-xs text-blue-500'>▽ APPS</p>
+                <p className='absolute mob top-8 m-auto left-12 md:left-0 bottt text-xs text-[#303C8B]'>▽ APPS</p>
+                <p className='absolute pc top-8 m-auto ml-4 left-16 bottt  text-xs text-[#303C8B]'>▽ APPS</p>
                 <div className='relative w-full h-[60vh] overflow-hidden'>
                     <img className='absolute bottt pc right-0 w-1/2' src={shp2} />
                     <div className='flex flex-col justify-center ml-[8%] md:ml-[6%]'>
