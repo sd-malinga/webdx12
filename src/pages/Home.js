@@ -9,10 +9,39 @@ import shp2 from '../assets/shp02.svg'
 import wrk1 from '../assets/wrk-1.svg'
 import wrk2 from '../assets/wrk-2.svg'
 import wrk3 from '../assets/wrk-3.svg'
+import divid from '../assets/divider.svg'
 import pdf from '../assets/pdf.svg'
+
+
+import fb from '../assets/team/facebook.svg'
+import lin from '../assets/team/linkedin.svg'
+import ggl from '../assets/team/google-plus.svg'
+
+
+import crd1 from '../assets/cards/crd (1).jpg'
+import crd2 from '../assets/cards/crd (2).jpg'
+import crd3 from '../assets/cards/crd (1).png'
+
+
+import prtnr1 from '../assets/partners/partner (1).png'
+import prtnr2 from '../assets/partners/partner (2).png'
+import prtnr3 from '../assets/partners/partner (3).png'
+import prtnr4 from '../assets/partners/partner (4).png'
+import prtnr5 from '../assets/partners/partner (5).png'
 
 import gp from '../assets/gp.png'
 import as from '../assets/as.png'
+import av1 from '../assets/team/ava (1).png'
+import av2 from '../assets/team/ava (2).png'
+import av3 from '../assets/team/ava (3).png'
+import av4 from '../assets/team/ava (4).png'
+import av5 from '../assets/team/ava (5).png'
+import cmp1 from '../assets/company/Logo_1.png'
+import cmp2 from '../assets/company/Logo_2.png'
+import cmp3 from '../assets/company/Logo_3.png'
+import cmp4 from '../assets/company/Logo_4.png'
+import cmp5 from '../assets/company/Logo_5.png'
+import cmp6 from '../assets/company/Logo_6.png'
 
 import fe1 from '../assets/features/feat01.webp'
 import fe2 from '../assets/features/feat02.webp'
@@ -23,15 +52,20 @@ import fe6 from '../assets/features/feat06.webp'
 
 import { Link } from 'react-scroll'
 
+import * as React from 'react';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+
 
 const Home = () => {
     return(
         <div>
-
 {/**
 import vid from '../assets/vid.webp' */}
             <section id='nav' className="flex fixed backdrop-blur-xl w-full top-0 bg-white/90 topppp justify-center md:justify-between p-4 px-12 items-center">
-                <a href='#home'><img className='h-[1rem] lg:h-auto' alt='' src={logo} /></a>
+                <Link className='cursor-pointer ' to='home'><img className='h-[1rem] lg:h-auto' alt='' src={logo} /></Link>
                 <div className="pc hidden lg:visible text-black/60 font-medium text-md flex lg:gap-10">
                     <Link to="about" className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out ">About</Link>
                     <Link to="services" className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out ">Services</Link>
@@ -39,8 +73,8 @@ import vid from '../assets/vid.webp' */}
                     <Link to="token" className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out ">Token</Link>
                     <Link to="roadmap" className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out ">Roadmap</Link>
                     <Link to="whitepaper" className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out ">Whitepaper</Link>
-                    <Link to="team" className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out ">Team</Link>
                     <Link to="faq" className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out ">FAQ</Link>
+                    <Link to="team" className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out ">Team</Link>
                     <Link to="blog" className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out ">Blog</Link>
                 </div>
                 <button className='rounded-lg pc px-6 py-4 text-white font-medium text-sm grad'>Join Brit World</button>
@@ -74,7 +108,7 @@ import vid from '../assets/vid.webp' */}
                 <span className='font-[100] text-[1.7rem] md:text-[2.7rem] text-black/60'>the Real World</span>
                 </h1>
 
-            <section name="economy" className="mt-8 md:mt-16 relative w-full lg:w-10/12  gap-8 px-3 lg:px-8 m-auto flex flex-col-reverse lg:flex-row toppp">
+            <section name="about" className="mt-8 md:mt-16 relative w-full lg:w-10/12  gap-8 px-3 lg:px-8 m-auto flex flex-col-reverse lg:flex-row toppp">
                 <img className='p-6 object-contain' alt='' src={img1} />
                 <div className=''>
                     <p className='text-xs pt-24 w-10/12 m-auto text-[#303C8B]'>▽ DECENTRALISED ECONOMY</p>
@@ -115,7 +149,7 @@ import vid from '../assets/vid.webp' */}
             </section>
 
             
-            <section name="about" className="mt-8 md:mt-16 relative w-full gap-8 px-3 lg:px-12 flex flex-col-reverse lg:flex-row-reverse toppp">
+            <section className="mt-8 md:mt-16 relative w-full gap-8 px-3 lg:px-12 flex flex-col-reverse lg:flex-row-reverse toppp">
                 <img className='p-6 object-contain' alt='' src={img2} />
                 <div className=''>
                     <p className='text-xs pt-24 w-10/12 m-auto text-[#303C8B]'>▽ ABOUT BRIT GOLD</p>
@@ -211,23 +245,23 @@ import vid from '../assets/vid.webp' */}
                 <div className='flex flex-wrap scale-[100%] md:scale-[95%] gap-4 md:gap-8  m-auto w-full md:w-10/12 justify-center items-start mt-8 md:mt-16'>
                     <div className='flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4'>
                         <h2 className='font-semibold'>Blockchain</h2>
-                        <img className='p-3 shad1 rounded-full' src={wrk1} />
+                        <img className='p-3 shad1 rounded-full'  alt='' src={wrk1} />
                         <hr/>
                         <p className='text-sm text-black/60'>Involvement of third-party developers into IQeon ecosystem and expansion of our own product line will lead to growth in users.</p>
                     </div><hr className='rotate-[90deg] pc' />
                     <div className='flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4'>
                         <h2 className='font-semibold'>Indefication</h2>
-                        <img className='p-3 shad1 rounded-full' src={wrk3} /><hr/>
+                        <img className='p-3 shad1 rounded-full'  alt='' src={wrk3} /><hr/>
                         <p className='text-sm text-black/60'>Involvement of third-party developers into IQeon ecosystem and expansion of our own product line will lead to growth in users.</p>
                     </div><hr className='rotate-[90deg] pc' />
                     <div className='flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4'>
                         <h2 className='font-semibold'>Make payments</h2>
-                        <img className='p-3 shad1 rounded-full' src={wrk2} /><hr/>
+                        <img className='p-3 shad1 rounded-full'  alt='' src={wrk2} /><hr/>
                         <p className='text-sm text-black/60'>Involvement of third-party developers into IQeon ecosystem and expansion of our own product line will lead to growth in users.</p>
                     </div><hr className='rotate-[90deg] pc' />
                     <div className='flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4'>
                         <h2 className='font-semibold'>Buy or sell orders</h2>
-                        <img className='p-3 shad1 rounded-full' src={wrk3} /><hr/>
+                        <img className='p-3 shad1 rounded-full'  alt='' src={wrk3} /><hr/>
                         <p className='text-sm text-black/60'>Involvement of third-party developers into IQeon ecosystem and expansion of our own product line will lead to growth in users.</p>
                     </div>
                 </div>
@@ -264,7 +298,7 @@ import vid from '../assets/vid.webp' */}
                     </div>
                     <div className='flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4'>
                         <h2 className='font-semibold'>July 2023</h2>
-                        <div className='w-[35px] h-[35px] border-white/70 border-solid border-[4px] rounded-full bg-yellow-400'><br/></div>
+                        <div className='w-[35px] h-[35px] border-white/80 border-solid border-[10px] rounded-full bg-red-400'><br/></div><hr/>
                         <p className='text-sm text-black'>Issuing JCR tokens into the Ethereum blockchain.</p>
                     </div>
                     <div className='flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4'>
@@ -311,9 +345,8 @@ import vid from '../assets/vid.webp' */}
             </section>
 
             <section name='whitepaper' className='relative mt-12'>
-                <p className='absolute mob top-8 text-center m-auto centerh md:left-0 bottt text-xs text-[#303C8B]'>▽ DOCUMENTS</p>
-                <p className='absolute pc top-8 m-auto text-center md:text-left centerh bottt  text-xs text-[#303C8B]'>▽ DOCUMENTS</p>
-                <h1 className="text-black/90 w-10/12 lg:w-[60%] m-auto pt-16 text-center font-black text-[2rem] md:text-[3rem] leading-[2rem] md:leading-[3rem] lg:leading-[3.5rem]">Documents
+                    <p className='text-xs pt-24 w-10/12 text-center m-auto text-[#303C8B]'>▽ DOCUMENTS</p>
+                <h1 className="text-black/90 w-10/12 lg:w-[60%] m-auto pt-6 text-center font-black text-[2rem] md:text-[3rem] leading-[2rem] md:leading-[3rem] lg:leading-[3.5rem]">Documents
                  of Brit Gold </h1>
 
                 <div className='flex flex-wrap lg:flex-nowrap justify-center gap-6 mt-12 md:gap-12 items-center w-full'>
@@ -336,11 +369,323 @@ import vid from '../assets/vid.webp' */}
                 </div>
             </section>
 
+            <section name='faq' className=' '>
+                <p className='text-xs w-10/12 text-center pt-24 m-auto text-[#303C8B]'>▽ FAQs</p>
+                <h1 className="text-black/90 w-10/12 lg:w-[60%] m-auto pt-6 text-center font-black text-[2rem] md:text-[3rem] leading-[2rem] md:leading-[3rem] lg:leading-[3.5rem]">FAQs </h1>
+                
+                <div className='mt-[2rem] p-4 px-4 md:px-12 w-11/12 md:w-[60%] scale-[100%] md:scale-[110%] my-24 m-auto rale rounded-2xl'>
+                    <div className='rounded-2xl md:rounded-[2.5rem] overflow-hidden bg-white shad1 px-4 md:px-8 bottt mix-blend-screen'>  
+                        <Accordion className='scale-x-[110%] p-2'>
+                            <AccordionSummary
+                            aria-controls="panel2a-content"
+                            id="panel2a-header"
+                            >
+                            <Typography className='text-blue-200 hover:text-black transition-all duration-500 ease-in-out '>Accordion 1</Typography>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                            <Typography>
+                            JavaScript is also used in environments that aren't web-based, such as PDF documents, site-specific browsers, and desktop widgets. Newer and faster JavaScript virtual machines (VMs) and platforms built upon them have also increased the popularity of JavaScript for server-side web applications. On the client side, JavaScript has been traditionally implemented as an interpreted language, but more recent browsers perform just-in-time compilation.
+                            </Typography>
+                            </AccordionDetails>
+                        </Accordion>
+                    </div>
+                    <br/>
+                    <div className='rounded-2xl md:rounded-[2.5rem] overflow-hidden bg-white shad1 px-4 md:px-8 bottt mix-blend-screen'>  
+                        <Accordion className='scale-x-[110%] p-2'>
+                            <AccordionSummary
+                            aria-controls="panel2a-content"
+                            id="panel2a-header"
+                            >
+                            <Typography className='text-blue-200 hover:text-black transition-all duration-500 ease-in-out '>Accordion 2</Typography>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                            <Typography>
+                            JavaScript is also used in environments that aren't web-based, such as PDF documents, site-specific browsers, and desktop widgets. Newer and faster JavaScript virtual machines (VMs) and platforms built upon them have also increased the popularity of JavaScript for server-side web applications. On the client side, JavaScript has been traditionally implemented as an interpreted language, but more recent browsers perform just-in-time compilation.
+                            </Typography>
+                            </AccordionDetails>
+                        </Accordion>
+                    </div>
+                    <br/>
+                    <div className='rounded-2xl md:rounded-[2.5rem] overflow-hidden bg-white shad1 px-4 md:px-8 bottt mix-blend-screen'>  
+                        <Accordion className='scale-x-[110%] p-2'>
+                            <AccordionSummary
+                            aria-controls="panel2a-content"
+                            id="panel2a-header"
+                            >
+                            <Typography className='text-blue-200 hover:text-black transition-all duration-500 ease-in-out '>Accordion 3</Typography>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                            <Typography>
+                            JavaScript is also used in environments that aren’t web-based, such as PDF documents, site-specific browsers, and desktop widgets. Newer and faster JavaScript virtual machines (VMs) and platforms built upon them have also increased the popularity of JavaScript for server-side web applications. On the client side, JavaScript has been traditionally implemented as an interpreted language, but more recent browsers perform just-in-time compilation.
+                            </Typography>
+                            </AccordionDetails>
+                        </Accordion>
+                    </div>
+                    <br/>
+                    <div className='rounded-2xl md:rounded-[2.5rem] overflow-hidden bg-white shad1 px-4 md:px-8 bottt mix-blend-screen'>  
+                        <Accordion className='scale-x-[110%] p-2'>
+                            <AccordionSummary
+                            aria-controls="panel2a-content"
+                            id="panel2a-header"
+                            >
+                            <Typography className='text-blue-200 hover:text-black transition-all duration-500 ease-in-out '>Accordion 4</Typography>
+                            </AccordionSummary>
+                            <AccordionDetails>
+                            <Typography>
+                            JavaScript is also used in environments that aren't web-based, such as PDF documents, site-specific browsers, and desktop widgets. Newer and faster JavaScript virtual machines (VMs) and platforms built upon them have also increased the popularity of JavaScript for server-side web applications. On the client side, JavaScript has been traditionally implemented as an interpreted language, but more recent browsers perform just-in-time compilation.
+                            </Typography>
+                            </AccordionDetails>
+                        </Accordion>
+                    </div>
+                </div>
+            </section>
 
-            <br/>
-            <br/>
-            <br/>
-            <br/>
+            <section name='team' className='grad pb-12 relative'>
+                <img alt='' src={divid} className='absolute bottom-0 w-screen' />
+                <div className=' text-center lg:text-left lg:w-[70%] m-auto text-white'>
+                    <p className='text-xs pt-12 lg:pt-24 text-blue-200'>▽ TEAM</p>
+                    <h1 className=" lg:w-[60%] mt-4 font-black text-[2rem] md:text-[3rem] leading-[2rem] md:leading-[3rem] lg:leading-[3.5rem]">Awesome Team</h1>
+                </div>
+                <div>
+                    <div className='flex flex-wrap justify-center items-center  m-auto gap-8 lg:w-[70%] my-8'>
+                        <div className='flex flex-col p-4 gap-2 justify-center items-center w-[10rem]'>
+                        <img alt='' src={av1} />
+                            <h2 className='font-semibold text-white text-lg'>John Doe</h2>
+                            <p className=' text-white/60 font-thin text-sm -mt-2'>Designer</p>
+                            <div className='flex gap-2 mt-2'>
+                                <a href='/'><img className='w-6' alt='' src={fb} /></a>
+                                <a href='/'><img className='w-6' alt=''  src={lin} /></a>
+                                <a href='/'><img className='w-6' alt=''  src={ggl} /></a>
+                            </div>
+                        </div>
+                        <div className='flex flex-col p-4 gap-2 justify-center items-center w-[10rem]'>
+                        <img alt='' src={av2} />
+                            <h2 className='font-semibold text-white text-lg'>John Doe</h2>
+                            <p className=' text-white/60 font-thin text-sm -mt-2'>Designer</p>
+                            <div className='flex gap-2 mt-2'>
+                                <a href='/'><img className='w-6' alt='' src={fb} /></a>
+                                <a href='/'><img className='w-6' alt=''  src={lin} /></a>
+                                <a href='/'><img className='w-6' alt=''  src={ggl} /></a>
+                            </div>
+                        </div>
+                        <div className='flex flex-col p-4 gap-2 justify-center items-center w-[10rem]'>
+                        <img alt='' src={av3} />
+                            <h2 className='font-semibold text-white text-lg'>John Doe</h2>
+                            <p className=' text-white/60 font-thin text-sm -mt-2'>Designer</p>
+                            <div className='flex gap-2 mt-2'>
+                                <a href='/'><img className='w-6' alt='' src={fb} /></a>
+                                <a href='/'><img className='w-6' alt=''  src={lin} /></a>
+                                <a href='/'><img className='w-6' alt=''  src={ggl} /></a>
+                            </div>
+                        </div>
+                        <div className='flex flex-col p-4 gap-2 justify-center items-center w-[10rem]'>
+                        <img alt='' src={av4} />
+                            <h2 className='font-semibold text-white text-lg'>John Doe</h2>
+                            <p className=' text-white/60 font-thin text-sm -mt-2'>Designer</p>
+                            <div className='flex gap-2 mt-2'>
+                                <a href='/'><img className='w-6' alt='' src={fb} /></a>
+                                <a href='/'><img className='w-6' alt=''  src={lin} /></a>
+                                <a href='/'><img className='w-6' alt=''  src={ggl} /></a>
+                            </div>
+                        </div>
+                        <div className='flex flex-col p-4 gap-2 justify-center items-center w-[10rem]'>
+                        <img alt='' src={av5} />
+                            <h2 className='font-semibold text-white text-lg'>John Doe</h2>
+                            <p className=' text-white/60 font-thin text-sm -mt-2'>Designer</p>
+                            <div className='flex gap-2 mt-2'>
+                                <a href='/'><img className='w-6' alt='' src={fb} /></a>
+                                <a href='/'><img className='w-6' alt=''  src={lin} /></a>
+                                <a href='/'><img className='w-6' alt=''  src={ggl} /></a>
+                            </div>
+                        </div>
+                        <div className='flex flex-col p-4 gap-2 justify-center items-center w-[10rem]'>
+                        <img alt='' src={av1} />
+                            <h2 className='font-semibold text-white text-lg'>John Doe</h2>
+                            <p className=' text-white/60 font-thin text-sm -mt-2'>Designer</p>
+                            <div className='flex gap-2 mt-2'>
+                                <a href='/'><img className='w-6' alt='' src={fb} /></a>
+                                <a href='/'><img className='w-6' alt=''  src={lin} /></a>
+                                <a href='/'><img className='w-6' alt=''  src={ggl} /></a>
+                            </div>
+                        </div>
+                        <div className='flex flex-col p-4 gap-2 justify-center items-center w-[10rem]'>
+                        <img alt='' src={av2} />
+                            <h2 className='font-semibold text-white text-lg'>John Doe</h2>
+                            <p className=' text-white/60 font-thin text-sm -mt-2'>Designer</p>
+                            <div className='flex gap-2 mt-2'>
+                                <a href='/'><img className='w-6' alt='' src={fb} /></a>
+                                <a href='/'><img className='w-6' alt=''  src={lin} /></a>
+                                <a href='/'><img className='w-6' alt=''  src={ggl} /></a>
+                            </div>
+                        </div>
+                        <div className='flex flex-col p-4 gap-2 justify-center items-center w-[10rem]'>
+                        <img alt='' src={av4} />
+                            <h2 className='font-semibold text-white text-lg'>John Doe</h2>
+                            <p className=' text-white/60 font-thin text-sm -mt-2'>Designer</p>
+                            <div className='flex gap-2 mt-2'>
+                                <a href='/'><img className='w-6' alt='' src={fb} /></a>
+                                <a href='/'><img className='w-6' alt=''  src={lin} /></a>
+                                <a href='/'><img className='w-6' alt=''  src={ggl} /></a>
+                            </div>
+                        </div>
+                        <div className='flex flex-col p-4 gap-2 justify-center items-center w-[10rem]'>
+                        <img alt='' src={av3} />
+                            <h2 className='font-semibold text-white text-lg'>John Doe</h2>
+                            <p className=' text-white/60 font-thin text-sm -mt-2'>Designer</p>
+                            <div className='flex gap-2 mt-2'>
+                                <a href='/'><img className='w-6' alt='' src={fb} /></a>
+                                <a href='/'><img className='w-6' alt=''  src={lin} /></a>
+                                <a href='/'><img className='w-6' alt=''  src={ggl} /></a>
+                            </div>
+                        </div>
+                        <div className='flex flex-col p-4 gap-2 justify-center items-center w-[10rem]'>
+                        <img alt='' src={av5} />
+                            <h2 className='font-semibold text-white text-lg'>John Doe</h2>
+                            <p className=' text-white/60 font-thin text-sm -mt-2'>Designer</p>
+                            <div className='flex gap-2 mt-2'>
+                                <a href='/'><img className='w-6' alt='' src={fb} /></a>
+                                <a href='/'><img className='w-6' alt=''  src={lin} /></a>
+                                <a href='/'><img className='w-6' alt=''  src={ggl} /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section name='media'>
+                <p className='text-xs w-10/12 text-center pt-24 m-auto text-[#303C8B]'>▽ Media</p>
+                <h1 className="text-black/90 w-10/12 lg:w-[60%] m-auto pt-6 text-center font-black text-[2rem] md:text-[3rem] leading-[2rem] md:leading-[3rem] lg:leading-[3.5rem]">Company in Media</h1>
+                
+                <div className='flex flex-wrap m-auto scale-[95%] md:scale-[90%] gap-12 justify-center items-center'>
+                    <div className='flex p-8 py-16 bg-white drop-shadow-2xl flex-col justify-center items-center gap-6 w-10/12 md:w-[23rem] h-[23rem] '>
+                        <img className='w-[8rem]' alt='' src={cmp1} />
+                        <p className=' text-black/60 text-center '>COO of KrowdMentor, a strategic investment and advisory firm as well as Under Development Office, a software development company focused on</p>
+                    </div>
+                    <div className='flex p-8 py-16 bg-white drop-shadow-2xl flex-col justify-center items-center gap-6 w-10/12 md:w-[23rem] h-[23rem] '>
+                        <img className='w-[8rem]' alt='' src={cmp2} />
+                        <p className=' text-black/60 text-center '>COO of KrowdMentor, a strategic investment and advisory firm as well as Under Development Office, a software development company focused on</p>
+                    </div>
+                    <div className='flex p-8 py-16 bg-white drop-shadow-2xl flex-col justify-center items-center gap-6 w-10/12 md:w-[23rem] h-[23rem] '>
+                        <img className='w-[8rem]' alt='' src={cmp3} />
+                        <p className=' text-black/60 text-center '>COO of KrowdMentor, a strategic investment and advisory firm as well as Under Development Office, a software development company focused on</p>
+                    </div>
+                    <div className='flex p-8 py-16 bg-white drop-shadow-2xl flex-col justify-center items-center gap-6 w-10/12 md:w-[23rem] h-[23rem] '>
+                        <img className='w-[8rem]' alt='' src={cmp4} />
+                        <p className=' text-black/60 text-center '>COO of KrowdMentor, a strategic investment and advisory firm as well as Under Development Office, a software development company focused on</p>
+                    </div>
+                    <div className='flex p-8 py-16 bg-white drop-shadow-2xl flex-col justify-center items-center gap-6 w-10/12 md:w-[23rem] h-[23rem] '>
+                        <img className='w-[8rem]' alt='' src={cmp5} />
+                        <p className=' text-black/60 text-center '>COO of KrowdMentor, a strategic investment and advisory firm as well as Under Development Office, a software development company focused on</p>
+                    </div>
+                    <div className='flex p-8 py-16 bg-white drop-shadow-2xl flex-col justify-center items-center gap-6 w-10/12 md:w-[23rem] h-[23rem] '>
+                        <img className='w-[8rem]' alt='' src={cmp6} />
+                        <p className=' text-black/60 text-center '>COO of KrowdMentor, a strategic investment and advisory firm as well as Under Development Office, a software development company focused on</p>
+                    </div>
+                </div>
+            </section>
+
+            <section name='blog'>
+                <p className='text-xs w-10/12 text-center pt-12 md:pt-[24] m-auto text-[#303C8B]'>▽ Blog</p>
+                <h1 className="text-black/90 w-10/12 lg:w-[60%] m-auto pt-6 text-center font-black text-[2rem] md:text-[3rem] leading-[2rem] md:leading-[3rem] lg:leading-[3.5rem]">Blog by Brit Gold</h1>
+                
+                <div className='w-10/12 mt-12 m-auto overflow-x-scroll flex gap-6 px-4 py-8'>
+                    <div className='bg-white drop-shadow-xl pb-6 rounded-2xl w-[20rem] shrink-0'>
+                        <div className='h-[10rem] overflow-hidden w-full  rounded-tr-2xl rounded-tl-2xl'><img alt='' className=' h-full w-full' src={crd1} /></div>
+                        <div className='px-6 py-2'>
+                            <h2 className='text-blue-200 text-sm font-semibold'>Blockchain</h2>
+                            <h1 className='mt-3 text-black text-2xl font-bold'>New trends in Blockchain UIUX</h1>
+                            <p className=' text-black/60'>COO of KrowdMentor, a strategic investment and advisory firm as well as Under Development Office, a software development company focused on</p>
+                        </div>
+                    </div>
+                    <div className='bg-white drop-shadow-xl pb-6 rounded-2xl w-[20rem] shrink-0'>
+                        <div className='h-[10rem] overflow-hidden w-full  rounded-tr-2xl rounded-tl-2xl'><img alt='' className=' h-full w-full' src={crd2} /></div>
+                        <div className='px-6 py-2'>
+                            <h2 className='text-blue-200 text-sm font-semibold'>Blockchain</h2>
+                            <h1 className='mt-3 text-black text-2xl font-bold'>New trends in Blockchain UIUX</h1>
+                            <p className=' text-black/60'>COO of KrowdMentor, a strategic investment and advisory firm as well as Under Development Office, a software development company focused on</p>
+                        </div>
+                    </div>
+                    <div className='bg-white drop-shadow-xl pb-6 rounded-2xl w-[20rem] shrink-0'>
+                        <div className='h-[10rem] overflow-hidden w-full rounded-tr-2xl rounded-tl-2xl'><img alt='' className=' h-full w-full' src={crd3} /></div>
+                        <div className='px-6 py-2'>
+                            <h2 className='text-blue-200 text-sm font-semibold'>Blockchain</h2>
+                            <h1 className='mt-3 text-black text-2xl font-bold'>New trends in Blockchain UIUX</h1>
+                            <p className=' text-black/60'>COO of KrowdMentor, a strategic investment and advisory firm as well as Under Development Office, a software development company focused on</p>
+                        </div>
+                    </div>
+                    <div className='bg-white drop-shadow-xl pb-6 rounded-2xl w-[20rem] shrink-0'>
+                        <div className='h-[10rem] overflow-hidden w-full   rounded-tr-2xl rounded-tl-2xl'><img alt='' className=' h-full w-full' src={crd1} /></div>
+                        <div className='px-6 py-2'>
+                            <h2 className='text-blue-200 text-sm font-semibold'>Blockchain</h2>
+                            <h1 className='mt-3 text-black text-2xl font-bold'>New trends in Blockchain UIUX</h1>
+                            <p className=' text-black/60'>COO of KrowdMentor, a strategic investment and advisory firm as well as Under Development Office, a software development company focused on</p>
+                        </div>
+                    </div>
+                    <div className='bg-white drop-shadow-xl pb-6 rounded-2xl w-[20rem] shrink-0'>
+                        <div className='h-[10rem] overflow-hidden w-full  rounded-tr-2xl rounded-tl-2xl'><img alt='' className=' h-full w-full' src={crd2} /></div>
+                        <div className='px-6 py-2'>
+                            <h2 className='text-blue-200 text-sm font-semibold'>Blockchain</h2>
+                            <h1 className='mt-3 text-black text-2xl font-bold'>New trends in Blockchain UIUX</h1>
+                            <p className=' text-black/60'>COO of KrowdMentor, a strategic investment and advisory firm as well as Under Development Office, a software development company focused on</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section name='partners' className=' relative'>
+                <div className=' text-center lg:text-left lg:w-[80%] m-auto'>
+                    <p className='text-xs pt-12 lg:pt-24 text-blue-200'>▽ OUR FRIENDS</p>
+                    <h1 className=" lg:w-[60%] mt-4 font-black text-black/90 text-[2rem] md:text-[3rem] leading-[2rem] md:leading-[3rem] lg:leading-[3.5rem]">Partners</h1>
+                </div>
+                <div className='flex gap-12 m-auto flex-wrap mt-12 w-[80%] justify-center md:justify-between items-center'>
+                    <img className='transition-all duration-500 ease-in-out w-[40%] md:w-auto object-contain opacity-40 hover:opacity-90 ' alt='' src={prtnr1} />
+                    <img className='transition-all duration-500 ease-in-out w-[40%] md:w-auto object-contain opacity-40 hover:opacity-90 ' alt='' src={prtnr2} />
+                    <img className='transition-all duration-500 ease-in-out w-[40%] md:w-auto object-contain opacity-40 hover:opacity-90 ' alt='' src={prtnr3} />
+                    <img className='transition-all duration-500 ease-in-out w-[40%] md:w-auto object-contain opacity-40 hover:opacity-90 ' alt='' src={prtnr4} />
+                    <img className='transition-all duration-500 ease-in-out w-[40%] md:w-auto object-contain opacity-40 hover:opacity-90 ' alt='' src={prtnr5} />
+                </div>
+            </section>
+
+            <section name='contact' className='grad relative mt-12 h-screen'>
+                <img alt='' src={divid} className='absolute -top-[.5px] rotate-[180deg] w-screen' />
+                <div className='flex w-full md:w-[70%] justify-center flex-wrap md:flex-nowrap h-full m-auto'>
+
+                    <div className=' text-center mt-[14%] md:mt-[20%] lg:text-left lg:w-[70%] m-auto text-white'>
+                        <p className='text-xs text-blue-200'>▽ CONTACT US</p>
+                        <h1 className=" lg:w-[60%] mt-4 font-black text-[2rem] md:text-[3rem] leading-[2rem] md:leading-[3rem] lg:leading-[3.5rem]">Get in Touch</h1>
+                        <p className='text-white/60 text-sm mt-4  leading-loose font-light'>523 Sylvan Ave, 5th Floor Mountain View, CA<br/>
+                            +1 (234) 56789, +1 987 654 3210<br/>
+                            info@cryptoland.com<br/>
+                            supportcenter@cryptoland.com
+                        </p>
+
+                        <div className='flex gap-16 mt-8 md:mt-16 w-full justify-center md:justify-start m-auto items-center'>
+                            <div className='flex gap-3 flex-col text-white/70'>
+                                <Link to='about'>About</Link>
+                                <Link to='roadmap'>Roadmap</Link>
+                                <Link to='token'>Token</Link>
+                                <Link to='team'>Team</Link>
+                            </div>
+                            <div className='flex gap-3 flex-col text-white/70'>
+                                <Link to='services'>Services</Link>
+                                <Link to='statistics'>Statistics</Link>
+                                <Link to='whitepaper'>Whitepapers</Link>
+                                <Link to='faq'>FAQs</Link>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className=' flex gap-6 flex-col mt-8 md:mt-[20%] w-10/12 md:w-[60%]'>
+                        <input className='p-3 bg-white/10 focus:bg-white hover:bg-white transition-all duration-500 ease-in-out  outline-none rounded-full px-5' type='text' placeholder='Name' />
+                        <input className='p-3 bg-white/10 focus:bg-white hover:bg-white transition-all duration-500 ease-in-out  outline-none rounded-full px-5' type='text' placeholder='Email' />
+                        <input className='p-3 pt-5 pb-12 md:pb-24 rounded-2xl bg-white/10 focus:bg-white hover:bg-white transition-all duration-500 ease-in-out  outline-none rounded-full px-5' type='text' placeholder='Message' />
+                        <button className='p-3 bg-white rounded-2xl px-5' type='submit'> Send</button>
+                    </div>
+
+                </div>
+                
+            </section>
 
         </div>
     )
