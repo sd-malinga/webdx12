@@ -64,7 +64,7 @@ const Home = () => {
         <div>
 {/**
 import vid from '../assets/vid.webp' */}
-            <section id='nav' className="flex fixed backdrop-blur-xl w-full top-0 bg-white/90 topppp justify-center md:justify-between p-4 px-12 items-center">
+            <section id='nav' className="flex fixed backdrop-blur-xl w-full top-0 bg-white/90 topppp justify-center md:justify-between p-6 lg:p-4 px-12 items-center">
                 <Link className='cursor-pointer ' to='home'><img className='h-[1rem] lg:h-auto' alt='' src={logo} /></Link>
                 <div className="pc hidden lg:visible text-black/60 font-medium text-md flex lg:gap-10">
                     <Link to="about" className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out ">About</Link>
@@ -657,21 +657,21 @@ import vid from '../assets/vid.webp' */}
                         <p className='text-white/60 text-sm mt-4  leading-loose font-light'>523 Sylvan Ave, 5th Floor Mountain View, CA<br/>
                             +1 (234) 56789, +1 987 654 3210<br/>
                             info@cryptoland.com<br/>
-                            supportcenter@cryptoland.com
+                            <a href='mailto:supportcenter@cryptoland.com'>supportcenter@cryptoland.com</a>
                         </p>
 
                         <div className='flex gap-16 mt-8 md:mt-16 w-full justify-center md:justify-start m-auto items-center'>
                             <div className='flex gap-3 flex-col text-white/70'>
-                                <Link to='about'>About</Link>
-                                <Link to='roadmap'>Roadmap</Link>
-                                <Link to='token'>Token</Link>
-                                <Link to='team'>Team</Link>
+                                <Link className='cursor-pointer hover:text-white transition-all duration-500 ease-in-out ' to='about'>About</Link>
+                                <Link className='cursor-pointer hover:text-white transition-all duration-500 ease-in-out ' to='roadmap'>Roadmap</Link>
+                                <Link className='cursor-pointer hover:text-white transition-all duration-500 ease-in-out ' to='token'>Token</Link>
+                                <Link className='cursor-pointer hover:text-white transition-all duration-500 ease-in-out ' to='team'>Team</Link>
                             </div>
                             <div className='flex gap-3 flex-col text-white/70'>
-                                <Link to='services'>Services</Link>
-                                <Link to='statistics'>Statistics</Link>
-                                <Link to='whitepaper'>Whitepapers</Link>
-                                <Link to='faq'>FAQs</Link>
+                                <Link className='cursor-pointer hover:text-white transition-all duration-500 ease-in-out ' to='services'>Services</Link>
+                                <Link className='cursor-pointer hover:text-white transition-all duration-500 ease-in-out ' to='statistics'>Statistics</Link>
+                                <Link className='cursor-pointer hover:text-white transition-all duration-500 ease-in-out ' to='whitepaper'>Whitepapers</Link>
+                                <Link className='cursor-pointer hover:text-white transition-all duration-500 ease-in-out ' to='faq'>FAQs</Link>
                             </div>
                         </div>
                     </div>
@@ -680,7 +680,7 @@ import vid from '../assets/vid.webp' */}
                         <input className='p-3 bg-white/10 focus:bg-white hover:bg-white transition-all duration-500 ease-in-out  outline-none rounded-full px-5' type='text' placeholder='Name' />
                         <input className='p-3 bg-white/10 focus:bg-white hover:bg-white transition-all duration-500 ease-in-out  outline-none rounded-full px-5' type='text' placeholder='Email' />
                         <input className='p-3 pt-5 pb-12 md:pb-24 rounded-2xl bg-white/10 focus:bg-white hover:bg-white transition-all duration-500 ease-in-out  outline-none rounded-full px-5' type='text' placeholder='Message' />
-                        <button className='p-3 bg-white rounded-2xl px-5' type='submit'> Send</button>
+                        <button className='p-3 bg-white rounded-2xl px-5 hover:bg-blue-100 transition-all duration-500 ease-in-out ' type='submit'> Send</button>
                     </div>
 
                 </div>
