@@ -594,7 +594,7 @@ const Home = () => {
                         <motion.div
                         initial="hidden"
                         whileInView="show" 
-                        variants={container} className='flex flex-wrap justify-between items-center  m-auto gap-8 lg:w-[70%] my-8'>
+                        variants={container} className='flex flex-wrap justify-center lg:justify-between items-center  m-auto gap-8 lg:w-[70%] my-8'>
                             <motion.div variants={item} className='flex flex-col p-4 gap-2 justify-center items-center w-[10rem]'>
                                 <img alt='' src={av1} />
                                 <h2 className='font-semibold text-white text-lg'>John Doe</h2>
