@@ -131,7 +131,7 @@ const Home = () => {
                         whileInView={{opacity:1, x:0}}
                         exit={{ opacity:0, x:60}}
                         viewport={{once:false}}
-                        transition={{ duration: 0.7, ease:'linear' }}
+                        transition={{ duration: 0.4, ease:'linear' }}
                         onClick={closePopup} className='fixed h-screen w-[70vw] shad drop-shadow-xl right-0 backdrop-blur-lg bg-white/80 toppp'>
                             <div className='w-full h-full px-16 pt-8 leading-loose absolute flex flex-col items-end gap-4 backdrop-blur-lg bg-white/80 toppp'>
                             <img onClick={closePopup} alt='' src={close} className='w-8 mb-3' />
@@ -396,7 +396,7 @@ const Home = () => {
                             </motion.h1>
                             <p className='text-black/50 w-11/12 lg:w-[50%]  mt-4  text-lg '>JavaScript virtual machines (VMs) and platforms built upon them have also increased the popularity of JavaScript for server-side web applications. On the client side, JavaScript</p>
                             <div className='flex w-10/12 gap-3 md:gap-6 mt-8'>
-                        <motion.div variants={bubble} initial="up" animate="down" viewport={{once:false}} transition={{ repeatType:"loop",ease:"linear", type:"tween", repeat: Infinity, duration:5 }} className='scale-[50%] md:scale-[100%] md:w-[150px] h-[150px] bg-white rounded-full drop-shadow-2xl absolute top-[45%] right-[12%]'></motion.div>
+                        <motion.div variants={bubble} initial="up" animate="down" viewport={{once:false}} transition={{ repeatType:"loop",ease:"linear", type:"tween", repeat: Infinity, duration:5 }} className='scale-[50%] md:scale-[100%] md:w-[150px] h-[150px] bg-white rounded-full drop-shadow-2xl absolute top-[25%] right-[12%]'></motion.div>
                                 <img className='w-[45%] md:w-auto' alt='' src={gp} />
                                 <img className='w-[45%] md:w-auto'  alt='' src={as} />
                             </div>
