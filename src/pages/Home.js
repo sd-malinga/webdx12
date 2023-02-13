@@ -114,7 +114,7 @@ const Home = () => {
                     <div className="pc hidden lg:visible text-black/60 font-medium text-md flex lg:gap-10">
                         <Link to="about" className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out ">About</Link>
                         <Link to="services" className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out ">Services</Link>
-                        <Link to="stats" className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out ">Statistic</Link>
+                        {/*<Link to="stats" className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out ">Statistic</Link>*/}
                         <Link to="token" className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out ">Token</Link>
                         <Link to="roadmap" className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out ">Roadmap</Link>
                         <Link to="whitepaper" className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out ">Whitepaper</Link>
@@ -138,7 +138,7 @@ const Home = () => {
                             <Link onClick={closePopup} to="home" className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out ">Home</Link>
                             <Link onClick={closePopup} to="about" className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out ">About</Link>
                             <Link onClick={closePopup} to="services" className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out ">Services</Link>
-                            <Link onClick={closePopup} to="stats" className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out ">Statistic</Link>
+                            {/*<Link onClick={closePopup} to="stats" className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out ">Statistic</Link>*/}
                             <Link onClick={closePopup} to="token" className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out ">Token</Link>
                             <Link onClick={closePopup} to="apps" className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out ">Apps</Link>
                             <Link onClick={closePopup} to="roadmap" className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out ">Roadmap</Link>
