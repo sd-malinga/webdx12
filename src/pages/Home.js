@@ -486,19 +486,19 @@ const Home = () => {
                     initial="hidden"
                     whileInView="show"
                     viewport={{once:false}} className='flex flex-wrap lg:flex-nowrap justify-center gap-6 mt-12 md:gap-12 items-center w-full'>
-                        <motion.div variants={item} className='flex flex-col gap-4 text-white text-xs md:text-md font-bold justify-center hover:scale-[102%] transition-all duration-500 ease-in-out text-center p-5 grad rounded-2xl items-center w-[9rem] md:w-[15rem] min-h-[9rem] md:min-h-[15rem]'>
+                        <motion.div variants={item} className='flex hover:drop-shadow-xl hover:scale-[102%] transition-all duration-500 ease-in-out  flex-col gap-4 text-white text-xs md:text-md font-bold justify-center hover:scale-[102%] transition-all duration-500 ease-in-out text-center p-5 grad rounded-2xl items-center w-[9rem] md:w-[15rem] min-h-[9rem] md:min-h-[15rem]'>
                             <img className='w-[2rem]' alt='' src={pdf} />
                             <p>Terms & Conditions</p>
                         </motion.div>
-                        <motion.div variants={item} className='flex flex-col gap-4 text-white text-xs md:text-md font-bold justify-center hover:scale-[102%] transition-all duration-500 ease-in-out text-center p-5 grad rounded-2xl items-center w-[9rem] md:w-[15rem] min-h-[9rem] md:min-h-[15rem]'>
+                        <motion.div variants={item} className='flex hover:drop-shadow-xl hover:scale-[102%] transition-all duration-500 ease-in-out  flex-col gap-4 text-white text-xs md:text-md font-bold justify-center hover:scale-[102%] transition-all duration-500 ease-in-out text-center p-5 grad rounded-2xl items-center w-[9rem] md:w-[15rem] min-h-[9rem] md:min-h-[15rem]'>
                             <img className='w-[2rem]' alt='' src={pdf} />
                             <p>Whitepapers</p>
                         </motion.div>
-                        <motion.div variants={item} className='flex flex-col gap-4 text-white text-xs md:text-md font-bold justify-center hover:scale-[102%] transition-all duration-500 ease-in-out text-center p-5 grad rounded-2xl items-center w-[9rem] md:w-[15rem] min-h-[9rem] md:min-h-[15rem]'>
+                        <motion.div variants={item} className='flex hover:drop-shadow-xl hover:scale-[102%] transition-all duration-500 ease-in-out  flex-col gap-4 text-white text-xs md:text-md font-bold justify-center hover:scale-[102%] transition-all duration-500 ease-in-out text-center p-5 grad rounded-2xl items-center w-[9rem] md:w-[15rem] min-h-[9rem] md:min-h-[15rem]'>
                             <img className='w-[2rem]' alt='' src={pdf} />
                             <p>Privacy Policy</p>
                         </motion.div>
-                        <motion.div variants={item} className='flex flex-col gap-4 text-white text-xs md:text-md font-bold justify-center hover:scale-[102%] transition-all duration-500 ease-in-out text-center p-5 grad rounded-2xl items-center w-[9rem] md:w-[15rem] min-h-[9rem] md:min-h-[15rem]'>
+                        <motion.div variants={item} className='flex hover:drop-shadow-xl hover:scale-[102%] transition-all duration-500 ease-in-out  flex-col gap-4 text-white text-xs md:text-md font-bold justify-center hover:scale-[102%] transition-all duration-500 ease-in-out text-center p-5 grad rounded-2xl items-center w-[9rem] md:w-[15rem] min-h-[9rem] md:min-h-[15rem]'>
                             <img className='w-[2rem]' alt='' src={pdf} />
                             <p>Business Profile</p>
                         </motion.div>
@@ -835,7 +835,7 @@ const Home = () => {
                                 </div>
                                 <div className='flex gap-3 flex-col text-white/70'>
                                     <Link className='cursor-pointer hover:text-white transition-all duration-500 ease-in-out ' to='services'>Services</Link>
-                                    <Link className='cursor-pointer hover:text-white transition-all duration-500 ease-in-out ' to='statistics'>Statistics</Link>
+                                    {/*<Link className='cursor-pointer hover:text-white transition-all duration-500 ease-in-out ' to='statistics'>Statistics</Link>*/}
                                     <Link className='cursor-pointer hover:text-white transition-all duration-500 ease-in-out ' to='whitepaper'>Whitepapers</Link>
                                     <Link className='cursor-pointer hover:text-white transition-all duration-500 ease-in-out ' to='faq'>FAQs</Link>
                                 </div>
