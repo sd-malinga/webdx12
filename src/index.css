@@ -8,8 +8,18 @@ html {
   overflow-x: hidden;
   transition: all;
   transition-timing-function: ease-in-out;
-  transition-duration: 300ms;
+  transition-duration: 300ms; 
+  accent-color: unset;
 }
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 50px white inset;
+  -webkit-text-fill-color: rgb(0, 0, 0);
+} 
 
 html img{
   user-select: none;
@@ -39,6 +49,16 @@ hr {
   box-shadow: 0px 3px 32px 0px rgba(74, 131, 236, 0.262);
 }
 
+.conthrax{
+  font-family: 'Conthrax Semibold';
+}
+
+@font-face {
+  font-family: 'Conthrax SemiBold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Conthrax SemiBold'), url('assets/fonts/conthrax-sb.woff') format('woff');
+  }
 
 .grad{
   background: linear-gradient(89.84deg, #181F4E 0.13%, #303D8C 98.99%);
@@ -142,6 +162,10 @@ hr {
 
       .bottt{
         z-index: -9999; 
+      }
+
+      .botttt{
+        z-index: -99999; 
       }
 
 

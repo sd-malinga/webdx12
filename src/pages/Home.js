@@ -48,6 +48,8 @@ import fe3 from "../assets/features/feat03.webp";
 import fe4 from "../assets/features/feat04.webp";
 import fe5 from "../assets/features/feat05.webp";
 import fe6 from "../assets/features/feat06.webp";
+import coin1 from "../assets/coin1.webp";
+import coin2 from "../assets/coin2.webp";
 
 import { Link } from "react-scroll";
 import { motion, AnimatePresence } from "framer-motion";
@@ -110,7 +112,7 @@ const Home = () => {
           >
             <Link className="cursor-pointer " to="home">
               <img
-                className="h-[1rem] ml-0 lg:ml-4 lg:h-auto"
+                className="h-[1rem] ml-0 lg:ml-4 object-contain lg:h-[1.5rem]"
                 alt=""
                 src={logo}
               />
@@ -143,7 +145,7 @@ const Home = () => {
               </Link>
               <Link
                 to="Goldpaper"
-                className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out "
+                className="cursor-pointer hover:text-yellow-500 transition-all duration-500 ease-in-out "
               >
                 Goldpaper
               </Link>
@@ -166,12 +168,14 @@ const Home = () => {
                 Community
               </Link>
             </div>
-            <button className="rounded-lg pc px-6 py-4 text-white mr-4 font-medium text-sm grad">
-              Join Brit World
-            </button>
+            <a href='/login'>
+                <button className="rounded-lg pc px-6 py-4 text-white mr-4 font-medium text-sm grad">
+                Join Brit World
+                </button>
+            </a>
             <div
               onClick={handleClickOpen}
-              className="mob h-full  fixed right-8"
+              className="mob h-full fixed right-8"
             >
               <img onClick={handleClickOpen} alt="" src={nav} className="w-6" />
               {popup ? (
@@ -276,12 +280,11 @@ const Home = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false }}
               transition={{ duration: 1.2 }}
-              className="text-black/90 w-10/12 lg:w-[60%] m-auto pt-16 text-center font-black text-[2rem] md:text-[3rem] leading-[2rem] md:leading-[3rem] lg:leading-[3.5rem]"
+              className="text-black/90 w-10/12 lg:w-[60%] m-auto pt-16 text-center font-black text-[2rem] md:text-[2.8rem] leading-[2.3rem] md:leading-[3rem] lg:leading-[3.5rem]"
             >
-              Brit Gold Just Entered
-              <br />
+              <span className="conthrax uppercase text-blue-900">Brit.</span><span className="conthrax font-semibold uppercase text-yellow-500">Gold</span><br/>
               <span className="font-[100] text-[1.7rem] md:text-[2.7rem] text-black/60">
-                the Real World
+              Just Entered the Real World
               </span>
             </motion.h1>
 
@@ -290,9 +293,10 @@ const Home = () => {
               className="pc botttt transition-all duration-500 ease-in-out "
             >
               <div className="scale-[50%] md:scale-[100%] md:w-[400px] h-[400px] grad absolute rounded-full drop-shadow-2xl absolute top-4 -left-[8%]">
-                <img className="m-auto topppp mt-14 " alt="" src={logor} />
+                <img className="m-auto scale-[115%] topppp mt-14 " alt="" src={logor} />
               </div>
-              <motion.div
+              <motion.img
+                src={coin2}
                 variants={bubble}
                 initial="up"
                 animate="down"
@@ -302,10 +306,10 @@ const Home = () => {
                   ease: "linear",
                   type: "tween",
                   repeat: Infinity,
-                  duration: 5,
+                  duration: 4,
                 }}
                 className="scale-[50%] md:scale-[100%] md:w-[150px] h-[150px] bg-white rounded-full drop-shadow-2xl absolute top-[45%] left-[16%]"
-              ></motion.div>
+              ></motion.img>
               <motion.img
                 initial={{ y: 40 }}
                 whileInView={{ y: 0 }}
@@ -315,7 +319,8 @@ const Home = () => {
                 alt=""
                 src={shp1}
               />
-              <motion.div
+              <motion.img
+                src={coin1}
                 variants={bubble}
                 initial="up"
                 animate="down"
@@ -325,17 +330,17 @@ const Home = () => {
                   ease: "linear",
                   type: "tween",
                   repeat: Infinity,
-                  duration: 5,
+                  duration: 4,
                 }}
                 className="scale-[50%] md:scale-[100%] md:w-[150px] h-[150px] bg-white rounded-full drop-shadow-2xl absolute -bottom-[68%] right-[12%]"
-              ></motion.div>
+              ></motion.img>
             </motion.div>
 
             <div className="m-auto w-full mt-16 flex gap-3 items-center lg:gap-8 flex-col lg:flex-row justify-center">
               <button className="py-4 px-8 grad rounded-md w-11/12 lg:w-fit hover:drop-shadow-xl transition-all duration-500 ease-in-out text-white shad">
                 Buy Tokens 45% Off
               </button>
-              <button className="py-4 px-8 bg-yellow-500 w-11/12 lg:w-fit hover:bg-yellow-500 hover:drop-shadow-xl transition-all duration-500 ease-in-out rounded-md text-white shad">
+              <button className="py-4 px-8 bg-yellow-500 w-11/12 lg:w-fit hover:drop-shadow-xl transition-all duration-500 ease-in-out rounded-md text-white shad">
                 Goldpaper
               </button>
             </div>
@@ -471,8 +476,8 @@ const Home = () => {
 
           <section className="mt-8 md:mt-16 relative w-full gap-8 px-3 lg:px-12 flex flex-col-reverse lg:flex-row-reverse toppp">
             <motion.img
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false }}
               transition={{ duration: 0.7 }}
               className="p-6 object-contain"
@@ -506,20 +511,6 @@ const Home = () => {
                 mountain thought. Jumbo plus shine sale.
               </p>
 
-              <motion.div
-                variants={bubble}
-                initial="up"
-                animate="down"
-                viewport={{ once: false }}
-                transition={{
-                  repeatType: "loop",
-                  ease: "linear",
-                  type: "tween",
-                  repeat: Infinity,
-                  duration: 5,
-                }}
-                className="scale-[50%] md:scale-[100%] md:w-[150px] h-[150px] bg-white rounded-full drop-shadow-2xl absolute -bottom-[68%] right-[12%]"
-              ></motion.div>
               <div className="w-10/12 m-auto mt-6 md:mt-10">
                 <div className="flex gap-3 p-2 justify-start items-start">
                   <div className="mt-2 ">
@@ -818,7 +809,8 @@ const Home = () => {
                   server-side web applications. On the client side, JavaScript
                 </p>
                 <div className="flex w-10/12 gap-3 md:gap-6 mt-8">
-                  <motion.div
+                  <motion.img
+                src={logor}
                     variants={bubble}
                     initial="up"
                     animate="down"
@@ -828,15 +820,15 @@ const Home = () => {
                       ease: "linear",
                       type: "tween",
                       repeat: Infinity,
-                      duration: 5,
+                      duration: 4,
                     }}
                     className="scale-[50%] md:scale-[100%] md:w-[150px] h-[150px] bg-white rounded-full drop-shadow-2xl absolute top-[25%] right-[12%]"
-                  ></motion.div>
+                  ></motion.img>
                   <img className="w-[45%] md:w-auto" alt="" src={gp} />
                   <img className="w-[45%] md:w-auto" alt="" src={as} />
                 </div>
                 <img
-                  className="absolute pc -bottom-8 right-[20%] w-1/4"
+                  className="absolute pc -bottom-4 right-[20%] w-1/4"
                   alt=""
                   src={mob}
                 />
@@ -1648,6 +1640,10 @@ const Home = () => {
               src={divid}
               className="absolute -top-[1px] rotate-[180deg] w-screen"
             />
+            <img
+            src={logor}
+            className="absolute top-4 left-4 w-[10rem] pc "
+            />
             <div className="flex w-full md:w-[70%] justify-center flex-wrap md:flex-nowrap h-full m-auto">
               <div className=" text-center mt-[14%] md:mt-[20%] lg:text-left lg:w-[70%] m-auto text-white">
                 <p className="text-xs text-blue-200">▽ CONTACT US</p>
@@ -1672,7 +1668,7 @@ const Home = () => {
                   </a>
                 </p>
 
-                <div className="flex gap-16 mt-8 md:mt-16 w-full justify-center md:justify-start m-auto items-center">
+                <div className="flex gap-16 mt-8 md:mt-16 w-full justify-center md:justify-start m-auto items-start">
                   <div className="flex gap-3 flex-col text-white/70">
                     <Link
                       className="cursor-pointer hover:text-white transition-all duration-500 ease-in-out "
