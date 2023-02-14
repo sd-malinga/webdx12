@@ -266,6 +266,11 @@ const Home = () => {
                     >
                       Blog
                     </Link>
+                    <a href='/login'>
+                        <button className="rounded-lg absolute bottom-8 centerh w-10/12 px-6 py-4 text-white font-medium text-sm grad">
+                        Join Brit World
+                        </button>
+                    </a>
                   </div>
                 </motion.div>
               ) : (
