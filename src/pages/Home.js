@@ -822,7 +822,7 @@ const Home = () => {
                       repeat: Infinity,
                       duration: 4,
                     }}
-                    className="scale-[50%] md:scale-[100%] md:w-[150px] h-[150px] bg-white rounded-full drop-shadow-2xl absolute top-[25%] right-[12%]"
+                    className="scale-[50%] pc md:scale-[100%] md:w-[150px] h-[150px] bg-white rounded-full drop-shadow-2xl absolute top-[25%] right-[12%]"
                   ></motion.img>
                   <img className="w-[45%] md:w-auto" alt="" src={gp} />
                   <img className="w-[45%] md:w-auto" alt="" src={as} />
@@ -1638,7 +1638,7 @@ const Home = () => {
             <img
               alt=""
               src={divid}
-              className="absolute -top-[1px] rotate-[180deg] w-screen"
+              className="absolute top-0 md:-top-[1px] rotate-[180deg] w-screen"
             />
             <img
             src={logor}
