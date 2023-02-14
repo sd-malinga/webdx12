@@ -366,7 +366,7 @@ const Home = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false }}
               transition={{ duration: 0.7 }}
-              className="p-6 object-contain"
+              className="p-6 w-11/12 m-auto object-contain"
               alt=""
               src={img1}
             />
@@ -480,7 +480,7 @@ const Home = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false }}
               transition={{ duration: 0.7 }}
-              className="p-6 object-contain"
+              className="p-6 w-11/12 m-auto object-contain"
               alt=""
               src={img2}
             />
