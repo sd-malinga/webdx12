@@ -62,9 +62,6 @@ import Typography from "@mui/material/Typography";
 import React, { useState, useEffect } from "react";
 
 const Home = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   const [popup, setPop] = useState(false);
 
@@ -130,7 +127,7 @@ const Home = () => {
               >
                 Services
               </Link>
-              {/*<Link to="stats" className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out ">Statistic</Link>*/}
+              
               <Link
                 to="token"
                 className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out "
@@ -216,7 +213,6 @@ const Home = () => {
                     >
                       Services
                     </Link>
-                    {/*<Link onClick={closePopup} to="stats" className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out ">Statistic</Link>*/}
                     <Link
                       onClick={closePopup}
                       to="token"
@@ -297,8 +293,8 @@ const Home = () => {
               variants={container}
               className="pc botttt transition-all duration-500 ease-in-out "
             >
-              <div className="scale-[50%] md:scale-[100%] md:w-[400px] h-[400px] grad absolute rounded-full drop-shadow-2xl absolute top-4 -left-[8%]">
-                <img className="m-auto scale-[115%] topppp mt-14 " alt="" src={logor} />
+              <div className="scale-[50%] md:scale-[100%] md:w-[400px] h-[400px] grad absolute rounded-full drop-shadow-2xl absolute top-12 -left-[5%]">
+                <img className="m-auto topppp mt-14 " alt="" src={logor} />
               </div>
               <motion.img
                 src={coin2}
@@ -313,7 +309,7 @@ const Home = () => {
                   repeat: Infinity,
                   duration: 4,
                 }}
-                className="scale-[50%] md:scale-[100%] md:w-[150px] h-[150px] bg-white rounded-full drop-shadow-2xl absolute top-[45%] left-[16%]"
+                className="scale-[50%] md:scale-[100%] md:w-[150px] h-[150px] bg-white rounded-full drop-shadow-2xl absolute bottom-[0%] left-[16%]"
               ></motion.img>
               <motion.img
                 initial={{ y: 40 }}
@@ -342,14 +338,22 @@ const Home = () => {
             </motion.div>
 
             <div className="m-auto w-full mt-16 flex gap-3 items-center lg:gap-8 flex-col lg:flex-row justify-center">
-              <button className="py-4 px-8 grad rounded-md w-11/12 lg:w-fit hover:drop-shadow-xl transition-all duration-500 ease-in-out text-white shad">
+              <button className="py-4 px-8 grad rounded-md w-11/12 lg:w-[15rem] hover:drop-shadow-xl transition-all duration-500 ease-in-out text-white shad">
                 Buy Tokens 45% Off
               </button>
-              <button className="py-4 px-8 bg-yellow-500 w-11/12 lg:w-fit hover:drop-shadow-xl transition-all duration-500 ease-in-out rounded-md text-white shad">
+              <button className="py-4 px-8 bg-yellow-500 w-11/12 lg:w-[15rem] hover:drop-shadow-xl transition-all duration-500 ease-in-out rounded-md text-white shad">
                 Goldpaper
               </button>
             </div>
-            <img className="m-auto mt-12 noselect" alt="" src={pay} />
+            {/*<img className="m-auto mt-12 noselect" alt="" src={pay} />*/}
+            <form className="mt-12 m-auto flex flex-col gap-2">
+              <h1 className="mt-4 text-center font-semibold text-blue-900">Verify Your Brit.Gold</h1>
+              <div className="flex -gap-4 w-11/12 lg:w-[36%] m-auto mt-4 justify-center items-center">
+                <input type='text' placeholder="Verify your Brit.Gold" className="p-4 px-6 border-solid border-2 rounded-xl outline-none border-blue-400 w-11/12 lg:w-[32rem] m-auto" />
+                <button type="submit" className="py-4 px-8 -ml-3 grad rounded-md m-auto lg:w-[15rem] hover:drop-shadow-xl transition-all duration-500 ease-in-out text-white shad" >Verify</button>
+              </div>
+            </form>
+
           </section>
 
           {/*<img className='m-auto w-11/12 mt-12 drop-shadow-xl shad hover:p-4 bg-white/20 backdrop-blur-xl hover:scale-[102%] transition-all duration-700 ease-in-out rounded-lg  md:w-1/2' alt='' src={vid} />*/}
@@ -1646,6 +1650,7 @@ const Home = () => {
               className="absolute top-0 md:-top-[1px] rotate-[180deg] w-screen"
             />
             <img
+            alt=""
             src={logor}
             className="absolute top-4 left-4 w-[10rem] pc "
             />
