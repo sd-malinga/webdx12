@@ -349,8 +349,8 @@ const Home = () => {
             <form className="mt-12 m-auto flex flex-col gap-2">
               <h1 className="mt-4 text-center font-semibold text-blue-900">Verify Your Brit.Gold</h1>
               <div className="flex -gap-4 w-11/12 lg:w-[36%] m-auto mt-4 justify-center items-center">
-                <input type='text' placeholder="Verify your Brit.Gold" className="p-4 px-6 border-solid border-2 rounded-xl outline-none border-blue-400 w-11/12 lg:w-[32rem] m-auto" />
-                <button type="submit" className="py-4 px-8 -ml-3 grad rounded-md m-auto lg:w-[15rem] hover:drop-shadow-xl transition-all duration-500 ease-in-out text-white shad" >Verify</button>
+                <input type='text' placeholder="Track your Brit.Gold" className="p-4 px-6 border-solid border-2 rounded-xl outline-none border-blue-400 w-11/12 lg:w-[32rem] m-auto" />
+                <button type="submit" className="py-4 px-8 -ml-3 grad rounded-md m-auto lg:w-[15rem] hover:drop-shadow-xl transition-all duration-500 ease-in-out text-white shad" >Track</button>
               </div>
             </form>
 
