@@ -26,6 +26,9 @@ html img{
   user-select: none;
 }
 
+select option{
+  padding: 2rem;
+}
 body {  
   margin: 0;
   padding: 0;
