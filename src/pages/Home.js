@@ -1,6 +1,5 @@
 import logo from "../assets/head-logo.webp";
 import logor from "../assets/logo-round.webp";
-import pay from "../assets/div.webp";
 import img1 from "../assets/img-1.webp";
 import img2 from "../assets/img-2.webp";
 import mob from "../assets/mobile.webp";
@@ -59,7 +58,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const Home = () => {
 
