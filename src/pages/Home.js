@@ -61,7 +61,6 @@ import Typography from "@mui/material/Typography";
 import React, { useState } from "react";
 
 const Home = () => {
-
   const [popup, setPop] = useState(false);
 
   const handleClickOpen = () => {
@@ -126,7 +125,7 @@ const Home = () => {
               >
                 Services
               </Link>
-              
+
               <Link
                 to="token"
                 className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out "
@@ -164,15 +163,12 @@ const Home = () => {
                 Community
               </Link>
             </div>
-            <a href='/login'>
-                <button className="rounded-lg pc px-6 py-4 text-white mr-4 font-medium text-sm grad">
+            <a href="https://britgold-dashboard.vercel.app/register">
+              <button className="rounded-lg pc px-6 py-4 text-white mr-4 font-medium text-sm grad">
                 Join Brit World
-                </button>
+              </button>
             </a>
-            <div
-              onClick={handleClickOpen}
-              className="mob h-full fixed right-8"
-            >
+            <div onClick={handleClickOpen} className="mob h-full fixed right-8">
               <img onClick={handleClickOpen} alt="" src={nav} className="w-6" />
               {popup ? (
                 <motion.div
@@ -261,10 +257,10 @@ const Home = () => {
                     >
                       Blog
                     </Link>
-                    <a href='/login'>
-                        <button className="rounded-lg absolute bottom-8 centerh w-10/12 px-6 py-4 text-white font-medium text-sm grad">
+                    <a href="/login">
+                      <button className="rounded-lg absolute bottom-8 centerh w-10/12 px-6 py-4 text-white font-medium text-sm grad">
                         Join Brit World
-                        </button>
+                      </button>
                     </a>
                   </div>
                 </motion.div>
@@ -282,9 +278,15 @@ const Home = () => {
               transition={{ duration: 1.2 }}
               className="text-black/90 w-10/12 lg:w-[60%] m-auto pt-16 text-center font-black text-[2rem] md:text-[2.8rem] leading-[2.3rem] md:leading-[3rem] lg:leading-[3.5rem]"
             >
-              <span className="conthrax uppercase text-blue-900 text-4xl">Brit.</span><span className="conthrax font-semibold uppercase text-yellow-500 text-4xl">Gold</span><br/>
+              <span className="conthrax uppercase text-blue-900 text-4xl">
+                Brit.
+              </span>
+              <span className="conthrax font-semibold uppercase text-yellow-500 text-4xl">
+                Gold
+              </span>
+              <br />
               <span className="font-[100] text-[1.7rem] md:text-[2.7rem] text-black/60">
-              Just Entered the Real World
+                Just Entered the Real World
               </span>
             </motion.h1>
 
@@ -346,19 +348,35 @@ const Home = () => {
             </div>
             {/*<img className="m-auto mt-12 noselect" alt="" src={pay} />*/}
             <form className="mt-12 m-auto flex flex-col gap-2">
-              <h1 className="mt-4 text-center font-semibold text-blue-900">Track Your Brit.Gold</h1>
+              <h1 className="mt-4 text-center font-semibold text-blue-900">
+                Track Your Brit.Gold
+              </h1>
               <div className="flex -gap-4 w-11/12 lg:w-[36%] m-auto mt-4 justify-center items-center">
-                <input type='text' placeholder="Enter your Unique ID" className="p-4 px-6 border-solid border-2 rounded-xl outline-none border-blue-400 w-11/12 lg:w-[32rem] m-auto" />
-                <button type="submit" className="py-4 px-8 -ml-3 grad rounded-md m-auto lg:w-[15rem] hover:drop-shadow-xl transition-all duration-500 ease-in-out text-white shad" >Verify</button>
+                <input
+                  type="text"
+                  placeholder="Enter your Unique ID"
+                  className="p-4 px-6 border-solid border-2 rounded-xl outline-none border-blue-400 w-11/12 lg:w-[32rem] m-auto"
+                />
+                <button
+                  type="submit"
+                  className="py-4 px-8 -ml-3 grad rounded-md m-auto lg:w-[15rem] hover:drop-shadow-xl transition-all duration-500 ease-in-out text-white shad"
+                >
+                  Verify
+                </button>
               </div>
             </form>
-
           </section>
 
           {/*<img className='m-auto w-11/12 mt-12 drop-shadow-xl shad hover:p-4 bg-white/20 backdrop-blur-xl hover:scale-[102%] transition-all duration-700 ease-in-out rounded-lg  md:w-1/2' alt='' src={vid} />*/}
 
           <h1 className="text-black/90 w-10/12 lg:w-[60%] my-24 m-auto pt-16 text-center font-black text-[2rem] md:text-[3rem] leading-[2rem] md:leading-[3rem] lg:leading-[3.5rem]">
-          <span className="conthrax uppercase text-blue-900 text-4xl">Brit.</span><span className="conthrax font-semibold uppercase text-yellow-500 text-4xl">Gold</span> Just Entered
+            <span className="conthrax uppercase text-blue-900 text-4xl">
+              Brit.
+            </span>
+            <span className="conthrax font-semibold uppercase text-yellow-500 text-4xl">
+              Gold
+            </span>{" "}
+            Just Entered
             <br />
             <span className="font-[100] text-[1.7rem] md:text-[2.7rem] text-black/60">
               the Real World
@@ -507,7 +525,13 @@ const Home = () => {
                   className="transition-all duration-500 ease-in-out hover:text-blue-700"
                   href="#about"
                 >
-                  <span className="conthrax uppercase text-blue-900 text-4xl">Brit.</span><span className="conthrax font-semibold uppercase text-yellow-500 text-4xl">Gold</span> Theme <br />
+                  <span className="conthrax uppercase text-blue-900 text-4xl">
+                    Brit.
+                  </span>
+                  <span className="conthrax font-semibold uppercase text-yellow-500 text-4xl">
+                    Gold
+                  </span>{" "}
+                  Theme <br />
                   <span className="font-[100] text-[1.7rem] md:text-[2.4rem] text-black/60">
                     is the best for your ICO
                   </span>
@@ -604,7 +628,13 @@ const Home = () => {
               transition={{ duration: 1.2 }}
               className="text-black/90 w-10/12 lg:w-[60%] m-auto pt-6 text-center font-black text-[2rem] md:text-[3rem] leading-[2rem] md:leading-[3rem] lg:leading-[3.5rem]"
             >
-              <span className="conthrax uppercase text-blue-900 text-4xl">Brit.</span><span className="conthrax font-semibold uppercase text-yellow-500 text-4xl">Gold</span> Features
+              <span className="conthrax uppercase text-blue-900 text-4xl">
+                Brit.
+              </span>
+              <span className="conthrax font-semibold uppercase text-yellow-500 text-4xl">
+                Gold
+              </span>{" "}
+              Features
             </motion.h1>
 
             <div className="w-full md:w-[85%] m-auto scale-[90%] md:scale-[85%] mt-12 justify-center flex flex-wrap gap-4">
@@ -722,7 +752,13 @@ const Home = () => {
               transition={{ duration: 1.2 }}
               className="text-black/90 w-10/12 lg:w-[60%] m-auto pt-6 text-center font-black text-[2rem] md:text-[3rem] leading-[2rem] md:leading-[3rem] lg:leading-[3.5rem]"
             >
-              Working of <span className="conthrax uppercase text-blue-900 text-4xl">Brit.</span><span className="conthrax font-semibold uppercase text-yellow-500 text-4xl">Gold</span>{" "}
+              Working of{" "}
+              <span className="conthrax uppercase text-blue-900 text-4xl">
+                Brit.
+              </span>
+              <span className="conthrax font-semibold uppercase text-yellow-500 text-4xl">
+                Gold
+              </span>{" "}
             </motion.h1>
             <motion.div
               initial="hidden"
@@ -809,7 +845,13 @@ const Home = () => {
                   transition={{ duration: 1.2 }}
                   className="text-black/90 w-11/12 lg:w-[40%] pt-16 font-black text-[2rem] md:text-[3rem] leading-[2rem] md:leading-[3rem] lg:leading-[3.5rem]"
                 >
-                  <span className="conthrax uppercase text-blue-900 text-4xl">Brit.</span><span className="conthrax font-semibold uppercase text-yellow-500 text-4xl">Gold</span> App for ICO Platform
+                  <span className="conthrax uppercase text-blue-900 text-4xl">
+                    Brit.
+                  </span>
+                  <span className="conthrax font-semibold uppercase text-yellow-500 text-4xl">
+                    Gold
+                  </span>{" "}
+                  App for ICO Platform
                 </motion.h1>
                 <p className="text-black/50 w-11/12 lg:w-[50%]  mt-4  text-lg ">
                   JavaScript virtual machines (VMs) and platforms built upon
@@ -818,7 +860,7 @@ const Home = () => {
                 </p>
                 <div className="flex w-10/12 gap-3 md:gap-6 mt-8">
                   <motion.img
-                src={logor}
+                    src={logor}
                     variants={bubble}
                     initial="up"
                     animate="down"
@@ -1011,7 +1053,13 @@ const Home = () => {
               transition={{ duration: 1.2 }}
               className="text-black/90 w-10/12 lg:w-[60%] m-auto pt-6 text-center font-black text-[2rem] md:text-[3rem] leading-[2rem] md:leading-[3rem] lg:leading-[3.5rem]"
             >
-              Documents of <span className="conthrax uppercase text-blue-900 text-4xl">Brit.</span><span className="conthrax font-semibold uppercase text-yellow-500 text-4xl">Gold</span>{" "}
+              Documents of{" "}
+              <span className="conthrax uppercase text-blue-900 text-4xl">
+                Brit.
+              </span>
+              <span className="conthrax font-semibold uppercase text-yellow-500 text-4xl">
+                Gold
+              </span>{" "}
             </motion.h1>
 
             <motion.div
@@ -1033,7 +1081,7 @@ const Home = () => {
                 className="flex flex-col gap-4 text-white text-xs md:text-md font-bold justify-center hover:scale-[102%] transition-all duration-500 ease-in-out text-center p-5 grad rounded-2xl items-center w-[9rem] md:w-[15rem] min-h-[9rem] md:min-h-[15rem]"
               >
                 <img className="w-[2rem]" alt="" src={pdf} />
-                <p>Goldpapers</p>
+                <p>Goldpaper</p>
               </motion.div>
               <motion.div
                 variants={item}
@@ -1481,7 +1529,13 @@ const Home = () => {
               transition={{ duration: 1.2 }}
               className="text-black/90 w-10/12 lg:w-[60%] m-auto pt-6 text-center font-black text-[2rem] md:text-[3rem] leading-[2rem] md:leading-[3rem] lg:leading-[3.5rem]"
             >
-              Blog by <span className="conthrax uppercase text-blue-900 text-4xl">Brit.</span><span className="conthrax font-semibold uppercase text-yellow-500 text-4xl">Gold</span>
+              Blog by{" "}
+              <span className="conthrax uppercase text-blue-900 text-4xl">
+                Brit.
+              </span>
+              <span className="conthrax font-semibold uppercase text-yellow-500 text-4xl">
+                Gold
+              </span>
             </motion.h1>
 
             <motion.div
@@ -1649,9 +1703,9 @@ const Home = () => {
               className="absolute top-0 md:-top-[1px] rotate-[180deg] w-screen"
             />
             <img
-            alt=""
-            src={logor}
-            className="absolute top-4 left-4 w-[10rem] pc "
+              alt=""
+              src={logor}
+              className="absolute top-4 left-4 w-[10rem] pc "
             />
             <div className="flex w-full md:w-[70%] justify-center flex-wrap md:flex-nowrap h-full m-auto">
               <div className=" text-center mt-[14%] md:mt-[20%] lg:text-left lg:w-[70%] m-auto text-white">

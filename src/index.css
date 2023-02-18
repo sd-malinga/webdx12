@@ -2,13 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
   transition: all;
   transition-timing-function: ease-in-out;
-  transition-duration: 300ms; 
+  transition-duration: 300ms;
   accent-color: unset;
   overflow-x: hidden;
 }
@@ -20,168 +19,162 @@ input:-webkit-autofill {
 input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 50px white inset;
   -webkit-text-fill-color: rgb(0, 0, 0);
-} 
+}
 
-html img{
+html img {
   user-select: none;
 }
 
-select option{
+select option {
   padding: 2rem;
 }
-body {  
+body {
   margin: 0;
   padding: 0;
-  font-family: 'Raleway';
+  font-family: "Raleway";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #ffffff;
   scroll-behavior: smooth;
 }
 
-.shad{
+.shad {
   box-shadow: 0px 3px 32px 0px rgba(74, 131, 236, 0.54);
 }
 
 hr {
-  height:2.5rem;
+  height: 2.5rem;
   width: 1px;
-  border:0.7px solid rgba(0, 0, 0, 0.137);
+  border: 0.7px solid rgba(0, 0, 0, 0.137);
 }
 
-.shad1{
+.shad1 {
   box-shadow: 0px 3px 32px 0px rgba(74, 131, 236, 0.262);
 }
 
-.conthrax{
-  font-family: 'Conthrax Semibold';
+.conthrax {
+  font-family: "Conthrax Semibold";
 }
 
 @font-face {
-  font-family: 'Conthrax SemiBold';
+  font-family: "Conthrax SemiBold";
   font-style: normal;
   font-weight: normal;
-  src: local('Conthrax SemiBold'), url('assets/fonts/conthrax-sb.woff') format('woff');
-  }
-
-.grad{
-  background: linear-gradient(89.84deg, #181F4E 0.13%, #303D8C 98.99%);
+  src: local("Conthrax SemiBold"),
+    url("assets/fonts/conthrax-sb.woff") format("woff");
 }
 
-.manr{
-  font-family: 'Manrope';
+.grad {
+  background: linear-gradient(89.84deg, #181f4e 0.13%, #303d8c 98.99%);
+}
+
+.manr {
+  font-family: "Manrope";
 }
 
 /*---------------HP Classics---------------*/
 
-
 /*centering absolute stuff*/
 
-      .centerh{      
-        left: 50%;                        
-        transform: translate(-50%, 0)
-      }
+.centerh {
+  left: 50%;
+  transform: translate(-50%, 0);
+}
 
-      .centerv{      
-        top: 50%;                        
-        transform: translate(0, -50%)
-        
-      }
-
+.centerv {
+  top: 50%;
+  transform: translate(0, -50%);
+}
 
 /*Selection controls*/
 
-      ::-moz-selection {
-        color: rgb(255, 255, 255); 
-        background: #ffc907;
-      }
+::-moz-selection {
+  color: rgb(255, 255, 255);
+  background: #ffc907;
+}
 
-      ::selection {
-        color: rgb(255, 255, 255); 
-        background: #ffc907;
-      }
+::selection {
+  color: rgb(255, 255, 255);
+  background: #ffc907;
+}
 
-      .noselect {
-        -webkit-user-drag: none;
-        user-select: none;
-        -moz-user-select: none;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-        pointer-events: none;
-      }
-
+.noselect {
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  pointer-events: none;
+}
 
 /*media hacks*/
 
-      .pc{
-        visibility: visible;
-        display: flex;
-      }
+.pc {
+  visibility: visible;
+  display: flex;
+}
 
-      .mob{
-        visibility: hidden;
-        display: none;
-      }
-      
-      .hide{
-        display: none;
-        visibility: hidden;
-      }
+.mob {
+  visibility: hidden;
+  display: none;
+}
 
+.hide {
+  display: none;
+  visibility: hidden;
+}
 
 /*Scrollbar customized*/
 
-    ::-webkit-scrollbar-track {
-      background-color: transparent;
-      overflow: overlay;
-      width: 5px;
-      z-index: 100;
-    }
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  overflow: overlay;
+  width: 5px;
+  z-index: 100;
+}
 
-    ::-webkit-scrollbar {
-      width: 5px;
-      overflow: overlay;
-      z-index: 100;
-      height: 4px;
-    }
+::-webkit-scrollbar {
+  width: 5px;
+  overflow: overlay;
+  z-index: 100;
+  height: 4px;
+}
 
-    ::-webkit-scrollbar-thumb {
-      visibility: visible;
-      border-radius: 100px;
+::-webkit-scrollbar-thumb {
+  visibility: visible;
+  border-radius: 100px;
 
-      background-color: #d8d8d8;
-      z-index: 150;
-    }
-
+  background-color: #d8d8d8;
+  z-index: 150;
+}
 
 /*z-index hacks*/
 
-      .toppp{
-        z-index: 9999;
-      }
+.toppp {
+  z-index: 9999;
+}
 
-      .topppp{
-        z-index: 99999;
-      }
+.topppp {
+  z-index: 99999;
+}
 
-      .bottt{
-        z-index: -9999; 
-      }
+.bottt {
+  z-index: -9999;
+}
 
-      .botttt{
-        z-index: -99999; 
-      }
-
+.botttt {
+  z-index: -99999;
+}
 
 /*animation*/
 
-      .scaleup{
-        transition: scale 0.5s;
-        transition-timing-function: ease-in-out;
-      }
-      .scaleup:hover{
-        scale: 101%;
-      }
+.scaleup {
+  transition: scale 0.5s;
+  transition-timing-function: ease-in-out;
+}
+.scaleup:hover {
+  scale: 101%;
+}
 
 /*others*/
 
@@ -192,23 +185,20 @@ abbr[title] {
 }
 
 @media screen and (max-width: 1024px) {
-
-  .mob{
+  .mob {
     visibility: visible;
-    display:flex;
+    display: flex;
   }
-  .pc{
+  .pc {
     visibility: hidden;
     display: none;
   }
 
   hr {
-    height:1.8rem;
+    height: 1.8rem;
     width: 1px;
-    border:0.7px solid rgba(0, 0, 0, 0.137);
+    border: 0.7px solid rgba(0, 0, 0, 0.137);
   }
-
 }
-
 
 /*---------------HP Classics---------------*/
