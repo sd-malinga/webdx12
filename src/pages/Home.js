@@ -1,7 +1,7 @@
-import logo from "../assets/head-logo.webp";
+import logo from "../assets/head-logo-hd.png";
 import logor from "../assets/logo-round.webp";
 import img1 from "../assets/img-1.webp";
-import img2 from "../assets/img-2.webp";
+import img2 from "../assets/img-2.svg";
 import mob from "../assets/mobile.webp";
 import shp1 from "../assets/shp01.svg";
 import shp2 from "../assets/shp02.svg";
@@ -107,7 +107,7 @@ const Home = () => {
           >
             <Link className="cursor-pointer" to="home">
               <img
-                className="h-[1rem] ml-0 lg:ml-4 object-contain lg:h-[1.5rem]"
+                className="h-[1rem] ml-0 lg:ml-4 object-contain lg:h-[2rem]"
                 alt=""
                 src={logo}
               />
