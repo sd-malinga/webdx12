@@ -27,8 +27,15 @@ import prtnr3 from "../assets/partners/partner (3).png";
 import prtnr4 from "../assets/partners/partner (4).png";
 import prtnr5 from "../assets/partners/partner (5).png";
 
-import gp from "../assets/gp.png";
-import as from "../assets/as.png";
+/* import gp from "../assets/gp.png";
+import as from "../assets/as.png"; 
+import fe1 from "../assets/features/feat01.webp";
+import fe2 from "../assets/features/feat02.webp";
+import fe3 from "../assets/features/feat03.webp";
+import fe4 from "../assets/features/feat04.webp";
+import fe5 from "../assets/features/feat05.webp";
+import fe6 from "../assets/features/feat06.webp";
+ */
 import av1 from "../assets/team/ava (1).png";
 import av2 from "../assets/team/ava (2).png";
 import av3 from "../assets/team/ava (3).png";
@@ -41,12 +48,6 @@ import cmp4 from "../assets/company/Logo_4.png";
 import cmp5 from "../assets/company/Logo_5.png";
 import cmp6 from "../assets/company/Logo_6.png";
 
-import fe1 from "../assets/features/feat01.webp";
-import fe2 from "../assets/features/feat02.webp";
-import fe3 from "../assets/features/feat03.webp";
-import fe4 from "../assets/features/feat04.webp";
-import fe5 from "../assets/features/feat05.webp";
-import fe6 from "../assets/features/feat06.webp";
 import coin1 from "../assets/coin1.webp";
 import coin2 from "../assets/coin2.webp";
 
@@ -119,12 +120,12 @@ const Home = () => {
               >
                 About
               </Link>
-              <Link
+              {/*      <Link
                 to="services"
                 className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out "
               >
                 Services
-              </Link>
+              </Link> */}
 
               <Link
                 to="token"
@@ -397,9 +398,9 @@ const Home = () => {
               src={img1}
             />
             <div className="">
-              <p className="text-xs pt-24 w-10/12 m-auto text-[#303C8B]">
+              {/*               <p className="text-xs pt-24 w-10/12 m-auto text-[#303C8B]">
                 ▽ DECENTRALISED ECONOMY
-              </p>
+              </p> */}
               <motion.h1
                 initial={{ opacity: 0, x: 40 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -408,99 +409,165 @@ const Home = () => {
                 className="text-black/90 w-10/12 m-auto pt-6 font-black text-[2rem] md:text-[3rem] leading-[2rem] md:leading-[3rem] lg:leading-[3.5rem]"
               >
                 <a
-                  className="transition-all duration-500 ease-in-out hover:text-blue-700"
+                  className="transition-all duration-500 ease-in-out hover:text-blue-700 "
                   href="#about"
                 >
-                  A banking platform that <br />
-                  <span className="font-[100] text-[1.7rem] md:text-[2.4rem] text-black/60">
+                  What is BRIT.GOLD and <br />
+                  Why is it Different?
+                  <br />
+                  {/*                <span className="font-[100] text-[1.7rem] md:text-[2.4rem] text-black/60">
                     enables developer solutions
-                  </span>
+                  </span> */}
                 </a>
               </motion.h1>
-              <p className="text-black/50 w-10/12 mt-4  m-auto text-lg ">
-                Spend real fights effective anything extra by leading.
-                Mouthwatering leading how real formula also locked-in have can
-                mountain thought. Jumbo plus shine sale.
+              <p className="text-black w-10/12 mt-4  m-auto text-lg ">
+                Cryptocurrencies are here to stay in one form or another, but
+                things need to change to allow access to all.
+                <br />
+                <br />{" "}
+                <span className="conthrax uppercase text-blue-900 ">Brit.</span>
+                <span className="conthrax font-semibold uppercase text-yellow-500 ">
+                  Gold
+                </span>{" "}
+                allows investors to trade otherwise illiquid assets. We deliver
+                accessibility for customers of all income levels by bridging the
+                gap between modern digital acquisitions and good old-fashioned
+                physical gold.
               </p>
-              <div className="w-10/12 m-auto mt-6 md:mt-10">
-                <div className="flex gap-3 p-2 justify-start items-start">
-                  <div className="mt-2 ">
-                    <svg
-                      width="15"
-                      height="13"
-                      viewBox="0 0 13 10"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8.79302 1.92236L10.062 3.18239L5.60699 7.64646L4.33801 6.36842L8.79302 1.92236Z"
-                        fill="#0008B2"
-                      />
-                      <path
-                        d="M1.69202 4.59545L2.96099 3.32642L6.40801 6.76437L5.13903 8.04241L1.69202 4.59545Z"
-                        fill="#0008B2"
-                      />
-                    </svg>
-                  </div>
-                  <p className="text-black/80 ">
-                    <strong>Modular structure </strong>enabling easy
-                    implementation for different softwares
+            </div>
+          </section>
+
+          <section name="services" className="mt-8 md:mt-16 relative">
+            {/*             <p className="text-xs pt-24 w-10/12 text-center m-auto text-[#303C8B]">
+              ▽ FEATURES BRIT GOLD
+            </p> */}
+            <motion.h1
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 1.2 }}
+              className="text-black/90 w-10/12 lg:w-[60%] m-auto pt-6 text-center font-black text-[2rem] md:text-[3rem] leading-[2rem] md:leading-[3rem] lg:leading-[3.5rem]"
+            >
+              <p className="text-xl">
+                With{" "}
+                <span className="conthrax uppercase text-blue-900 ">Brit.</span>
+                <span className="conthrax font-semibold uppercase text-yellow-500">
+                  Gold
+                </span>{" "}
+                physical gold bars and investment-quality coins become divisible
+                into digital equivalents with asset-backed NFTs. This
+                democratizes the entire purchase process and ensures
+                accessibility.
+              </p>
+            </motion.h1>
+
+            <div className="w-full md:w-[85%] m-auto scale-[90%] md:scale-[85%] mt-12 justify-center flex flex-wrap gap-4">
+              <div className="flex flex-wrap md:flex-nowrap justify-center gap-4 bg-white rounded-xl p-4 items-start w-full md:w-[45%]">
+                <div className="text-center md:text-left ">
+                  <h3 className=" font-bold text-2xl my-2 text-yellow-500">
+                    ADAPTABLE
+                  </h3>
+                  <p className="text-black/60">
+                    Digital assets are easily transferable and transactions
+                    occur instantly. No settlement required.
                   </p>
                 </div>
-                <div className="flex gap-3 p-2 justify-start items-start">
-                  <div className="mt-2">
-                    <svg
-                      width="15"
-                      height="13"
-                      viewBox="0 0 13 10"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8.79302 1.92236L10.062 3.18239L5.60699 7.64646L4.33801 6.36842L8.79302 1.92236Z"
-                        fill="#0008B2"
-                      />
-                      <path
-                        d="M1.69202 4.59545L2.96099 3.32642L6.40801 6.76437L5.13903 8.04241L1.69202 4.59545Z"
-                        fill="#0008B2"
-                      />
-                    </svg>
-                  </div>
-                  <p className="text-black/80 ">
-                    <strong>Advanced payment </strong>and processing
-                    technologies, fine-tuned from more than 3 years of
-                    development testing
+              </div>
+              <div className="flex flex-wrap md:flex-nowrap justify-center gap-4 bg-white rounded-xl p-4 items-start w-full md:w-[45%]">
+                <div className="text-center md:text-left ">
+                  <h3 className=" font-bold text-2xl my-2 text-yellow-500">
+                    SUPPORTED
+                  </h3>
+                  <p className="text-black/60">
+                    <span className="conthrax uppercase text-blue-900 ">
+                      Brit.
+                    </span>
+                    <span className="conthrax font-semibold uppercase text-yellow-500">
+                      Gold
+                    </span>{" "}
+                    offers a range of services including product support,
+                    uninterrupted online trading, and global market access.
                   </p>
                 </div>
-                <div className="flex gap-3 p-2 justify-start items-start">
-                  <div className="mt-2">
-                    <svg
-                      width="15"
-                      height="13"
-                      viewBox="0 0 13 10"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8.79302 1.92236L10.062 3.18239L5.60699 7.64646L4.33801 6.36842L8.79302 1.92236Z"
-                        fill="#0008B2"
-                      />
-                      <path
-                        d="M1.69202 4.59545L2.96099 3.32642L6.40801 6.76437L5.13903 8.04241L1.69202 4.59545Z"
-                        fill="#0008B2"
-                      />
-                    </svg>
-                  </div>
-                  <p className="text-black/80 ">
-                    <strong>Unified AppStore </strong>for retail cryptocurrency
-                    solutions with a Crypterium products audience
+              </div>
+              <div className="flex flex-wrap md:flex-nowrap justify-center gap-4 bg-white rounded-xl p-4 items-start w-full md:w-[45%]">
+                <div className="text-center md:text-left ">
+                  <h3 className=" font-bold text-2xl my-2 text-yellow-500">
+                    ACCESSIBLE
+                  </h3>
+                  <p className="text-black/60">
+                    Our NFTs can be bought by anyone, anywhere in the world, so
+                    long as they register with{" "}
+                    <span className="conthrax uppercase text-blue-900 ">
+                      Brit.
+                    </span>
+                    <span className="conthrax font-semibold uppercase text-yellow-500">
+                      Gold
+                    </span>{" "}
+                    and complete their KYC (Know Your Customer) requirements.
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-wrap md:flex-nowrap justify-center gap-4 bg-white rounded-xl p-4 items-start w-full md:w-[45%]">
+                <div className="text-center md:text-left ">
+                  <h3 className=" font-bold text-2xl my-2 text-yellow-500">
+                    TRANSPARENT
+                  </h3>
+                  <p className="text-black/60">
+                    On-chain monitoring verifies asset backing at all times.
+                    Information about physical gold is stored in the metadata of{" "}
+                    <span className="conthrax uppercase text-blue-900 ">
+                      Brit.
+                    </span>
+                    <span className="conthrax font-semibold uppercase text-yellow-500">
+                      Gold
+                    </span>{" "}
+                    NFTs.
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-wrap md:flex-nowrap justify-center gap-4 bg-white rounded-xl p-4 items-start w-full md:w-[45%]">
+                <div className="text-center md:text-left ">
+                  <h3 className=" font-bold text-2xl my-2 text-yellow-500">
+                    SIMPLE
+                  </h3>
+                  <p className="text-black/60">
+                    <span className="conthrax uppercase text-blue-900 ">
+                      Brit.
+                    </span>
+                    <span className="conthrax font-semibold uppercase text-yellow-500">
+                      Gold
+                    </span>{" "}
+                    aims to be the fastest and easiest way for anyone to buy
+                    gold, in the form of NFTs.
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-wrap md:flex-nowrap justify-center gap-4 bg-white rounded-xl p-4 items-start w-full md:w-[45%]">
+                <div className="text-center md:text-left ">
+                  <h3 className=" font-bold text-2xl my-2 text-yellow-500">
+                    SECURE
+                  </h3>
+                  <p className="text-black/60">
+                    <span className="conthrax uppercase text-blue-900 ">
+                      Brit.
+                    </span>
+                    <span className="conthrax font-semibold uppercase text-yellow-500">
+                      Gold
+                    </span>{" "}
+                    uses advanced security measures such as multi-factor
+                    authentication and encryption to ensure that transactions
+                    and user data are protected from unauthorized access.
                   </p>
                 </div>
               </div>
             </div>
           </section>
 
-          <section className="mt-8 md:mt-16 relative w-full gap-8 px-3 lg:px-12 flex flex-col-reverse lg:flex-row-reverse toppp">
+          <section
+            name="token"
+            className="mt-8 md:mt-16 relative w-full gap-8 px-3 lg:px-12 flex flex-col-reverse lg:flex-row-reverse toppp"
+          >
             <motion.img
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -511,9 +578,9 @@ const Home = () => {
               src={img2}
             />
             <div className="">
-              <p className="text-xs pt-24 w-10/12 m-auto text-[#303C8B]">
+              {/* <p className="text-xs pt-24 w-10/12 m-auto text-[#303C8B]">
                 ▽ ABOUT BRIT GOLD
-              </p>
+              </p> */}
               <motion.h1
                 initial={{ opacity: 0, x: -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -525,223 +592,35 @@ const Home = () => {
                   className="transition-all duration-500 ease-in-out hover:text-blue-700"
                   href="#about"
                 >
+                  Trade Easily with the{" "}
                   <span className="conthrax uppercase text-blue-900 text-4xl">
-                    Brit.
+                    BRIT.
                   </span>
                   <span className="conthrax font-semibold uppercase text-yellow-500 text-4xl">
-                    Gold
+                    CASH
                   </span>{" "}
-                  Theme <br />
-                  <span className="font-[100] text-[1.7rem] md:text-[2.4rem] text-black/60">
-                    is the best for your ICO
-                  </span>
+                  Token <br />
                 </a>
               </motion.h1>
-              <p className="text-black/50 w-10/12 mt-4  m-auto text-lg ">
-                Spend real fights effective anything extra by leading.
-                Mouthwatering leading how real formula also locked-in have can
-                mountain thought. Jumbo plus shine sale.
+              <p className="text-black w-10/12 mt-4   m-auto text-lg ">
+                <p className="font-bold">
+                  For investors and traders within the Brit.Gold network, there
+                  is an easy way to trade and transfer!
+                </p>
+                <br />
+                <span className="font-bold">Brit.Cash is a utility token.</span>
+                It is created by Solus and built on the Polygon network (the
+                most stable Blockchain technology). BritCash empowers users to
+                transact seamlessly across the fully decentralized Brit.Gold
+                ecosystem. As our ecosystem grows, we will continue to expand
+                functionality for the Brit.Cash token. Additional offerings to
+                our marketplace will include limited edition NFTs, discounts,
+                revenue sharing and much, much, more…
               </p>
-
-              <div className="w-10/12 m-auto mt-6 md:mt-10">
-                <div className="flex gap-3 p-2 justify-start items-start">
-                  <div className="mt-2 ">
-                    <svg
-                      width="15"
-                      height="13"
-                      viewBox="0 0 13 10"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8.79302 1.92236L10.062 3.18239L5.60699 7.64646L4.33801 6.36842L8.79302 1.92236Z"
-                        fill="#0008B2"
-                      />
-                      <path
-                        d="M1.69202 4.59545L2.96099 3.32642L6.40801 6.76437L5.13903 8.04241L1.69202 4.59545Z"
-                        fill="#0008B2"
-                      />
-                    </svg>
-                  </div>
-                  <p className="text-black/80 ">
-                    Mouthwatering leading how real formula also
-                  </p>
-                </div>
-                <div className="flex gap-3 p-2 justify-start items-start">
-                  <div className="mt-2">
-                    <svg
-                      width="15"
-                      height="13"
-                      viewBox="0 0 13 10"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8.79302 1.92236L10.062 3.18239L5.60699 7.64646L4.33801 6.36842L8.79302 1.92236Z"
-                        fill="#0008B2"
-                      />
-                      <path
-                        d="M1.69202 4.59545L2.96099 3.32642L6.40801 6.76437L5.13903 8.04241L1.69202 4.59545Z"
-                        fill="#0008B2"
-                      />
-                    </svg>
-                  </div>
-                  <p className="text-black/80 ">
-                    Locked-in have can mountain thought
-                  </p>
-                </div>
-                <div className="flex gap-3 p-2 justify-start items-start">
-                  <div className="mt-2">
-                    <svg
-                      width="15"
-                      height="13"
-                      viewBox="0 0 13 10"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M8.79302 1.92236L10.062 3.18239L5.60699 7.64646L4.33801 6.36842L8.79302 1.92236Z"
-                        fill="#0008B2"
-                      />
-                      <path
-                        d="M1.69202 4.59545L2.96099 3.32642L6.40801 6.76437L5.13903 8.04241L1.69202 4.59545Z"
-                        fill="#0008B2"
-                      />
-                    </svg>
-                  </div>
-                  <p className="text-black/80 ">
-                    Locked-in have can mountain thought
-                  </p>
-                </div>
-              </div>
             </div>
           </section>
 
-          <section name="services" className="mt-8 md:mt-16 relative">
-            <p className="text-xs pt-24 w-10/12 text-center m-auto text-[#303C8B]">
-              ▽ FEATURES BRIT GOLD
-            </p>
-            <motion.h1
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false }}
-              transition={{ duration: 1.2 }}
-              className="text-black/90 w-10/12 lg:w-[60%] m-auto pt-6 text-center font-black text-[2rem] md:text-[3rem] leading-[2rem] md:leading-[3rem] lg:leading-[3.5rem]"
-            >
-              <span className="conthrax uppercase text-blue-900 text-4xl">
-                Brit.
-              </span>
-              <span className="conthrax font-semibold uppercase text-yellow-500 text-4xl">
-                Gold
-              </span>{" "}
-              Features
-            </motion.h1>
-
-            <div className="w-full md:w-[85%] m-auto scale-[90%] md:scale-[85%] mt-12 justify-center flex flex-wrap gap-4">
-              <div className="flex flex-wrap md:flex-nowrap justify-center gap-4 bg-white rounded-xl p-4 items-start w-full md:w-[45%]">
-                <img
-                  className=" object-contain p-2 shad1 rounded-full"
-                  alt=""
-                  src={fe1}
-                />
-                <div className="text-center md:text-left ">
-                  <h3 className=" font-bold text-2xl my-2">
-                    General ecosystem
-                  </h3>
-                  <p className="text-black/60">
-                    Surf sardine mooneye, sawtooth eel trout-perch, Death Valley
-                    pupfish zebra tilapia medaka golden shiner, danio Black
-                    angelfish sandperch, whiff.
-                  </p>
-                </div>
-              </div>
-              <div className="flex flex-wrap md:flex-nowrap justify-center gap-4 bg-white rounded-xl p-4 items-start w-full md:w-[45%]">
-                <img
-                  className=" object-contain p-2 shad1 rounded-full"
-                  alt=""
-                  src={fe2}
-                />
-                <div className="text-center md:text-left ">
-                  <h3 className=" font-bold text-2xl my-2">
-                    General ecosystem
-                  </h3>
-                  <p className="text-black/60">
-                    Surf sardine mooneye, sawtooth eel trout-perch, Death Valley
-                    pupfish zebra tilapia medaka golden shiner, danio Black
-                    angelfish sandperch, whiff.
-                  </p>
-                </div>
-              </div>
-              <div className="flex flex-wrap md:flex-nowrap justify-center gap-4 bg-white rounded-xl p-4 items-start w-full md:w-[45%]">
-                <img
-                  className=" object-contain p-2 shad1 rounded-full"
-                  alt=""
-                  src={fe3}
-                />
-                <div className="text-center md:text-left ">
-                  <h3 className=" font-bold text-2xl my-2">
-                    Exchange for other crypto currency
-                  </h3>
-                  <p className="text-black/60">
-                    Surf sardine mooneye, sawtooth eel trout-perch, Death Valley
-                    pupfish zebra tilapia medaka golden shiner, danio Black
-                    angelfish sandperch, whiff.
-                  </p>
-                </div>
-              </div>
-              <div className="flex flex-wrap md:flex-nowrap justify-center gap-4 bg-white rounded-xl p-4 items-start w-full md:w-[45%]">
-                <img
-                  className=" object-contain p-2 shad1 rounded-full"
-                  alt=""
-                  src={fe4}
-                />
-                <div className="text-center md:text-left ">
-                  <h3 className=" font-bold text-2xl my-2">
-                    Protection against fraud
-                  </h3>
-                  <p className="text-black/60">
-                    Surf sardine mooneye, sawtooth eel trout-perch, Death Valley
-                    pupfish zebra tilapia medaka golden shiner, danio Black
-                    angelfish sandperch, whiff.
-                  </p>
-                </div>
-              </div>
-              <div className="flex flex-wrap md:flex-nowrap justify-center gap-4 bg-white rounded-xl p-4 items-start w-full md:w-[45%]">
-                <img
-                  className=" object-contain p-2 shad1 rounded-full"
-                  alt=""
-                  src={fe5}
-                />
-                <div className="text-center md:text-left ">
-                  <h3 className=" font-bold text-2xl my-2">
-                    Transfer to Debit card
-                  </h3>
-                  <p className="text-black/60">
-                    Surf sardine mooneye, sawtooth eel trout-perch, Death Valley
-                    pupfish zebra tilapia medaka golden shiner, danio Black
-                    angelfish sandperch, whiff.
-                  </p>
-                </div>
-              </div>
-              <div className="flex flex-wrap md:flex-nowrap justify-center gap-4 bg-white rounded-xl p-4 items-start w-full md:w-[45%]">
-                <img
-                  className=" object-contain p-2 shad1 rounded-full"
-                  alt=""
-                  src={fe6}
-                />
-                <div className="text-center md:text-left ">
-                  <h3 className=" font-bold text-2xl my-2">Anonymity</h3>
-                  <p className="text-black/60">
-                    Surf sardine mooneye, sawtooth eel trout-perch, Death Valley
-                    pupfish zebra tilapia medaka golden shiner, danio Black
-                    angelfish sandperch, whiff.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section name="token" className="relative mt-12">
+          <section name="" className="relative mt-12">
             <p className="text-xs md:pt-24 w-10/12 text-center m-auto text-[#303C8B]">
               ▽ WORKING
             </p>
@@ -825,12 +704,12 @@ const Home = () => {
           </section>
 
           <section name="apps" className="mt-8 md:mt-24 relative">
-            <p className="absolute mob top-8 m-auto left-8 md:left-0 bottt text-xs text-[#303C8B]">
+            {/*             <p className="absolute mob top-8 m-auto left-8 md:left-0 bottt text-xs text-[#303C8B]">
               ▽ APPS
             </p>
             <p className="absolute pc top-8 m-auto ml-4 left-16 bottt  text-xs text-[#303C8B]">
               ▽ APPS
-            </p>
+            </p> */}
             <div className="relative w-full h-auto md:h-[70vh] overflow-hidden">
               <img
                 className="absolute bottt pc right-0 w-1/2"
@@ -851,12 +730,13 @@ const Home = () => {
                   <span className="conthrax font-semibold uppercase text-yellow-500 text-4xl">
                     Gold
                   </span>{" "}
-                  App for ICO Platform
+                  News & Articles
                 </motion.h1>
-                <p className="text-black/50 w-11/12 lg:w-[50%]  mt-4  text-lg ">
-                  JavaScript virtual machines (VMs) and platforms built upon
-                  them have also increased the popularity of JavaScript for
-                  server-side web applications. On the client side, JavaScript
+                <p className="text-black/50 w-11/12 lg:w-[50%]  mt-4  text-lg">
+                  <p className="font-bold">Introducing Our New Gold Paper!</p>
+                  Learn everything you need to know about Brit.Gold, HardCoin,
+                  Brit.Cash and the current cryptocurrency market with our new
+                  GOLD PAPER. You can download the paper here.
                 </p>
                 <div className="flex w-10/12 gap-3 md:gap-6 mt-8">
                   <motion.img
@@ -874,8 +754,8 @@ const Home = () => {
                     }}
                     className="scale-[50%] pc md:scale-[100%] md:w-[150px] h-[150px] bg-white rounded-full drop-shadow-2xl absolute top-[25%] right-[12%]"
                   ></motion.img>
-                  <img className="w-[45%] md:w-auto" alt="" src={gp} />
-                  <img className="w-[45%] md:w-auto" alt="" src={as} />
+                  {/*  <img className="w-[45%] md:w-auto" alt="" src={gp} />
+                  <img className="w-[45%] md:w-auto" alt="" src={as} /> */}
                 </div>
                 <img
                   className="absolute pc -bottom-4 right-[20%] w-1/4"
@@ -1100,10 +980,10 @@ const Home = () => {
             </motion.div>
           </section>
 
-          <section name="faq" className=" ">
-            <p className="text-xs w-10/12 text-center pt-24 m-auto text-[#303C8B]">
+          <section name="faq" className="relative mt-12 ">
+            {/*       <p className="text-xs w-10/12 text-center pt-24 m-auto text-[#303C8B]">
               ▽ FAQs
-            </p>
+            </p> */}
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1114,7 +994,35 @@ const Home = () => {
               FAQs{" "}
             </motion.h1>
 
-            <div className="mt-[2rem] p-4 px-4 md:px-12 w-11/12 md:w-[60%] scale-[100%] md:scale-[110%] my-24 m-auto rale rounded-2xl">
+            <div className="mt-[2rem] p-4 px-4 md:px-12 w-11/12 md:w-[70%] scale-[100%] md:scale-[110%] my-24 m-auto rale rounded-2xl">
+              <p className="text-black   mt-4  text-sm">
+                Brit.Gold is the new gold standard in blockchain currency. It’s
+                DIFFERENT, BETTER and MORE SECURE than any StableCoin (all of
+                which have failed to date), and more robust than any
+                cryptocurrency. Backed by Royal Mint Gold, it is the world’s
+                first 100% gold-backed NFT financial ecosystem.
+                <br />
+                <br />
+                Brit.Gold is responsible for bringing the world’s first
+                ‘HardCoin’ to the global financial system. It has the
+                flexibility of cryptocurrency and more stability than any other
+                FIAT currencies, it IS the future of finance.
+                <br />
+                <br />
+                Here are the answers to some frequently asked questions (FAQs)
+                to help you understand why Brit.Gold is here to stay; why
+                HardCoin is the future of global finance, and; why NFTs will
+                provide the basis for Britain being the financial
+                country/capital of the world. The first thing to establish here
+                is that, without question:
+                <br />
+                <br />
+                <span className="font-bold">
+                  THE ROYAL MINT IS THE MOST SECURE FINANCIAL INSTITUTION IN THE
+                  WORLD.
+                </span>
+              </p>
+              <br />
               <div className="rounded-2xl md:rounded-[2.5rem] overflow-hidden bg-white shad1 px-4 md:px-8 bottt mix-blend-screen">
                 <Accordion className="scale-x-[110%] p-2">
                   <AccordionSummary
@@ -1122,19 +1030,18 @@ const Home = () => {
                     id="panel2a-header"
                   >
                     <Typography className="text-blue-200 hover:text-black transition-all duration-500 ease-in-out ">
-                      Accordion 1
+                      WHAT IS AN NFT?
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography>
-                      JavaScript is also used in environments that aren't
-                      web-based, such as PDF documents, site-specific browsers,
-                      and desktop widgets. Newer and faster JavaScript virtual
-                      machines (VMs) and platforms built upon them have also
-                      increased the popularity of JavaScript for server-side web
-                      applications. On the client side, JavaScript has been
-                      traditionally implemented as an interpreted language, but
-                      more recent browsers perform just-in-time compilation.
+                      NFTs are Non-Fungible Tokens. These tokens are verified on
+                      the blockchain and cannot be replicated. The term
+                      ‘fungibility’ refers to the interchangeability of goods;
+                      but once a token is given a unique identity, it becomes
+                      non-fungible. Unlike other cryptographic assets, an NFT
+                      cannot be replaced or interchanged because of its unique
+                      properties. IT IS SECURE.
                     </Typography>
                   </AccordionDetails>
                 </Accordion>
@@ -1147,19 +1054,32 @@ const Home = () => {
                     id="panel2a-header"
                   >
                     <Typography className="text-blue-200 hover:text-black transition-all duration-500 ease-in-out ">
-                      Accordion 2
+                      WHAT IS BLOCKCHAIN?
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography>
-                      JavaScript is also used in environments that aren't
-                      web-based, such as PDF documents, site-specific browsers,
-                      and desktop widgets. Newer and faster JavaScript virtual
-                      machines (VMs) and platforms built upon them have also
-                      increased the popularity of JavaScript for server-side web
-                      applications. On the client side, JavaScript has been
-                      traditionally implemented as an interpreted language, but
-                      more recent browsers perform just-in-time compilation.
+                      Blockchain is a database that is not solely held in one
+                      location. The data is held between a network of computer
+                      nodes. The innovative and unique aspect of blockchain
+                      means that there is no third party required to guarantee
+                      the security of data.
+                      <br />
+                      <br />
+                      To explain in more detail, a blockchain is a collection of
+                      information that is stored in ‘blocks’. Each block has a
+                      certain storage capacity and once that block reaches its
+                      limit, it is closed and linked to the previously filled
+                      block of data. This forms a chain which is referred to as
+                      the blockchain. When a new block of information is
+                      created, it is linked to the previously filled block (and
+                      blocks) of data. Each time a ‘block’ of data is created
+                      and linked to a previous block; an irreversible timestamp
+                      is created. Within the blockchain, transactions cannot be
+                      altered, deleted or destroyed. If any part of the
+                      blockchain is hacked, every transaction and digital
+                      footprint is traceable making it more secure than any
+                      traditional financial transaction or database in general.
                     </Typography>
                   </AccordionDetails>
                 </Accordion>
@@ -1172,19 +1092,29 @@ const Home = () => {
                     id="panel2a-header"
                   >
                     <Typography className="text-blue-200 hover:text-black transition-all duration-500 ease-in-out ">
-                      Accordion 3
+                      WHAT IS STABLECOIN?
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography>
-                      JavaScript is also used in environments that aren’t
-                      web-based, such as PDF documents, site-specific browsers,
-                      and desktop widgets. Newer and faster JavaScript virtual
-                      machines (VMs) and platforms built upon them have also
-                      increased the popularity of JavaScript for server-side web
-                      applications. On the client side, JavaScript has been
-                      traditionally implemented as an interpreted language, but
-                      more recent browsers perform just-in-time compilation.
+                      Stablecoins are cryptocurrencies that are related to the
+                      value of something else. The problem being that something
+                      else could literally mean anything. While we will provide
+                      more detail here, it is first worth knowing that to date,
+                      <span className="font-bold">
+                        ALL STABLECOINS HAVE FAILED.
+                      </span>
+                      <br />
+                      <br />
+                      Stablecoins attempt to link their value to an external
+                      reference – usually a fiat currency. This is usually a
+                      government guarantee or a guarantee issued by a large
+                      company. As a result, it that government or company fails
+                      in some way, the security of that currency is undermined
+                      and no longer stable. Stablecoins are not that stable.
+                      This is the reason that they have not faired well in
+                      recent global financial markets. And most importantly,
+                      this is why HardCoin is different.
                     </Typography>
                   </AccordionDetails>
                 </Accordion>
@@ -1197,19 +1127,185 @@ const Home = () => {
                     id="panel2a-header"
                   >
                     <Typography className="text-blue-200 hover:text-black transition-all duration-500 ease-in-out ">
-                      Accordion 4
+                      WHAT IS HARDCOIN AND WHY IS IT DIFFERENT TO OTHER
+                      CRYPTOCURRENCIES?
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography>
-                      JavaScript is also used in environments that aren't
-                      web-based, such as PDF documents, site-specific browsers,
-                      and desktop widgets. Newer and faster JavaScript virtual
-                      machines (VMs) and platforms built upon them have also
-                      increased the popularity of JavaScript for server-side web
-                      applications. On the client side, JavaScript has been
-                      traditionally implemented as an interpreted language, but
-                      more recent browsers perform just-in-time compilation.
+                      Brit.Gold is the world’s first HardCoin. It is setting the
+                      standard for the future of NFTs and global financial
+                      trading. For every NFT that Brit.Gold issues, the
+                      equivalent amount of gold is purchased from the British
+                      Royal Mint. This purchase is open, transparent and
+                      compliant.
+                      <br />
+                      <br />
+                      Financial security and investment stability is ensured due
+                      to the equivalent gold being stored in the United
+                      Kingdom's Royal Mint.{" "}
+                      <span className="font-bold">
+                        PURITY, SECURITY AND ACCOUNTABILITY ARE ALL GUARANTEED
+                      </span>
+                      .
+                      <br />
+                      <br /> At any point, you can exchange your NFTs for
+                      actual, physical gold. Gold that you can hold in your hand
+                      at the vault itself.{" "}
+                      <span className="font-bold">
+                        BRIT.GOLD IS THE ONLY DIGITAL CURRENCY SECURED IN THIS
+                        WAY.{" "}
+                      </span>
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+              </div>
+              <br />
+              <div className="rounded-2xl md:rounded-[2.5rem] overflow-hidden bg-white shad1 px-4 md:px-8 bottt mix-blend-screen">
+                <Accordion className="scale-x-[110%] p-2">
+                  <AccordionSummary
+                    aria-controls="panel2a-content"
+                    id="panel2a-header"
+                  >
+                    <Typography className="text-blue-200 hover:text-black transition-all duration-500 ease-in-out ">
+                      WHAT MAKES BRIT.GOLD SECURE?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Quite simply, Brit.Gold is the future of the global
+                      electronic financial market because of gold. Pure gold.
+                      Gold that is regulated, secured and confirmed.
+                      <br />
+                      <br />
+                      Brit.Gold will/is always be backed by actual, physical
+                      gold. That backing is fully audited daily by a team of
+                      Chartered Accountants and Custodians. There are minimal
+                      entry/exit fees, minimal storage fees, and every day, the
+                      value of coins/tokens is priced against the London Metals
+                      Gold evening spot close. Audit confirmation and details
+                      are published daily, along with the closing LBMA (London
+                      Bullion Market Association) daily close price.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+              </div>
+              <br />
+              <div className="rounded-2xl md:rounded-[2.5rem] overflow-hidden bg-white shad1 px-4 md:px-8 bottt mix-blend-screen">
+                <Accordion className="scale-x-[110%] p-2">
+                  <AccordionSummary
+                    aria-controls="panel2a-content"
+                    id="panel2a-header"
+                  >
+                    <Typography className="text-blue-200 hover:text-black transition-all duration-500 ease-in-out ">
+                      WHAT IS BRIT.CASH?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      For investors and traders within the Brit.Gold network,
+                      there is an easy way to trade and transfer. This meets the
+                      needs of those used to, and wanting to trade between
+                      cryptocurrencies. Brit.Cash bridges the gap between crypto
+                      and NFTs with all of the flexibility of DeFi crypto, and
+                      all of the security of HardCoin.
+                      <br />
+                      <br />
+                      Brit.Cash is a utility token. It is created by Solus and
+                      built on the Polygon network (the most stable Blockchain
+                      technology). BritCash empowers users to transact
+                      seamlessly across the fully decentralized Brit.Gold
+                      ecosystem. Users will have access to a variety of
+                      services, including exclusive early access to our
+                      marketplace, offers, and discounts. A direct communication
+                      line with our cryptocurrency and NFT experts is also
+                      available 24/7. Our Brit.Gold, Brit.Cash, HardCoin and
+                      cryptocurrency experts understand the industry and are
+                      available to provide guidance with investments,
+                      opportunities and technical support.
+                      <br />
+                      <br /> At any point, you can exchange your NFTs for
+                      actual,As our ecosystem grows, we will continue to expand
+                      functionality for the Brit.Cash token.Additional offerings
+                      to our marketplace will include limited edition NFTs,
+                      discounts, revenuesharing and much, much, more…
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+              </div>
+              <br />
+              <div className="rounded-2xl md:rounded-[2.5rem] overflow-hidden bg-white shad1 px-4 md:px-8 bottt mix-blend-screen">
+                <Accordion className="scale-x-[110%] p-2">
+                  <AccordionSummary
+                    aria-controls="panel2a-content"
+                    id="panel2a-header"
+                  >
+                    <Typography className="text-blue-200 hover:text-black transition-all duration-500 ease-in-out ">
+                      WHAT IS TOKENOMICS?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Blockchain apps and technology design tokenomics rules
+                      around their currency or NFTs to encourage or discourage
+                      various user actions.
+                      <br />
+                      <br />
+                      Central banks and financial institutions currently do this
+                      to encourage or discourage spending, lending and saving
+                      behaviours. Tokenomics are coded into the algorithms of
+                      Brit.Gold and Brit.Cash and are transparent, predictable
+                      and difficult to modify. As a result, it is essential that
+                      the tokenomics model for Brit.Gold is secured, regulated
+                      and different to all predecessors in the digital currency
+                      market.
+                      <br />
+                      <br />
+                      HardCoins have no maximum supply limit, as these NFTs are
+                      issued based on the UK Royal Mint gold reserves. This in
+                      itself is revolutionary. To underpin the expansion of
+                      Brit.Gold, Solus has created a DeFi cryptocurrency called
+                      Brit.Coin as added insurance. It will also rival and
+                      out-compete other cryptocurrencies due to its security
+                      features.
+                      <br />
+                      <br />
+                      Brit.Cash is a fully funded cryptocurrency designed to
+                      facilitate the launch of Brit.Gold. Brit.Cash is financed
+                      by investors (who are finance industry experts). This
+                      ensures security, as well as the ability to expand quickly
+                      and effectively whilst negating risk.
+                    </Typography>
+                  </AccordionDetails>
+                </Accordion>
+              </div>
+              <br />
+              <div className="rounded-2xl md:rounded-[2.5rem] overflow-hidden bg-white shad1 px-4 md:px-8 bottt mix-blend-screen">
+                <Accordion className="scale-x-[110%] p-2">
+                  <AccordionSummary
+                    aria-controls="panel2a-content"
+                    id="panel2a-header"
+                  >
+                    <Typography className="text-blue-200 hover:text-black transition-all duration-500 ease-in-out ">
+                      WHO IS NICK DAVENPORT?
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>
+                      Nick Davenport is a UK based, Financial and Internet
+                      Entrepreneur. He has spent the past decade successfully
+                      developing DBS (Domain Backed Securities) into the legal
+                      process of securitizing company domain names into assets.
+                      <br />
+                      <br />
+                      Nick foresaw the problems of “Crypto 1.0”, especially in
+                      terms of global regulation and open source blockchain. He
+                      realised that by using the IP of his DBS, he could provide
+                      a solution. He set up Solus to be the world’s first
+                      digital stock exchange. Solus has a number of unique
+                      offerings within the FinTech market – Brit.Gold being the
+                      key to the company’s development and expansion in the
+                      coming months/years.
                     </Typography>
                   </AccordionDetails>
                 </Accordion>
