@@ -10,6 +10,8 @@ import wrk2 from "../assets/wrk-2.svg";
 import wrk3 from "../assets/wrk-3.svg";
 import divid from "../assets/divider.svg";
 import pdf from "../assets/pdf.svg";
+import gb1 from "../assets/gold-bars-1.png";
+import bgl2 from "../assets/bg-logo-2.png";
 
 import fb from "../assets/team/facebook.svg";
 import lin from "../assets/team/linkedin.svg";
@@ -26,6 +28,16 @@ import prtnr2 from "../assets/partners/partner (2).png";
 import prtnr3 from "../assets/partners/partner (3).png";
 import prtnr4 from "../assets/partners/partner (4).png";
 import prtnr5 from "../assets/partners/partner (5).png";
+
+import faq0 from "../assets/faq/0.jpg";
+import faq1 from "../assets/faq/1.jpg";
+import faq2 from "../assets/faq/2.jpg";
+import faq3 from "../assets/faq/3.jpg";
+import faq4 from "../assets/faq/4.jpg";
+import faq5 from "../assets/faq/5.jpg";
+import faq6 from "../assets/faq/6.jpg";
+import faq7 from "../assets/faq/7.jpg";
+import faq8 from "../assets/faq/8.jpg";
 
 /* import gp from "../assets/gp.png";
 import as from "../assets/as.png"; 
@@ -286,8 +298,8 @@ const Home = () => {
                 Gold
               </span>
               <br />
-              <span className="font-[100] text-[1.7rem] md:text-[2.7rem] text-black/60">
-                Just Entered the Real World
+              <span className="font-[100] text-[1.7rem] md:text-[2.7rem] text-black/80">
+                Welcome To the Future of Finance
               </span>
             </motion.h1>
 
@@ -322,7 +334,7 @@ const Home = () => {
                 alt=""
                 src={shp1}
               />
-              <motion.img
+              {/* <motion.img
                 src={coin1}
                 variants={bubble}
                 initial="up"
@@ -336,7 +348,7 @@ const Home = () => {
                   duration: 4,
                 }}
                 className="scale-[50%] md:scale-[100%] md:w-[150px] h-[150px] bg-white rounded-full drop-shadow-2xl absolute -bottom-[68%] right-[12%]"
-              ></motion.img>
+              ></motion.img> */}
             </motion.div>
 
             <div className="m-auto w-full mt-16 flex gap-3 items-center lg:gap-8 flex-col lg:flex-row justify-center">
@@ -369,20 +381,52 @@ const Home = () => {
           </section>
 
           {/*<img className='m-auto w-11/12 mt-12 drop-shadow-xl shad hover:p-4 bg-white/20 backdrop-blur-xl hover:scale-[102%] transition-all duration-700 ease-in-out rounded-lg  md:w-1/2' alt='' src={vid} />*/}
-
-          <h1 className="text-black/90 w-10/12 lg:w-[60%] my-24 m-auto pt-16 text-center font-black text-[2rem] md:text-[3rem] leading-[2rem] md:leading-[3rem] lg:leading-[3.5rem]">
-            <span className="conthrax uppercase text-blue-900 text-4xl">
-              Brit.
-            </span>
-            <span className="conthrax font-semibold uppercase text-yellow-500 text-4xl">
+          <p className="text-black/90 w-10/12 lg:w-[60%] my-10 m-auto pt-0 text-center font-black ">
+            <p>
+              <span className="conthrax uppercase text-blue-900 ">Brit.</span>
+              <span className="conthrax font-semibold uppercase text-yellow-500 ">
+                Gold
+              </span>{" "}
+              DOES NOT INVEST in anything else.
+              <br />
+            </p>
+            <p>
+              <span className="conthrax uppercase text-blue-900 ">Brit.</span>
+              <span className="conthrax font-semibold uppercase text-yellow-500 ">
+                Gold
+              </span>{" "}
+              IS ALWAYS backed by actual, physical gold.
+              <br />
+            </p>
+            <p>
+              <span className="conthrax uppercase text-blue-900 ">Brit.</span>
+              <span className="conthrax font-semibold uppercase text-yellow-500 ">
+                Gold
+              </span>{" "}
+              IS AUDITED DAILY by a team of Chartered Accountants and
+              Custodians.
+              <br />
+            </p>
+            <img
+              className="m-auto mt-12 noselect"
+              width={300}
+              alt=""
+              src={gb1}
+            />
+            <br />
+            <br />
+            HardCoin has arrived and it’s here to stay. Where other offerings
+            have failed, the HardCoin combines the best in Blockchain
+            technology, compliance and security. It is brought to you by
+            BRIT.GOLD.
+            <br />
+            <br />
+            <span className="conthrax uppercase text-blue-900 ">Brit.</span>
+            <span className="conthrax font-semibold uppercase text-yellow-500 ">
               Gold
             </span>{" "}
-            Just Entered
-            <br />
-            <span className="font-[100] text-[1.7rem] md:text-[2.7rem] text-black/60">
-              the Real World
-            </span>
-          </h1>
+            = THE NEW GOLD STANDARD
+          </p>
 
           <section
             name="about"
@@ -560,6 +604,40 @@ const Home = () => {
                     and user data are protected from unauthorized access.
                   </p>
                 </div>
+              </div>
+              <div>
+                <h1 className="text-black text-center pt-16 font-black text-[2rem] md:text-[3rem] leading-[2rem] md:leading-[3rem] lg:leading-[3.5rem]">
+                  HardCoin is the Future
+                </h1>
+                <br />
+                <p className="text-black text-lg ">
+                  Brit.Gold is the world’s first HardCoin. It is setting the
+                  standard for the future of NFTs and global financial trading.
+                  For every NFT that Brit.Gold issues, the equivalent amount of
+                  gold is purchased from the British Royal Mint. This purchase
+                  is open, transparent and compliant.
+                  <br />
+                  <img
+                    className="m-auto mt-12 noselect"
+                    width={300}
+                    alt=""
+                    src={bgl2}
+                  />
+                  <br />
+                  Financial security and investment stability is ensured due to
+                  the equivalent gold being stored in the United Kingdom's Royal
+                  Mint.{" "}
+                  <span className="font-bold">
+                    PURITY, SECURITY AND ACCOUNTABILITY ARE ALL GUARANTEED.
+                  </span>
+                  <br />
+                  <br />
+                  At any point, you can exchange your NFTs for actual, physical
+                  gold. Gold that you can hold in your hand at the vault itself.
+                  <span className="font-bold">
+                    BRIT.GOLD IS THE ONLY DIGITAL CURRENCY SECURED IN THIS WAY.
+                  </span>
+                </p>
               </div>
             </div>
           </section>
@@ -1008,6 +1086,12 @@ const Home = () => {
                 flexibility of cryptocurrency and more stability than any other
                 FIAT currencies, it IS the future of finance.
                 <br />
+                <img
+                  className="m-auto mt-12 noselect"
+                  width={300}
+                  alt=""
+                  src={faq0}
+                />
                 <br />
                 Here are the answers to some frequently asked questions (FAQs)
                 to help you understand why Brit.Gold is here to stay; why
@@ -1042,6 +1126,12 @@ const Home = () => {
                       non-fungible. Unlike other cryptographic assets, an NFT
                       cannot be replaced or interchanged because of its unique
                       properties. IT IS SECURE.
+                      <img
+                        className="m-auto mt-12 noselect"
+                        width={150}
+                        alt=""
+                        src={faq1}
+                      />
                     </Typography>
                   </AccordionDetails>
                 </Accordion>
@@ -1076,10 +1166,17 @@ const Home = () => {
                       blocks) of data. Each time a ‘block’ of data is created
                       and linked to a previous block; an irreversible timestamp
                       is created. Within the blockchain, transactions cannot be
-                      altered, deleted or destroyed. If any part of the
-                      blockchain is hacked, every transaction and digital
-                      footprint is traceable making it more secure than any
-                      traditional financial transaction or database in general.
+                      altered, deleted or destroyed.
+                      <img
+                        className="m-auto mt-12 noselect"
+                        width={150}
+                        alt=""
+                        src={faq2}
+                      />
+                      If any part of the blockchain is hacked, every transaction
+                      and digital footprint is traceable making it more secure
+                      than any traditional financial transaction or database in
+                      general.
                     </Typography>
                   </AccordionDetails>
                 </Accordion>
@@ -1105,6 +1202,12 @@ const Home = () => {
                         ALL STABLECOINS HAVE FAILED.
                       </span>
                       <br />
+                      <img
+                        className="m-auto mt-12 noselect"
+                        width={150}
+                        alt=""
+                        src={faq3}
+                      />
                       <br />
                       Stablecoins attempt to link their value to an external
                       reference – usually a fiat currency. This is usually a
@@ -1115,6 +1218,12 @@ const Home = () => {
                       This is the reason that they have not faired well in
                       recent global financial markets. And most importantly,
                       this is why HardCoin is different.
+                      <img
+                        className="m-auto mt-12 noselect"
+                        width={150}
+                        alt=""
+                        src={faq4}
+                      />
                     </Typography>
                   </AccordionDetails>
                 </Accordion>
@@ -1140,6 +1249,12 @@ const Home = () => {
                       Royal Mint. This purchase is open, transparent and
                       compliant.
                       <br />
+                      <img
+                        className="m-auto mt-12 noselect"
+                        width={150}
+                        alt=""
+                        src={faq5}
+                      />
                       <br />
                       Financial security and investment stability is ensured due
                       to the equivalent gold being stored in the United
@@ -1177,6 +1292,12 @@ const Home = () => {
                       electronic financial market because of gold. Pure gold.
                       Gold that is regulated, secured and confirmed.
                       <br />
+                      <img
+                        className="m-auto mt-12 noselect"
+                        width={150}
+                        alt=""
+                        src={faq6}
+                      />
                       <br />
                       Brit.Gold will/is always be backed by actual, physical
                       gold. That backing is fully audited daily by a team of
@@ -1210,6 +1331,12 @@ const Home = () => {
                       and NFTs with all of the flexibility of DeFi crypto, and
                       all of the security of HardCoin.
                       <br />
+                      <img
+                        className="m-auto mt-12 noselect"
+                        width={150}
+                        alt=""
+                        src={faq7}
+                      />
                       <br />
                       Brit.Cash is a utility token. It is created by Solus and
                       built on the Polygon network (the most stable Blockchain
@@ -1250,6 +1377,12 @@ const Home = () => {
                       around their currency or NFTs to encourage or discourage
                       various user actions.
                       <br />
+                      <img
+                        className="m-auto mt-12 noselect"
+                        width={150}
+                        alt=""
+                        src={faq8}
+                      />
                       <br />
                       Central banks and financial institutions currently do this
                       to encourage or discourage spending, lending and saving
