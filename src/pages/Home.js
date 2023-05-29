@@ -362,6 +362,9 @@ const Home = () => {
             {/*<img className="m-auto mt-12 noselect" alt="" src={pay} />*/}
             <form className="mt-12 m-auto flex flex-col gap-2">
               <h1 className="mt-4 text-center font-semibold text-blue-900">
+                Live Gold Price: $1946.14
+              </h1>
+              <h1 className="mt-4 text-center font-semibold text-blue-900">
                 Track Your Brit.Gold
               </h1>
               <div className="flex -gap-4 w-11/12 lg:w-[36%] m-auto mt-4 justify-center items-center">
