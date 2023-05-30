@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import logo from "../assets/head-logo-hd.png";
 import logor from "../assets/logo-round.webp";
 import img1 from "../assets/img-1.webp";
@@ -60,7 +61,7 @@ import cmp4 from "../assets/company/Logo_4.png";
 import cmp5 from "../assets/company/Logo_5.png";
 import cmp6 from "../assets/company/Logo_6.png";
 
-import coin1 from "../assets/coin1.webp";
+//  import coin1 from "../assets/coin1.webp";
 import coin2 from "../assets/coin2.webp";
 
 import { Link } from "react-scroll";
@@ -101,7 +102,78 @@ const Home = () => {
     up: { y: 0 },
     down: { y: [-15, 0, -15] },
   };
+  const [goldOptions, setGoldOptions] = useState([
+    {
+      weight: "1/8 Ounce",
+      commissionPercentage: 0.06,
+      goldPrice: 1933.74786442,
+      totalCost: 256.22159203565,
+    },
+    {
+      weight: "1/4 Ounce",
+      commissionPercentage: 0.05,
+      goldPrice: 1933.74786442,
+      totalCost: 507.60881441025003,
+    },
+    {
+      weight: "1/2 Ounce",
+      commissionPercentage: 0.04,
+      goldPrice: 1933.74786442,
+      totalCost: 1005.5488894984001,
+    },
+    {
+      weight: "1 Ounce",
+      commissionPercentage: 0.03,
+      goldPrice: 1933.74786442,
+      totalCost: 1991.7603003526,
+    },
+  ]);
 
+  const getGoldPricesWithCommission = async () => {
+    const response = await fetch(
+      "https://api.metalpriceapi.com/v1/latest?api_key=a10e464db091daece4393b856b5faaef&base=XAU&currencies=USD",
+    );
+    const data = await response.json();
+
+    if (data.success) {
+      const goldPricePerOunce = data.rates.USD;
+      const options = [
+        {
+          weight: "1/8 Ounce",
+          commissionPercentage: 0.06,
+          goldPrice: goldPricePerOunce,
+          totalCost: goldPricePerOunce * (1 + 0.06) * (1 / 8),
+        },
+        {
+          weight: "1/4 Ounce",
+          commissionPercentage: 0.05,
+          goldPrice: goldPricePerOunce,
+          totalCost: goldPricePerOunce * (1 + 0.05) * (1 / 4),
+        },
+        {
+          weight: "1/2 Ounce",
+          commissionPercentage: 0.04,
+          goldPrice: goldPricePerOunce,
+          totalCost: goldPricePerOunce * (1 + 0.04) * (1 / 2),
+        },
+        {
+          weight: "1 Ounce",
+          commissionPercentage: 0.03,
+          goldPrice: goldPricePerOunce,
+          totalCost: goldPricePerOunce * (1 + 0.03),
+        },
+      ];
+
+      return options;
+    } else {
+      throw new Error("Failed to fetch gold prices.");
+    }
+  };
+  useEffect(() => {
+    getGoldPricesWithCommission()
+      .then((options) => setGoldOptions(options))
+      .catch((error) => console.error(error));
+  }, []);
   return (
     <div>
       <AnimatePresence>
@@ -361,9 +433,56 @@ const Home = () => {
             </div>
             {/*<img className="m-auto mt-12 noselect" alt="" src={pay} />*/}
             <form className="mt-12 m-auto flex flex-col gap-2">
-              <h1 className="mt-4 text-center font-semibold text-blue-900">
-                Live Gold Price: $1946.14
-              </h1>
+              <div>
+                <p className="text-center">
+                  <span className="conthrax uppercase text-blue-900 ">
+                    1/8 Ounce:
+                  </span>{" "}
+                  <span className="conthrax font-semibold uppercase text-yellow-500 ">
+                    $
+                    {goldOptions
+                      .find((item) => item.weight === "1/8 Ounce")
+                      .totalCost.toFixed(2)}
+                  </span>
+                  <br />
+                </p>
+                <p className="text-center">
+                  <span className="conthrax uppercase text-blue-900 ">
+                    1/4 Ounce:
+                  </span>{" "}
+                  <span className="conthrax font-semibold uppercase text-yellow-500 ">
+                    $
+                    {goldOptions
+                      .find((item) => item.weight === "1/4 Ounce")
+                      .totalCost.toFixed(2)}
+                  </span>
+                  <br />
+                </p>
+                <p className="text-center">
+                  <span className="conthrax uppercase text-blue-900  ">
+                    1/2 Ounce:
+                  </span>{" "}
+                  <span className="conthrax font-semibold uppercase text-yellow-500 ">
+                    $
+                    {goldOptions
+                      .find((item) => item.weight === "1/2 Ounce")
+                      .totalCost.toFixed(2)}
+                  </span>
+                  <br />
+                </p>
+                <p className="text-center">
+                  <span className="conthrax uppercase text-blue-900 ">
+                    1 Ounce:
+                  </span>{" "}
+                  <span className="conthrax font-semibold uppercase text-yellow-500 ">
+                    $
+                    {goldOptions
+                      .find((item) => item.weight === "1 Ounce")
+                      .totalCost.toFixed(2)}
+                  </span>
+                  <br />
+                </p>
+              </div>
               <h1 className="mt-4 text-center font-semibold text-blue-900">
                 Track Your Brit.Gold
               </h1>
