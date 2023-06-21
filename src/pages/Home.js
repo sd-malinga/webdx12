@@ -436,6 +436,14 @@ const Home = () => {
               <div>
                 <p className="text-center">
                   <span className="conthrax uppercase text-blue-900 ">
+                    Brit.
+                  </span>
+                  <span className="conthrax font-semibold uppercase text-yellow-500 ">
+                    Gold
+                  </span>{" "}
+                  <span className="font-bold">Live Rate</span>
+                  <br />
+                  <span className="conthrax uppercase text-blue-900 ">
                     1/8 Ounce:
                   </span>{" "}
                   <span className="conthrax font-semibold uppercase text-yellow-500 ">
