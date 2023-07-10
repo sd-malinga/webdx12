@@ -106,26 +106,34 @@ const Home = () => {
     {
       weight: "1/8 Ounce",
       commissionPercentage: 0.06,
-      goldPrice: 1933.74786442,
-      totalCost: 256.22159203565,
+      goldPrice: 1923.64328805,
+      priceChange24h: 1926.0660294,
+      totalCost: 254.882735666625,
+      priceChangePercentage: 0.06675109275596079,
     },
     {
       weight: "1/4 Ounce",
       commissionPercentage: 0.05,
-      goldPrice: 1933.74786442,
-      totalCost: 507.60881441025003,
+      goldPrice: 1923.64328805,
+      priceChange24h: 1926.0660294,
+      totalCost: 504.956363113125,
+      priceChangePercentage: 0.06612136546580877,
     },
     {
       weight: "1/2 Ounce",
       commissionPercentage: 0.04,
-      goldPrice: 1933.74786442,
-      totalCost: 1005.5488894984001,
+      goldPrice: 1923.64328805,
+      priceChange24h: 1926.0660294,
+      totalCost: 1000.2945097859999,
+      priceChangePercentage: 0.06549163817565676,
     },
     {
       weight: "1 Ounce",
       commissionPercentage: 0.03,
-      goldPrice: 1933.74786442,
-      totalCost: 1991.7603003526,
+      goldPrice: 1923.64328805,
+      priceChange24h: 1926.0660294,
+      totalCost: 1981.3525866915,
+      priceChangePercentage: 0.06486191088550473,
     },
   ]);
 
@@ -137,38 +145,86 @@ const Home = () => {
 
     if (data.success) {
       const goldPricePerOunce = data.rates.USD;
+
+      // Get today's date
+      var today = new Date();
+
+      // Subtract one day from today's date
+      var yesterday = new Date(today);
+      yesterday.setDate(today.getDate() - 1);
+
+      // Format the date in the desired format (YYYY-MM-DD)
+      var formattedDate = yesterday.toISOString().split("T")[0];
+
+      // Construct the API request URL
+      var apiKey = "a10e464db091daece4393b856b5faaef";
+      var baseURL = "https://api.metalpriceapi.com/v1/";
+      var endpoint =
+        formattedDate + "?api_key=" + apiKey + "&base=XAU&currencies=USD";
+      var requestURL = baseURL + endpoint;
+
+      // Fetch price change data
+      const priceChangeResponse = await fetch(requestURL);
+      const priceChangeData = await priceChangeResponse.json();
+      const goldPriceChange24h = priceChangeData.rates.USD;
+
       const options = [
         {
           weight: "1/8 Ounce",
           commissionPercentage: 0.06,
           goldPrice: goldPricePerOunce,
+          priceChange24h: goldPriceChange24h,
           totalCost: goldPricePerOunce * (1 + 0.06) * (1 / 8),
+          priceChangePercentage:
+            ((goldPriceChange24h * (1 + 0.06) * (1 / 2) -
+              goldPricePerOunce * (1 + 0.06) * (1 / 2)) /
+              goldPricePerOunce) *
+            100,
         },
         {
           weight: "1/4 Ounce",
           commissionPercentage: 0.05,
           goldPrice: goldPricePerOunce,
+          priceChange24h: goldPriceChange24h,
           totalCost: goldPricePerOunce * (1 + 0.05) * (1 / 4),
+          priceChangePercentage:
+            ((goldPriceChange24h * (1 + 0.05) * (1 / 2) -
+              goldPricePerOunce * (1 + 0.05) * (1 / 2)) /
+              goldPricePerOunce) *
+            100,
         },
         {
           weight: "1/2 Ounce",
           commissionPercentage: 0.04,
           goldPrice: goldPricePerOunce,
+          priceChange24h: goldPriceChange24h,
           totalCost: goldPricePerOunce * (1 + 0.04) * (1 / 2),
+          priceChangePercentage:
+            ((goldPriceChange24h * (1 + 0.04) * (1 / 2) -
+              goldPricePerOunce * (1 + 0.04) * (1 / 2)) /
+              goldPricePerOunce) *
+            100,
         },
         {
           weight: "1 Ounce",
           commissionPercentage: 0.03,
           goldPrice: goldPricePerOunce,
+          priceChange24h: goldPriceChange24h,
           totalCost: goldPricePerOunce * (1 + 0.03),
+          priceChangePercentage:
+            ((goldPriceChange24h * (1 + 0.03) * (1 / 2) -
+              goldPricePerOunce * (1 + 0.03) * (1 / 2)) /
+              goldPricePerOunce) *
+            100,
         },
       ];
-
+      console.log(options);
       return options;
     } else {
       throw new Error("Failed to fetch gold prices.");
     }
   };
+
   useEffect(() => {
     getGoldPricesWithCommission()
       .then((options) => setGoldOptions(options))
@@ -450,7 +506,24 @@ const Home = () => {
                     $
                     {goldOptions
                       .find((item) => item.weight === "1/8 Ounce")
-                      .totalCost.toFixed(2)}
+                      .totalCost.toFixed(2)}{" "}
+                    <span
+                      className={`conthrax font-semibold uppercase text-xs ${
+                        goldOptions.find((item) => item.weight === "1/8 Ounce")
+                          .priceChangePercentage > 0
+                          ? "text-green-500"
+                          : "text-red-500"
+                      }`}
+                    >
+                      {goldOptions.find((item) => item.weight === "1/8 Ounce")
+                        .priceChangePercentage > 0
+                        ? "+"
+                        : "-"}
+                      {goldOptions
+                        .find((item) => item.weight === "1/8 Ounce")
+                        .priceChangePercentage.toFixed(4)}
+                      %
+                    </span>
                   </span>
                   <br />
                 </p>
@@ -462,7 +535,24 @@ const Home = () => {
                     $
                     {goldOptions
                       .find((item) => item.weight === "1/4 Ounce")
-                      .totalCost.toFixed(2)}
+                      .totalCost.toFixed(2)}{" "}
+                    <span
+                      className={`conthrax font-semibold uppercase text-xs ${
+                        goldOptions.find((item) => item.weight === "1/4 Ounce")
+                          .priceChangePercentage > 0
+                          ? "text-green-500"
+                          : "text-red-500"
+                      }`}
+                    >
+                      {goldOptions.find((item) => item.weight === "1/4 Ounce")
+                        .priceChangePercentage > 0
+                        ? "+"
+                        : "-"}
+                      {goldOptions
+                        .find((item) => item.weight === "1/4 Ounce")
+                        .priceChangePercentage.toFixed(4)}
+                      %
+                    </span>
                   </span>
                   <br />
                 </p>
@@ -474,7 +564,24 @@ const Home = () => {
                     $
                     {goldOptions
                       .find((item) => item.weight === "1/2 Ounce")
-                      .totalCost.toFixed(2)}
+                      .totalCost.toFixed(2)}{" "}
+                    <span
+                      className={`conthrax font-semibold uppercase text-xs ${
+                        goldOptions.find((item) => item.weight === "1/4 Ounce")
+                          .priceChangePercentage > 0
+                          ? "text-green-500"
+                          : "text-red-500"
+                      }`}
+                    >
+                      {goldOptions.find((item) => item.weight === "1/2 Ounce")
+                        .priceChangePercentage > 0
+                        ? "+"
+                        : "-"}
+                      {goldOptions
+                        .find((item) => item.weight === "1/2 Ounce")
+                        .priceChangePercentage.toFixed(4)}
+                      %
+                    </span>
                   </span>
                   <br />
                 </p>
@@ -486,7 +593,24 @@ const Home = () => {
                     $
                     {goldOptions
                       .find((item) => item.weight === "1 Ounce")
-                      .totalCost.toFixed(2)}
+                      .totalCost.toFixed(2)}{" "}
+                    <span
+                      className={`conthrax font-semibold uppercase text-xs ${
+                        goldOptions.find((item) => item.weight === "1/4 Ounce")
+                          .priceChangePercentage > 0
+                          ? "text-green-500"
+                          : "text-red-500"
+                      }`}
+                    >
+                      {goldOptions.find((item) => item.weight === "1 Ounce")
+                        .priceChangePercentage > 0
+                        ? "+"
+                        : "-"}
+                      {goldOptions
+                        .find((item) => item.weight === "1 Ounce")
+                        .priceChangePercentage.toFixed(4)}
+                      %
+                    </span>
                   </span>
                   <br />
                 </p>
