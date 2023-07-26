@@ -102,40 +102,7 @@ const Home = () => {
     up: { y: 0 },
     down: { y: [-15, 0, -15] },
   };
-  const [goldOptions, setGoldOptions] = useState([
-    {
-      weight: "1/8 Ounce",
-      commissionPercentage: 0.06,
-      goldPrice: 1923.64328805,
-      priceChange24h: 1926.0660294,
-      totalCost: 254.882735666625,
-      priceChangePercentage: 0.06675109275596079,
-    },
-    {
-      weight: "1/4 Ounce",
-      commissionPercentage: 0.05,
-      goldPrice: 1923.64328805,
-      priceChange24h: 1926.0660294,
-      totalCost: 504.956363113125,
-      priceChangePercentage: 0.06612136546580877,
-    },
-    {
-      weight: "1/2 Ounce",
-      commissionPercentage: 0.04,
-      goldPrice: 1923.64328805,
-      priceChange24h: 1926.0660294,
-      totalCost: 1000.2945097859999,
-      priceChangePercentage: 0.06549163817565676,
-    },
-    {
-      weight: "1 Ounce",
-      commissionPercentage: 0.03,
-      goldPrice: 1923.64328805,
-      priceChange24h: 1926.0660294,
-      totalCost: 1981.3525866915,
-      priceChangePercentage: 0.06486191088550473,
-    },
-  ]);
+  const [goldOptions, setGoldOptions] = useState([]);
 
   const getGoldPricesWithCommission = async () => {
     const response = await fetch(
@@ -489,132 +456,140 @@ const Home = () => {
             </div>
             {/*<img className="m-auto mt-12 noselect" alt="" src={pay} />*/}
             <form className="mt-12 m-auto flex flex-col gap-2">
-              <div>
-                <p className="text-center">
-                  <span className="conthrax uppercase text-blue-900 ">
-                    Brit.
-                  </span>
-                  <span className="conthrax font-semibold uppercase text-yellow-500 ">
-                    Gold
-                  </span>{" "}
-                  <span className="font-bold">Live Rate</span>
-                  <br />
-                  <span className="conthrax uppercase text-blue-900 ">
-                    1/8 Ounce:
-                  </span>{" "}
-                  <span className="conthrax font-semibold uppercase text-yellow-500 ">
-                    $
-                    {goldOptions
-                      .find((item) => item.weight === "1/8 Ounce")
-                      .totalCost.toFixed(2)}{" "}
-                    <span
-                      className={`conthrax font-semibold uppercase text-xs ${
-                        goldOptions.find((item) => item.weight === "1/8 Ounce")
-                          .priceChangePercentage > 0
-                          ? "text-green-500"
-                          : "text-red-500"
-                      }`}
-                    >
-                      {goldOptions.find((item) => item.weight === "1/8 Ounce")
-                        .priceChangePercentage > 0
-                        ? "+"
-                        : "-"}
+              {goldOptions.length > 0 ? (
+                <div>
+                  <p className="text-center">
+                    <span className="conthrax uppercase text-blue-900 ">
+                      Brit.
+                    </span>
+                    <span className="conthrax font-semibold uppercase text-yellow-500 ">
+                      Gold
+                    </span>{" "}
+                    <span className="font-bold">Live Rate</span>
+                    <br />
+                    <span className="conthrax uppercase text-blue-900 ">
+                      1/8 Ounce:
+                    </span>{" "}
+                    <span className="conthrax font-semibold uppercase text-yellow-500 ">
+                      $
                       {goldOptions
                         .find((item) => item.weight === "1/8 Ounce")
-                        .priceChangePercentage.toFixed(4)}
-                      %
-                    </span>
-                  </span>
-                  <br />
-                </p>
-                <p className="text-center">
-                  <span className="conthrax uppercase text-blue-900 ">
-                    1/4 Ounce:
-                  </span>{" "}
-                  <span className="conthrax font-semibold uppercase text-yellow-500 ">
-                    $
-                    {goldOptions
-                      .find((item) => item.weight === "1/4 Ounce")
-                      .totalCost.toFixed(2)}{" "}
-                    <span
-                      className={`conthrax font-semibold uppercase text-xs ${
-                        goldOptions.find((item) => item.weight === "1/4 Ounce")
+                        .totalCost.toFixed(2)}{" "}
+                      <span
+                        className={`conthrax font-semibold uppercase text-xs ${
+                          goldOptions.find(
+                            (item) => item.weight === "1/8 Ounce",
+                          ).priceChangePercentage > 0
+                            ? "text-green-500"
+                            : "text-red-500"
+                        }`}
+                      >
+                        {goldOptions.find((item) => item.weight === "1/8 Ounce")
                           .priceChangePercentage > 0
-                          ? "text-green-500"
-                          : "text-red-500"
-                      }`}
-                    >
-                      {goldOptions.find((item) => item.weight === "1/4 Ounce")
-                        .priceChangePercentage > 0
-                        ? "+"
-                        : "-"}
+                          ? "+"
+                          : ""}
+                        {goldOptions
+                          .find((item) => item.weight === "1/8 Ounce")
+                          .priceChangePercentage.toFixed(4)}
+                        %
+                      </span>
+                    </span>
+                    <br />
+                  </p>
+                  <p className="text-center">
+                    <span className="conthrax uppercase text-blue-900 ">
+                      1/4 Ounce:
+                    </span>{" "}
+                    <span className="conthrax font-semibold uppercase text-yellow-500 ">
+                      $
                       {goldOptions
                         .find((item) => item.weight === "1/4 Ounce")
-                        .priceChangePercentage.toFixed(4)}
-                      %
-                    </span>
-                  </span>
-                  <br />
-                </p>
-                <p className="text-center">
-                  <span className="conthrax uppercase text-blue-900  ">
-                    1/2 Ounce:
-                  </span>{" "}
-                  <span className="conthrax font-semibold uppercase text-yellow-500 ">
-                    $
-                    {goldOptions
-                      .find((item) => item.weight === "1/2 Ounce")
-                      .totalCost.toFixed(2)}{" "}
-                    <span
-                      className={`conthrax font-semibold uppercase text-xs ${
-                        goldOptions.find((item) => item.weight === "1/4 Ounce")
+                        .totalCost.toFixed(2)}{" "}
+                      <span
+                        className={`conthrax font-semibold uppercase text-xs ${
+                          goldOptions.find(
+                            (item) => item.weight === "1/4 Ounce",
+                          ).priceChangePercentage > 0
+                            ? "text-green-500"
+                            : "text-red-500"
+                        }`}
+                      >
+                        {goldOptions.find((item) => item.weight === "1/4 Ounce")
                           .priceChangePercentage > 0
-                          ? "text-green-500"
-                          : "text-red-500"
-                      }`}
-                    >
-                      {goldOptions.find((item) => item.weight === "1/2 Ounce")
-                        .priceChangePercentage > 0
-                        ? "+"
-                        : "-"}
+                          ? "+"
+                          : ""}
+                        {goldOptions
+                          .find((item) => item.weight === "1/4 Ounce")
+                          .priceChangePercentage.toFixed(4)}
+                        %
+                      </span>
+                    </span>
+                    <br />
+                  </p>
+                  <p className="text-center">
+                    <span className="conthrax uppercase text-blue-900  ">
+                      1/2 Ounce:
+                    </span>{" "}
+                    <span className="conthrax font-semibold uppercase text-yellow-500 ">
+                      $
                       {goldOptions
                         .find((item) => item.weight === "1/2 Ounce")
-                        .priceChangePercentage.toFixed(4)}
-                      %
-                    </span>
-                  </span>
-                  <br />
-                </p>
-                <p className="text-center">
-                  <span className="conthrax uppercase text-blue-900 ">
-                    1 Ounce:
-                  </span>{" "}
-                  <span className="conthrax font-semibold uppercase text-yellow-500 ">
-                    $
-                    {goldOptions
-                      .find((item) => item.weight === "1 Ounce")
-                      .totalCost.toFixed(2)}{" "}
-                    <span
-                      className={`conthrax font-semibold uppercase text-xs ${
-                        goldOptions.find((item) => item.weight === "1/4 Ounce")
+                        .totalCost.toFixed(2)}{" "}
+                      <span
+                        className={`conthrax font-semibold uppercase text-xs ${
+                          goldOptions.find(
+                            (item) => item.weight === "1/4 Ounce",
+                          ).priceChangePercentage > 0
+                            ? "text-green-500"
+                            : "text-red-500"
+                        }`}
+                      >
+                        {goldOptions.find((item) => item.weight === "1/2 Ounce")
                           .priceChangePercentage > 0
-                          ? "text-green-500"
-                          : "text-red-500"
-                      }`}
-                    >
-                      {goldOptions.find((item) => item.weight === "1 Ounce")
-                        .priceChangePercentage > 0
-                        ? "+"
-                        : "-"}
+                          ? "+"
+                          : ""}
+                        {goldOptions
+                          .find((item) => item.weight === "1/2 Ounce")
+                          .priceChangePercentage.toFixed(4)}
+                        %
+                      </span>
+                    </span>
+                    <br />
+                  </p>
+                  <p className="text-center">
+                    <span className="conthrax uppercase text-blue-900 ">
+                      1 Ounce:
+                    </span>{" "}
+                    <span className="conthrax font-semibold uppercase text-yellow-500 ">
+                      $
                       {goldOptions
                         .find((item) => item.weight === "1 Ounce")
-                        .priceChangePercentage.toFixed(4)}
-                      %
+                        .totalCost.toFixed(2)}{" "}
+                      <span
+                        className={`conthrax font-semibold uppercase text-xs ${
+                          goldOptions.find(
+                            (item) => item.weight === "1/4 Ounce",
+                          ).priceChangePercentage > 0
+                            ? "text-green-500"
+                            : "text-red-500"
+                        }`}
+                      >
+                        {goldOptions.find((item) => item.weight === "1 Ounce")
+                          .priceChangePercentage > 0
+                          ? "+"
+                          : ""}
+                        {goldOptions
+                          .find((item) => item.weight === "1 Ounce")
+                          .priceChangePercentage.toFixed(4)}
+                        %
+                      </span>
                     </span>
-                  </span>
-                  <br />
-                </p>
-              </div>
+                    <br />
+                  </p>
+                </div>
+              ) : (
+                <></>
+              )}
               <h1 className="mt-4 text-center font-semibold text-blue-900">
                 Track Your Brit.Gold
               </h1>
