@@ -960,9 +960,9 @@ const Home = () => {
                 <img className="p-3 shad1 rounded-full" alt="" src={wrk1} />
                 <hr />
                 <p className="text-sm text-black/60">
-                  Involvement of third-party developers into IQeon ecosystem and
-                  expansion of our own product line will lead to growth in
-                  users.
+                  Blockchain is a shared, immutable ledger that facilitates the
+                  process of recording transactions and tracking assets in a
+                  business network
                 </p>
               </motion.div>
               <hr className="rotate-[90deg] pc" />
@@ -974,9 +974,9 @@ const Home = () => {
                 <img className="p-3 shad1 rounded-full" alt="" src={wrk3} />
                 <hr />
                 <p className="text-sm text-black/60">
-                  Involvement of third-party developers into IQeon ecosystem and
-                  expansion of our own product line will lead to growth in
-                  users.
+                  Our KYC process is a mandatory requirement for our users to
+                  verify their Identity to ensure that our users do not use
+                  Crypto to launder money
                 </p>
               </motion.div>
               <hr className="rotate-[90deg] pc" />
@@ -988,9 +988,8 @@ const Home = () => {
                 <img className="p-3 shad1 rounded-full" alt="" src={wrk2} />
                 <hr />
                 <p className="text-sm text-black/60">
-                  Involvement of third-party developers into IQeon ecosystem and
-                  expansion of our own product line will lead to growth in
-                  users.
+                  Our payment systems are very secure with an ease to make
+                  payment in your Fiat currency or via any other Crypto currency
                 </p>
               </motion.div>
               <hr className="rotate-[90deg] pc" />
@@ -1002,9 +1001,8 @@ const Home = () => {
                 <img className="p-3 shad1 rounded-full" alt="" src={wrk3} />
                 <hr />
                 <p className="text-sm text-black/60">
-                  Involvement of third-party developers into IQeon ecosystem and
-                  expansion of our own product line will lead to growth in
-                  users.
+                  You can trade in Brit.Gold or Brit.Cash on our market place or
+                  any other market place round the world
                 </p>
               </motion.div>
             </motion.div>
@@ -1094,57 +1092,122 @@ const Home = () => {
               className="flex flex-wrap scale-[100%] md:scale-[95%] gap-4 md:gap-8  m-auto w-full md:w-10/12 justify-center items-start mt-6 md:mt-16"
             >
               <motion.div className="flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4">
-                <h2 className="font-semibold">July 2023</h2>
+                <h2 className="font-semibold">Sep 2021</h2>
                 <div className="w-[20px] h-[20px] border-white/70 border-solid border-[4px] rounded-full bg-blue-200">
                   <br />
                 </div>
                 <hr />
                 <p className="text-sm text-black/60">
-                  Performing Closed Beta testing, launching a pre-ICO campaing.
+                  Trademark filling and concept initiation.
                 </p>
               </motion.div>
               <motion.div
                 variants={item}
                 className="flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4"
               >
-                <h2 className="font-semibold">July 2023</h2>
+                <h2 className="font-semibold">Jan 2022</h2>
                 <div className="w-[35px] h-[35px] border-white/80 border-solid border-[10px] rounded-full bg-red-400">
                   <br />
                 </div>
                 <hr />
                 <p className="text-sm text-black">
-                  Issuing JCR tokens into the Ethereum blockchain.
+                  Trademark entered into regiter of The Patent Office, Great
+                  Britain.
                 </p>
               </motion.div>
               <motion.div
                 variants={item}
                 className="flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4"
               >
-                <h2 className="font-semibold">July 2023</h2>
+                <h2 className="font-semibold">Dec 2022</h2>
                 <div className="w-[20px] h-[20px] border-white/70 border-solid border-[4px] rounded-full bg-blue-200">
                   <br />
                 </div>
                 <hr />
                 <p className="text-sm text-black/60">
-                  Preparing for Open Beta launch. Basic Employment Smart
-                  Contracts Templates Development.
+                  Concept thoroughly checked and validated. Ready to start
+                  development.
                 </p>
               </motion.div>
               <motion.div
                 variants={item}
                 className="flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4"
               >
-                <h2 className="font-semibold">July 2023</h2>
+                <h2 className="font-semibold">Feb 2023</h2>
                 <div className="w-[20px] h-[20px] border-white/70 border-solid border-[4px] rounded-full bg-blue-200">
                   <br />
                 </div>
                 <hr />
                 <p className="text-sm text-black/60">
-                  Invoicing & billing system implementation. Channel partner
-                  program launch. 200+ companies in Open Beta.
+                  Project Development started by the technical team.
                 </p>
               </motion.div>
               <motion.div
+                variants={item}
+                className="flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4"
+              >
+                <h2 className="font-semibold">May 2023</h2>
+                <div className="w-[20px] h-[20px] border-white/70 border-solid border-[4px] rounded-full bg-blue-200">
+                  <br />
+                </div>
+                <hr />
+                <p className="text-sm text-black/60">
+                  Project ready for internal tesing, UAT and further revisions.
+                </p>
+              </motion.div>
+              <motion.div
+                variants={item}
+                className="flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4"
+              >
+                <h2 className="font-semibold">June 2023</h2>
+                <div className="w-[20px] h-[20px] border-white/70 border-solid border-[4px] rounded-full bg-blue-200">
+                  <br />
+                </div>
+                <hr />
+                <p className="text-sm text-black/60">
+                  Smart Contract Audits and security Audits done.
+                </p>
+              </motion.div>
+              <motion.div
+                variants={item}
+                className="flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4"
+              >
+                <h2 className="font-semibold">Aug 2023</h2>
+                <div className="w-[20px] h-[20px] border-white/70 border-solid border-[4px] rounded-full bg-blue-200">
+                  <br />
+                </div>
+                <hr />
+                <p className="text-sm text-black/60">
+                  Beta testing done succefully with UAT accptance.
+                </p>
+              </motion.div>
+              <motion.div
+                variants={item}
+                className="flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4"
+              >
+                <h2 className="font-semibold">Sep 2023</h2>
+                <div className="w-[20px] h-[20px] border-white/70 border-solid border-[4px] rounded-full bg-blue-200">
+                  <br />
+                </div>
+                <hr />
+                <p className="text-sm text-black/60">
+                  Brit.Gold pre-sale phase started and live.
+                </p>
+              </motion.div>
+              <motion.div
+                variants={item}
+                className="flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4"
+              >
+                <h2 className="font-semibold">Dec 2023</h2>
+                <div className="w-[20px] h-[20px] border-white/70 border-solid border-[4px] rounded-full bg-blue-200">
+                  <br />
+                </div>
+                <hr />
+                <p className="text-sm text-black/60">
+                  Pre-sale phase will close and Brit.Gold ready to be sold live.
+                </p>
+              </motion.div>
+              {/*      <motion.div
                 variants={item}
                 className="flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4"
               >
@@ -1157,75 +1220,7 @@ const Home = () => {
                   Running of the crowdfunding campaign, 500+ companies
                   subscribed for Open Beta.
                 </p>
-              </motion.div>
-              <motion.div
-                variants={item}
-                className="flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4"
-              >
-                <h2 className="font-semibold">July 2023</h2>
-                <div className="w-[20px] h-[20px] border-white/70 border-solid border-[4px] rounded-full bg-blue-200">
-                  <br />
-                </div>
-                <hr />
-                <p className="text-sm text-black/60">
-                  Performing Closed Beta testing, launching a pre-ICO campaing.
-                </p>
-              </motion.div>
-              <motion.div
-                variants={item}
-                className="flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4"
-              >
-                <h2 className="font-semibold">July 2023</h2>
-                <div className="w-[20px] h-[20px] border-white/70 border-solid border-[4px] rounded-full bg-blue-200">
-                  <br />
-                </div>
-                <hr />
-                <p className="text-sm text-black/60">
-                  Issuing JCR tokens into the Ethereum blockchain.
-                </p>
-              </motion.div>
-              <motion.div
-                variants={item}
-                className="flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4"
-              >
-                <h2 className="font-semibold">July 2023</h2>
-                <div className="w-[20px] h-[20px] border-white/70 border-solid border-[4px] rounded-full bg-blue-200">
-                  <br />
-                </div>
-                <hr />
-                <p className="text-sm text-black/60">
-                  Preparing for Open Beta launch. Basic Employment Smart
-                  Contracts Templates Development.
-                </p>
-              </motion.div>
-              <motion.div
-                variants={item}
-                className="flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4"
-              >
-                <h2 className="font-semibold">July 2023</h2>
-                <div className="w-[20px] h-[20px] border-white/70 border-solid border-[4px] rounded-full bg-blue-200">
-                  <br />
-                </div>
-                <hr />
-                <p className="text-sm text-black/60">
-                  Invoicing & billing system implementation. Channel partner
-                  program launch. 200+ companies in Open Beta.
-                </p>
-              </motion.div>
-              <motion.div
-                variants={item}
-                className="flex flex-col text-center justify-center items-center p-3 w-10/12 md:w-[13rem] gap-4"
-              >
-                <h2 className="font-semibold">July 2023</h2>
-                <div className="w-[20px] h-[20px] border-white/70 border-solid border-[4px] rounded-full bg-blue-200">
-                  <br />
-                </div>
-                <hr />
-                <p className="text-sm text-black/60">
-                  Running of the crowdfunding campaign, 500+ companies
-                  subscribed for Open Beta.
-                </p>
-              </motion.div>
+              </motion.div> */}
             </motion.div>
           </section>
 
@@ -1282,7 +1277,7 @@ const Home = () => {
                 className="flex flex-col gap-4 text-white text-xs md:text-md font-bold justify-center hover:scale-[102%] transition-all duration-500 ease-in-out text-center p-5 grad rounded-2xl items-center w-[9rem] md:w-[15rem] min-h-[9rem] md:min-h-[15rem]"
               >
                 <img className="w-[2rem]" alt="" src={pdf} />
-                <p>Business Profile</p>
+                <p>Trademark</p>
               </motion.div>
             </motion.div>
           </section>
@@ -2014,13 +2009,13 @@ const Home = () => {
                     Blockchain
                   </h2>
                   <h1 className="mt-3 text-black text-2xl font-bold">
-                    New trends in Blockchain UIUX
+                    Grand Theft Auto enters Web3 via it's mobile gaming giant:
+                    Zynga
                   </h1>
-                  <p className=" text-black/60 mt-2">
-                    COO of KrowdMentor, a strategic investment and advisory firm
-                    as well as Under Development Office, a software development
-                    company focused on
-                  </p>
+                  {/*  <p className=" text-black/60 mt-2">
+                    Grand Theft Auto enters Web3 via it's mobile gaming giant:
+                    Zynga
+                  </p> */}
                 </div>
               </motion.div>
               <motion.div
@@ -2035,13 +2030,14 @@ const Home = () => {
                     Blockchain
                   </h2>
                   <h1 className="mt-3 text-black text-2xl font-bold">
-                    New trends in Blockchain UIUX
+                    OpenSea Reduces Fees and Revamps Creator Royalties Amid
+                    Rising Competition
                   </h1>
-                  <p className=" text-black/60 mt-2">
+                  {/*  <p className=" text-black/60 mt-2">
                     COO of KrowdMentor, a strategic investment and advisory firm
                     as well as Under Development Office, a software development
                     company focused on
-                  </p>
+                  </p> */}
                 </div>
               </motion.div>
               <motion.div
@@ -2056,13 +2052,14 @@ const Home = () => {
                     Blockchain
                   </h2>
                   <h1 className="mt-3 text-black text-2xl font-bold">
-                    New trends in Blockchain UIUX
+                    Gold-Backed Cryptocurrency: Is This the Future Gold
+                    Standard?
                   </h1>
-                  <p className=" text-black/60 mt-2">
+                  {/* <p className=" text-black/60 mt-2">
                     COO of KrowdMentor, a strategic investment and advisory firm
                     as well as Under Development Office, a software development
                     company focused on
-                  </p>
+                  </p> */}
                 </div>
               </motion.div>
               <motion.div
@@ -2077,13 +2074,13 @@ const Home = () => {
                     Blockchain
                   </h2>
                   <h1 className="mt-3 text-black text-2xl font-bold">
-                    New trends in Blockchain UIUX
+                    Gold-backed cryptocurrencies: the new stablecoin variant{" "}
                   </h1>
-                  <p className=" text-black/60 mt-2">
+                  {/*    <p className=" text-black/60 mt-2">
                     COO of KrowdMentor, a strategic investment and advisory firm
                     as well as Under Development Office, a software development
                     company focused on
-                  </p>
+                  </p> */}
                 </div>
               </motion.div>
               <motion.div
@@ -2098,13 +2095,13 @@ const Home = () => {
                     Blockchain
                   </h2>
                   <h1 className="mt-3 text-black text-2xl font-bold">
-                    New trends in Blockchain UIUX
+                    How Gold-backed Crypto is Reshaping our View on Finance{" "}
                   </h1>
-                  <p className=" text-black/60 mt-2">
+                  {/* <p className=" text-black/60 mt-2">
                     COO of KrowdMentor, a strategic investment and advisory firm
                     as well as Under Development Office, a software development
                     company focused on
-                  </p>
+                  </p> */}
                 </div>
               </motion.div>
             </motion.div>
@@ -2178,15 +2175,13 @@ const Home = () => {
                   Get in Touch
                 </motion.h1>
                 <p className="text-white/60 text-sm mt-4  leading-loose font-light">
-                  523 Sylvan Ave, 5th Floor Mountain View, CA
+                  The Solus Organisation Ltd
+                  <br /> Registered in the UK <br />
+                  www.solus.org and www.brit.gold
+                  <br /> Email: nick@solus.org
                   <br />
-                  +1 (234) 56789, +1 987 654 3210
-                  <br />
-                  info@cryptoland.com
-                  <br />
-                  <a href="mailto:supportcenter@cryptoland.com">
-                    supportcenter@cryptoland.com
-                  </a>
+                  Tel: +44 (0) 333 4444 333 <br /> +1 (234) 56789
+                  <br /> +1 987 654 3210
                 </p>
 
                 <div className="flex gap-16 mt-8 md:mt-16 w-full justify-center md:justify-start m-auto items-start">
