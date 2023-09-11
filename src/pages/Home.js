@@ -271,7 +271,7 @@ const Home = () => {
                 Community
               </Link>
             </div>
-            <a href="https://britgold-dashboard.vercel.app/register">
+            <a href="https://app.brit.gold/register">
               <button className="rounded-lg pc px-6 py-4 text-white mr-4 font-medium text-sm grad">
                 Join Brit World
               </button>
@@ -365,7 +365,7 @@ const Home = () => {
                     >
                       Blog
                     </Link>
-                    <a href="/login">
+                    <a href="https://app.brit.gold/register">
                       <button className="rounded-lg absolute bottom-8 centerh w-10/12 px-6 py-4 text-white font-medium text-sm grad">
                         Join Brit World
                       </button>
