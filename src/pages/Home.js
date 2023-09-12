@@ -75,10 +75,10 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 
 import React, { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 const Home = () => {
   const [popup, setPop] = useState(false);
-
+  const navigate = useNavigate();
   const handleClickOpen = () => {
     setPop(!popup);
   };
@@ -270,7 +270,7 @@ const Home = () => {
                 to="blog"
                 className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out "
               >
-                Community
+                Blog
               </Link>
             </div>
             <a href="https://app.brit.gold/register">
@@ -380,7 +380,11 @@ const Home = () => {
             </div>
           </section>
 
-          <section name="home" className="mt-[15%] lg:mt-[8%] relative">
+          <section
+            name="home"
+            id="home"
+            className="mt-[15%] lg:mt-[8%] relative"
+          >
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -663,6 +667,7 @@ const Home = () => {
 
           <section
             name="about"
+            id="about"
             className="mt-8 md:mt-16 relative w-full lg:w-10/12  gap-8 px-3 lg:px-8 m-auto flex flex-col-reverse lg:flex-row toppp"
           >
             <motion.img
@@ -714,7 +719,11 @@ const Home = () => {
             </div>
           </section>
 
-          <section name="services" className="mt-8 md:mt-16 relative">
+          <section
+            name="services"
+            id="services"
+            className="mt-8 md:mt-16 relative"
+          >
             {/*             <p className="text-xs pt-24 w-10/12 text-center m-auto text-[#303C8B]">
               ▽ FEATURES BRIT GOLD
             </p> */}
@@ -877,6 +886,7 @@ const Home = () => {
 
           <section
             name="token"
+            id="token"
             className="mt-8 md:mt-16 relative w-full gap-8 px-3 lg:px-12 flex flex-col-reverse lg:flex-row-reverse toppp"
           >
             <motion.img
@@ -1012,7 +1022,7 @@ const Home = () => {
             </motion.div>
           </section>
 
-          <section name="apps" className="mt-8 md:mt-24 relative">
+          <section name="apps" id="apps" className="mt-8 md:mt-24 relative">
             {/*             <p className="absolute mob top-8 m-auto left-8 md:left-0 bottt text-xs text-[#303C8B]">
               ▽ APPS
             </p>
@@ -1075,7 +1085,7 @@ const Home = () => {
             </div>
           </section>
 
-          <section name="roadmap" className="relative ">
+          <section name="roadmap" id="roadmap" className="relative ">
             <p className="text-xs pt-24 w-10/12 text-center m-auto text-[#303C8B]">
               ▽ ROADMAP
             </p>
@@ -1228,7 +1238,7 @@ const Home = () => {
             </motion.div>
           </section>
 
-          <section name="Goldpaper" className="relative mt-12">
+          <section name="Goldpaper" id="Goldpaper" className="relative mt-12">
             <p className="text-xs pt-24 w-10/12 text-center m-auto text-[#303C8B]">
               ▽ DOCUMENTS
             </p>
@@ -1292,7 +1302,7 @@ const Home = () => {
             </motion.div>
           </section>
 
-          <section name="faq" className="relative mt-12 ">
+          <section name="faq" id="faq" className="relative mt-12 ">
             {/*       <p className="text-xs w-10/12 text-center pt-24 m-auto text-[#303C8B]">
               ▽ FAQs
             </p> */}
@@ -1680,7 +1690,7 @@ const Home = () => {
             </div>
           </section>
 
-          <section name="team" className="grad pb-12 relative">
+          <section name="team" id="team" className="grad pb-12 relative">
             <img alt="" src={divid} className="absolute bottom-0 w-screen" />
             <div className=" text-center lg:text-left lg:w-[70%] m-auto text-white">
               <p className="text-xs pt-12 lg:pt-24 text-blue-200">▽ TEAM</p>
@@ -1915,7 +1925,7 @@ const Home = () => {
             </div>
           </section>
 
-          <section name="media">
+          <section name="media" id="media">
             <p className="text-xs w-10/12 text-center pt-24 m-auto text-[#303C8B]">
               ▽ Media
             </p>
@@ -1981,7 +1991,7 @@ const Home = () => {
             </div>
           </section>
 
-          <section name="blog">
+          <section name="blog" id="blog">
             <p className="text-xs w-10/12 text-center pt-12 md:pt-[24] m-auto text-[#303C8B]">
               ▽ Blog
             </p>
@@ -2009,7 +2019,10 @@ const Home = () => {
             >
               <motion.div
                 variants={item}
-                className="bg-white drop-shadow-xl pb-6 rounded-2xl w-[20rem] shrink-0"
+                className="bg-white drop-shadow-xl pb-6 rounded-2xl w-[20rem] shrink-0 cursor-pointer"
+                onClick={() => {
+                  window.open("/blog/3", "_self");
+                }}
               >
                 <div className="h-[10rem] overflow-hidden w-full  rounded-tr-2xl rounded-tl-2xl">
                   <img alt="" className=" h-full w-full" src={crd1} />
@@ -2030,7 +2043,10 @@ const Home = () => {
               </motion.div>
               <motion.div
                 variants={item}
-                className="bg-white drop-shadow-xl pb-6 rounded-2xl w-[20rem] shrink-0"
+                className="bg-white drop-shadow-xl pb-6 rounded-2xl w-[20rem] shrink-0 cursor-pointer"
+                onClick={() => {
+                  window.open("/blog/4", "_self");
+                }}
               >
                 <div className="h-[10rem] overflow-hidden w-full  rounded-tr-2xl rounded-tl-2xl">
                   <img alt="" className=" h-full w-full" src={crd2} />
@@ -2052,7 +2068,10 @@ const Home = () => {
               </motion.div>
               <motion.div
                 variants={item}
-                className="bg-white drop-shadow-xl pb-6 rounded-2xl w-[20rem] shrink-0"
+                className="bg-white drop-shadow-xl pb-6 rounded-2xl w-[20rem] shrink-0 cursor-pointer cursor-pointer"
+                onClick={() => {
+                  window.open("/blog/1", "_self");
+                }}
               >
                 <div className="h-[10rem] overflow-hidden w-full rounded-tr-2xl rounded-tl-2xl">
                   <img alt="" className=" h-full w-full" src={crd3} />
@@ -2074,7 +2093,10 @@ const Home = () => {
               </motion.div>
               <motion.div
                 variants={item}
-                className="bg-white drop-shadow-xl pb-6 rounded-2xl w-[20rem] shrink-0"
+                className="bg-white drop-shadow-xl pb-6 rounded-2xl w-[20rem] shrink-0 cursor-pointer cursor-pointer"
+                onClick={() => {
+                  window.open("/blog/2", "_self");
+                }}
               >
                 <div className="h-[10rem] overflow-hidden w-full   rounded-tr-2xl rounded-tl-2xl">
                   <img alt="" className=" h-full w-full" src={crd1} />
@@ -2084,7 +2106,7 @@ const Home = () => {
                     Blockchain
                   </h2>
                   <h1 className="mt-3 text-black text-2xl font-bold">
-                    Gold-backed cryptocurrencies: the new stablecoin variant{" "}
+                    Gold-backed cryptocurrencies: the new stablecoin variant
                   </h1>
                   {/*    <p className=" text-black/60 mt-2">
                     COO of KrowdMentor, a strategic investment and advisory firm
@@ -2095,7 +2117,10 @@ const Home = () => {
               </motion.div>
               <motion.div
                 variants={item}
-                className="bg-white drop-shadow-xl pb-6 rounded-2xl w-[20rem] shrink-0"
+                className="bg-white drop-shadow-xl pb-6 rounded-2xl w-[20rem] shrink-0 cursor-pointer"
+                onClick={() => {
+                  window.open("/blog/5", "_self");
+                }}
               >
                 <div className="h-[10rem] overflow-hidden w-full  rounded-tr-2xl rounded-tl-2xl">
                   <img alt="" className=" h-full w-full" src={crd2} />
@@ -2117,7 +2142,7 @@ const Home = () => {
             </motion.div>
           </section>
 
-          <section name="partners" className=" relative">
+          <section name="partners" id="partners" className=" relative">
             <div className=" text-center lg:text-left lg:w-[80%] m-auto">
               <p className="text-xs pt-12 lg:pt-24 text-[#303C8B]">
                 ▽ OUR FRIENDS
@@ -2161,7 +2186,11 @@ const Home = () => {
             </div>
           </section>
 
-          <section name="contact" className="grad relative mt-12 h-screen">
+          <section
+            name="contact"
+            id="contact"
+            className="grad relative mt-12 h-screen"
+          >
             <img
               alt=""
               src={divid}
@@ -2193,56 +2222,6 @@ const Home = () => {
                   Tel: +44 (0) 333 4444 333 <br /> +1 (234) 56789
                   <br /> +1 987 654 3210
                 </p>
-
-                <div className="flex gap-16 mt-8 md:mt-16 w-full justify-center md:justify-start m-auto items-start">
-                  <div className="flex gap-3 flex-col text-white/70">
-                    <Link
-                      className="cursor-pointer hover:text-white transition-all duration-500 ease-in-out "
-                      to="about"
-                    >
-                      About
-                    </Link>
-                    <Link
-                      className="cursor-pointer hover:text-white transition-all duration-500 ease-in-out "
-                      to="roadmap"
-                    >
-                      Roadmap
-                    </Link>
-                    <Link
-                      className="cursor-pointer hover:text-white transition-all duration-500 ease-in-out "
-                      to="token"
-                    >
-                      Token
-                    </Link>
-                    <Link
-                      className="cursor-pointer hover:text-white transition-all duration-500 ease-in-out "
-                      to="team"
-                    >
-                      Team
-                    </Link>
-                  </div>
-                  <div className="flex gap-3 flex-col text-white/70">
-                    <Link
-                      className="cursor-pointer hover:text-white transition-all duration-500 ease-in-out "
-                      to="services"
-                    >
-                      Services
-                    </Link>
-                    {/*<Link className='cursor-pointer hover:text-white transition-all duration-500 ease-in-out ' to='statistics'>Statistics</Link>*/}
-                    <Link
-                      className="cursor-pointer hover:text-white transition-all duration-500 ease-in-out "
-                      to="Goldpaper"
-                    >
-                      Goldpaper
-                    </Link>
-                    <Link
-                      className="cursor-pointer hover:text-white transition-all duration-500 ease-in-out "
-                      to="faq"
-                    >
-                      FAQs
-                    </Link>
-                  </div>
-                </div>
               </div>
 
               <div className=" flex gap-6 flex-col mt-8 md:mt-[20%] w-10/12 md:w-[60%]">
