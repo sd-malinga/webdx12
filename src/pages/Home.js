@@ -76,8 +76,14 @@ import Typography from "@mui/material/Typography";
 
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import CurrencySelector from "../components/CurrencySelector";
+import { useRecoilState } from "recoil";
+import { currencyState } from "../state/CurrencyState";
+import { COUNTRIES } from "../components/Country";
 const Home = () => {
   const [popup, setPop] = useState(false);
+  const [selectedCurrency, setSelectedCurrency] = useRecoilState(currencyState);
+
   const navigate = useNavigate();
   const handleClickOpen = () => {
     setPop(!popup);
@@ -105,15 +111,17 @@ const Home = () => {
     down: { y: [-15, 0, -15] },
   };
   const [goldOptions, setGoldOptions] = useState([]);
-
+  const [currencySymbol, setCurrencySymbol] = useState(
+    COUNTRIES.find((country) => country.currency === selectedCurrency).symbol,
+  );
   const getGoldPricesWithCommission = async () => {
     const response = await fetch(
-      "https://api.metalpriceapi.com/v1/latest?api_key=a10e464db091daece4393b856b5faaef&base=XAU&currencies=USD",
+      `https://api.metalpriceapi.com/v1/latest?api_key=a10e464db091daece4393b856b5faaef&base=XAU&currencies=${selectedCurrency}`,
     );
     const data = await response.json();
 
     if (data.success) {
-      const goldPricePerOunce = data.rates.USD;
+      const goldPricePerOunce = data.rates[selectedCurrency];
 
       // Get today's date
       var today = new Date();
@@ -129,13 +137,16 @@ const Home = () => {
       var apiKey = "a10e464db091daece4393b856b5faaef";
       var baseURL = "https://api.metalpriceapi.com/v1/";
       var endpoint =
-        formattedDate + "?api_key=" + apiKey + "&base=XAU&currencies=USD";
+        formattedDate +
+        "?api_key=" +
+        apiKey +
+        `&base=XAU&currencies=${selectedCurrency}`;
       var requestURL = baseURL + endpoint;
 
       // Fetch price change data
       const priceChangeResponse = await fetch(requestURL);
       const priceChangeData = await priceChangeResponse.json();
-      const goldPriceChange24h = priceChangeData.rates.USD;
+      const goldPriceChange24h = priceChangeData.rates[selectedCurrency];
 
       const options = [
         {
@@ -196,9 +207,16 @@ const Home = () => {
 
   useEffect(() => {
     getGoldPricesWithCommission()
-      .then((options) => setGoldOptions(options))
+      .then((options) => {
+        setGoldOptions(options);
+        setCurrencySymbol(
+          COUNTRIES.find((country) => country.currency === selectedCurrency)
+            .symbol,
+        );
+      })
       .catch((error) => console.error(error));
-  }, []);
+  }, [selectedCurrency]);
+
   return (
     <div>
       <AnimatePresence>
@@ -272,6 +290,9 @@ const Home = () => {
               >
                 Blog
               </Link>
+            </div>
+            <div className="pc hidden lg:visible flex gap-4 items-center">
+              <CurrencySelector />
             </div>
             <a href="https://app.brit.gold/register">
               <button className="rounded-lg pc px-6 py-4 text-white mr-4 font-medium text-sm grad">
@@ -367,6 +388,8 @@ const Home = () => {
                     >
                       Blog
                     </Link>
+                    <CurrencySelector />
+
                     <a href="https://app.brit.gold/register">
                       <button className="rounded-lg absolute bottom-8 centerh w-10/12 px-6 py-4 text-white font-medium text-sm grad">
                         Join Brit World
@@ -458,7 +481,7 @@ const Home = () => {
               </button>
               <a href={goldpaper} target="_blank">
                 <button className="py-4 px-8 bg-yellow-500 w-11/12 lg:w-[15rem] hover:drop-shadow-xl transition-all duration-500 ease-in-out rounded-md text-white shad">
-                  Goldpaper
+                  Brit Gold Goldpaper
                 </button>
               </a>
             </div>
@@ -467,19 +490,15 @@ const Home = () => {
               {goldOptions.length > 0 ? (
                 <div>
                   <p className="text-center">
-                    <span className="conthrax uppercase text-blue-900 ">
-                      Brit.
+                    <span className="font-bold text-2xl font-semibold text-blue-900">
+                      Latest Live London Gold Prices
                     </span>
-                    <span className="conthrax font-semibold uppercase text-yellow-500 ">
-                      Gold
-                    </span>{" "}
-                    <span className="font-bold">Live Rate</span>
                     <br />
                     <span className="conthrax uppercase text-blue-900 ">
                       1/8 Ounce:
                     </span>{" "}
                     <span className="conthrax font-semibold uppercase text-yellow-500 ">
-                      $
+                      {currencySymbol}
                       {goldOptions
                         .find((item) => item.weight === "1/8 Ounce")
                         .totalCost.toFixed(2)}{" "}
@@ -509,7 +528,7 @@ const Home = () => {
                       1/4 Ounce:
                     </span>{" "}
                     <span className="conthrax font-semibold uppercase text-yellow-500 ">
-                      $
+                      {currencySymbol}
                       {goldOptions
                         .find((item) => item.weight === "1/4 Ounce")
                         .totalCost.toFixed(2)}{" "}
@@ -539,7 +558,7 @@ const Home = () => {
                       1/2 Ounce:
                     </span>{" "}
                     <span className="conthrax font-semibold uppercase text-yellow-500 ">
-                      $
+                      {currencySymbol}
                       {goldOptions
                         .find((item) => item.weight === "1/2 Ounce")
                         .totalCost.toFixed(2)}{" "}
@@ -569,7 +588,7 @@ const Home = () => {
                       1 Ounce:
                     </span>{" "}
                     <span className="conthrax font-semibold uppercase text-yellow-500 ">
-                      $
+                      {currencySymbol}
                       {goldOptions
                         .find((item) => item.weight === "1 Ounce")
                         .totalCost.toFixed(2)}{" "}
@@ -1280,7 +1299,7 @@ const Home = () => {
               >
                 <img className="w-[2rem]" alt="" src={pdf} />
                 <a href={goldpaper} target="_blank">
-                  Goldpaper
+                  Brit Gold Goldpaper
                 </a>
               </motion.div>
               <motion.div

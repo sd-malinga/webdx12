@@ -2,6 +2,7 @@ import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import "./index.css";
 import Blog1 from "./pages/Blogs/Blog1";
 import Blog2 from "./pages/Blogs/Blog2";
@@ -9,11 +10,19 @@ import Blog3 from "./pages/Blogs/Blog3";
 import Blog4 from "./pages/Blogs/Blog4";
 import Blog5 from "./pages/Blogs/Blog5";
 import Blog6 from "./pages/Blogs/Blog6";
+import { RecoilRoot } from "recoil";
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<Home />} path="/" />
+        <Route
+          element={
+            <RecoilRoot>
+              <Home />
+            </RecoilRoot>
+          }
+          path="/"
+        />
         <Route element={<Login />} path="/login" />
         <Route path="*" element={<NotFound />} />
         <Route element={<Blog1 />} path="/blog/1" />
