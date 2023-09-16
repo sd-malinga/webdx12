@@ -73,7 +73,7 @@ const BlogLayout = ({ children }) => {
             }}
             className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out "
           >
-            Token
+            Brit Cash Token
           </div>
           <div
             onClick={() => {
@@ -174,7 +174,7 @@ const BlogLayout = ({ children }) => {
                   }}
                   className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out"
                 >
-                  Token
+                  Brit Cash Token
                 </div>
                 <div
                   onClick={() => {

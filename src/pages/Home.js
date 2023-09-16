@@ -258,7 +258,7 @@ const Home = () => {
                 to="token"
                 className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out "
               >
-                Token
+                Brit Cash Token
               </Link>
               <Link
                 to="roadmap"
@@ -344,7 +344,7 @@ const Home = () => {
                       to="token"
                       className="cursor-pointer hover:text-blue-800 transition-all duration-500 ease-in-out "
                     >
-                      Token
+                      Brit Cash Token
                     </Link>
                     <Link
                       onClick={closePopup}
@@ -475,16 +475,16 @@ const Home = () => {
               ></motion.img> */}
             </motion.div>
 
-            <div className="m-auto w-full mt-16 flex gap-3 items-center lg:gap-8 flex-col lg:flex-row justify-center">
+            {/*      <div className="m-auto w-full mt-16 flex gap-3 items-center lg:gap-8 flex-col lg:flex-row justify-center">
               <button className="py-4 px-8 grad rounded-md w-11/12 lg:w-[15rem] hover:drop-shadow-xl transition-all duration-500 ease-in-out text-white shad">
-                Buy Tokens 45% Off
+                Buy Brit Cash Tokens
               </button>
               <a href={goldpaper} target="_blank">
                 <button className="py-4 px-8 bg-yellow-500 w-11/12 lg:w-[15rem] hover:drop-shadow-xl transition-all duration-500 ease-in-out rounded-md text-white shad">
                   Brit Gold Goldpaper
                 </button>
               </a>
-            </div>
+            </div> */}
             {/*<img className="m-auto mt-12 noselect" alt="" src={pay} />*/}
             <form className="mt-12 m-auto flex flex-col gap-2">
               {goldOptions.length > 0 ? (
